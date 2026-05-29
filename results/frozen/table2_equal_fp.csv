@@ -1,0 +1,9 @@
+domain,dt_predicate_median,dt_predicate_iqr,n_pred,accepted_var_baseline,accepted_var_id,dt_var_median,dt_var_iqr,n_var,accepted_ac1_baseline,accepted_ac1_id,dt_ac1_median,dt_ac1_iqr,n_ac1,notes
+Toy,329,289-409,152,no,,,,0,yes,ews_ac1_time_W256,60,58-61,100,AC1 accepted under equal-FP
+LinUCB,316,272-355,150,no,,,,0,yes,ews_ac1_time_W256,60,58-61,99,AC1 accepted under equal-FP
+Epsilon-greedy,316,272-355,150,no,,,,0,yes,ews_ac1_time_W256,60,58-61,99,AC1 accepted under equal-FP
+MovieLens,412,284-454,1087,yes,ews_var_time_W256_z6p5,36,23-48,427,no,,,,0,Variance accepted under equal-FP
+Markets,404,274-453,1144,yes,ews_var_time_W256_z6p5,32,18-46,409,no,,,,0,Variance accepted under equal-FP
+Recursive model replay,378,269-436,1018,yes,ews_var_time_W256_z5p0,31,14-43,429,yes,ews_ac1_time_W256,61,57-62,214,Variance and AC1 accepted under equal-FP
+Cognition,359,261-441,916,yes,ews_var_time_W256_z5p0,32,14-47,413,yes,ews_ac1_time_W256,59,54-60,203,Variance and AC1 accepted under equal-FP
+Culture,224,148-430,2676,no,,,,0,no,,,,0,Preregistered saturation boundary case

@@ -1,0 +1,90 @@
+{
+  "benchmark_display_name": "MovieLens-25M Recursive Frontier Benchmark",
+  "benchmark_domain": "recommender_systems",
+  "benchmark_id": "movielens25m_recursive_frontier_public_v1",
+  "benchmark_version": "v1",
+  "collapse": {
+    "collapse_definition": "Collapse occurs at the first step tau where the recommender fails for collapse_streak_len consecutive recursive update steps to recover any remaining held-out positive item while remaining frontier size remains at least remaining_frontier_floor, within max_horizon_steps.",
+    "collapse_streak_len": 8,
+    "deterministic_frontier_reveal_rule": "highest_rating_then_earliest_true_timestamp_then_lowest_movieId",
+    "max_horizon_steps": 40,
+    "min_warning_runway": 15,
+    "positive_rating_threshold": 4.0,
+    "remaining_frontier_floor": 10,
+    "top_k": 10,
+    "warm_start_ratings": 30
+  },
+  "comparators": {
+    "acceptance_rule": "A comparator configuration is accepted iff control-unit FP is within [equal_fp_band_lower, equal_fp_band_upper].",
+    "availability_rule": "A comparator configuration is available only if it can be evaluated on all frozen units under the prespecified admissible windowing rule.",
+    "control_fp_definition": "Fraction of control units containing at least one gated alarm.",
+    "equal_fp_band_lower": 0.03,
+    "equal_fp_band_upper": 0.07,
+    "fast_families": [
+      "variance_ews",
+      "ac1",
+      "cusum",
+      "page_hinkley"
+    ],
+    "nearest_rule": "Nearest = minimum distance to the accepted FP band, even if trivial-silent.",
+    "nontrivial_rule": "Nontrivial = configuration produces at least one alarm on any unit.",
+    "slow_families": [
+      "matrix_profile",
+      "permutation_entropy"
+    ]
+  },
+  "contract_sha256": "2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d",
+  "created_utc": "2026-04-20T16:46:08+00:00",
+  "dataset": {
+    "archive_filename": "ml-25m.zip",
+    "movies_filename": "movies.csv",
+    "name": "MovieLens-25M",
+    "notes": "Canonical public snapshot. Ratings must be chronologically sorted within user before episode construction because released files are not globally time-ordered by timestamp.",
+    "one_episode_per_user": true,
+    "rating_timestamp_unit": "unix_seconds",
+    "ratings_filename": "ratings.csv",
+    "readme_filename": "ml-25m-README.html",
+    "sort_rule_within_user": [
+      "timestamp",
+      "movieId"
+    ],
+    "source": "GroupLens",
+    "tags_filename": "tags.csv"
+  },
+  "engine": {
+    "candidate_policy": "exclude_seen_items_then_rank_all_remaining_items",
+    "code_commit": "4fe4f5f27b3f911b7cc1a0fbf29246dd6ce8b7f5",
+    "deterministic": true,
+    "engine_family": "item_item_collaborative_filtering",
+    "engine_hash": "56c1cff225d60c09",
+    "engine_name": "movielens_recursive_replay_engine",
+    "engine_version": "1.0.0",
+    "hyperparameters": {
+      "min_common_raters": 1,
+      "neighborhood_size": 100,
+      "score_aggregation": "weighted_sum",
+      "similarity": "cosine",
+      "top_k": 10
+    },
+    "notes": "Canonical public deterministic item-item collaborative-filtering replay engine for the MovieLens-25M recursive frontier benchmark.",
+    "tie_break_rule": "score_desc_then_movieId_asc",
+    "update_policy": "at each recursive step append one deterministically revealed frontier hit to observed profile; otherwise append nothing"
+  },
+  "falsification_rule": "The recommender branch fails as a corroborating flagship benchmark if any comparator family achieves an accepted operating point on the canonical benchmark under the same locked equal-FP criterion.",
+  "horizon_sensitivity_override": {
+    "note": "Temporary contract override used only to generate adjacent-horizon robustness packet.",
+    "target_horizon": 40
+  },
+  "notes": "Initial canonical recommender benchmark contract freeze.",
+  "robustness": {
+    "adjacent_horizons": [
+      40,
+      50,
+      60
+    ],
+    "canonical_horizon": 40,
+    "robustness_axis": "episode_length_sensitivity",
+    "rule": "Only adjacent horizon sensitivity is canonical for this benchmark: 40, 50, 60 recursive update steps. No other sensitivity analyses are considered canonical at contract freeze."
+  },
+  "scientific_purpose": "Freeze the canonical public recommender benchmark contract so that dataset identity, recommender engine identity, collapse definition, equal-FP comparator families, and robustness horizons cannot drift during calibration or manuscript preparation."
+}

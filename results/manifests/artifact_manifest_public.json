@@ -1,0 +1,22 @@
+{
+  "artifact_set": "loopzero-paper-public",
+  "version": "0.1.0",
+  "entries": [
+    {
+      "path": "results/frozen/table1_domains.csv",
+      "sha256": "161ba7f666d554a0bc374ba172ab3b157038839f4528c8d46d626a4d11fdb5a6"
+    },
+    {
+      "path": "results/frozen/table2_equal_fp.csv",
+      "sha256": "7d241027afa4d89a34352dbf9ffdd56d628d820471e9e53327f739d2de05f35f"
+    },
+    {
+      "path": "results/frozen/table_s1_thresholds_public.csv",
+      "sha256": "e070af49dbebf25ac184f40cc9a35fe282d153d9de0cba96d708a6258c83081a"
+    },
+    {
+      "path": "results/frozen/fig3_leadtime_source.csv",
+      "sha256": "106428a5175b702ff7301e4063e027599f027abcb4aa41b5a5ed6372770dc288"
+    }
+  ]
+}

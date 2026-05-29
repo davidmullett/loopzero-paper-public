@@ -1,0 +1,42 @@
+{
+  "state_id": "witness_direction_bridge_state_v3",
+  "created_utc": "2026-04-22T13:07:59.417171+00:00",
+  "freeze_dir": "results/frozen/bridge/witness_direction_bridge_state_v3__20260422T130759Z",
+  "files": [
+    {
+      "filename": "witness_direction_table_v3.csv",
+      "source_path": "results/rendered/bridge/witness_direction_table_v3.csv",
+      "frozen_path": "results/frozen/bridge/witness_direction_bridge_state_v3__20260422T130759Z/witness_direction_table_v3.csv",
+      "sha256": "5e42acbce7ce5a0671cb4bbda313751c592ed0222c600baa5b012174a45b0e97",
+      "size_bytes": 1937
+    },
+    {
+      "filename": "witness_direction_table_v3.md",
+      "source_path": "results/rendered/bridge/witness_direction_table_v3.md",
+      "frozen_path": "results/frozen/bridge/witness_direction_bridge_state_v3__20260422T130759Z/witness_direction_table_v3.md",
+      "sha256": "dd459bc0b5c8dbd37a93db02c6f4f0c146c89aa9172b5ae3fa219e25855d3b39",
+      "size_bytes": 2792
+    },
+    {
+      "filename": "LOCK_NOTE.md",
+      "source_path": "generated_by_analysis/13bc_freeze_witness_direction_bridge_state_v3.py",
+      "frozen_path": "results/frozen/bridge/witness_direction_bridge_state_v3__20260422T130759Z/LOCK_NOTE.md",
+      "sha256": "48390a8aae393644087f8bf57a2e6739369882f13ccacfa830f5dcbe1d8a357f",
+      "size_bytes": 1765
+    },
+    {
+      "filename": "MANUSCRIPT_NOTE.md",
+      "source_path": "generated_by_analysis/13bc_freeze_witness_direction_bridge_state_v3.py",
+      "frozen_path": "results/frozen/bridge/witness_direction_bridge_state_v3__20260422T130759Z/MANUSCRIPT_NOTE.md",
+      "sha256": "843a40fb3b618bcbaa5ed0b9b59f18cb0ee0181d7c5ea4b4407170dd5b8bab31",
+      "size_bytes": 1384
+    },
+    {
+      "filename": "witness_direction_bridge_state_v3__LATEST.txt",
+      "source_path": "generated_by_analysis/13bc_freeze_witness_direction_bridge_state_v3.py",
+      "frozen_path": "results/frozen/bridge/witness_direction_bridge_state_v3__LATEST.txt",
+      "sha256": "b7fec821720c55f3a613310f55409c0dcb1ee85ef02e553c6ee2f1b9170fc2ba",
+      "size_bytes": 74
+    }
+  ]
+}

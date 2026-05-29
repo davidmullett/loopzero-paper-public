@@ -1,0 +1,7 @@
+Family,Accepted,Nearest FP,Nearest nontrivial FP,Interpretation
+Matrix Profile,no,0.013670,0.013670,below-band near miss
+Variance EWS,no,0.000000,0.712513,trivial-silent nearest; nontrivial severe overfire
+AC1,no,0.768454,0.768454,severe control overfire
+CUSUM,no,0.751840,0.751840,severe control overfire
+Page-Hinkley,no,0.768454,0.768454,severe control overfire
+Permutation Entropy,no,1.000000,1.000000,severe control overfire

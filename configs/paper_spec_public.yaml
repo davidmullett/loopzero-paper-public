@@ -1,0 +1,54 @@
+spec_name: loopzero-paper-public
+version: 0.1.0
+
+scope:
+  mode: publication-complete-production-incomplete
+  purpose: reproduce published analyses and figures only
+
+predicate:
+  witness_classes:
+    - diversity
+    - self_reinforcement
+    - gain
+  publication_window_family: [32, 64, 128, 256]
+  threshold_disclosure: coarsened_publication_grade
+  notes: >
+    Exact predicate tolerances and production threshold maps are not disclosed
+    in this public research package. Publication-facing threshold regimes are
+    summarized in results/frozen/table_s1_thresholds_public.csv.
+
+benchmark:
+  policy: equal-false-positive
+  target_fp: 0.05
+  acceptable_band: [0.03, 0.07]
+  baseline_families:
+    - variance
+    - ac1
+  windows: [32, 64, 128, 256]
+
+artifacts:
+  frozen_outputs:
+    - results/frozen/table1_domains.csv
+    - results/frozen/table2_equal_fp.csv
+    - results/frozen/table_s1_thresholds_public.csv
+    - results/frozen/fig3_leadtime_source.csv
+  manifests:
+    - results/manifests/artifact_manifest_public.json
+    - results/manifests/checksums.txt
+
+disclosure:
+  threshold_policy: coarsened_publication_grade
+  excludes:
+    - production_services
+    - deployment_infrastructure
+    - live_monitoring
+    - gate_controller
+    - replay_verifier_production_stack
+    - anti_gaming_logic
+    - calibration_ladders_beyond_paper
+    - tie_break_logic
+    - raw_private_sidecars
+    - internal_audit_logs
+    - family2_sensitive_adapter_contracts
+    - exact_production_configs
+    - exact_parameter_files

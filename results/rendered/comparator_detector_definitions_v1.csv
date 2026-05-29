@@ -1,0 +1,7 @@
+detector_family,str,Detector key
+family_group,str,classical_ews | change_detection | pattern_anomaly | entropy_complexity
+score_name,str,Human-readable score name
+score_formula_short,str,Compact formula description
+threshold_rule,str,Thresholding method
+gating_rule,str,Gating method
+parameter_grid_json,str,Serialized parameter grid

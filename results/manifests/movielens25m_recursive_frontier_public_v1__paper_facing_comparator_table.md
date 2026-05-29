@@ -1,0 +1,8 @@
+| family_group | family_display | n_configs | n_available_configs | n_accepted_configs | accepted_under_equal_fp | nearest_config_id | nearest_control_fp | nearest_band_distance | nearest_event_alarm_rate | nearest_nontrivial_flag | nearest_nontrivial_config_id | nearest_nontrivial_control_fp | nearest_nontrivial_band_distance | nearest_nontrivial_event_alarm_rate |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| fast | Variance EWS | 15 | 15 | 0 | False | variance_ews__a92c1715 | 0.0 | 0.03 | 0.0 | False | variance_ews__1a27323c | 0.7125131440588854 | 0.6425131440588854 | 1.0 |
+| fast | AC1 | 15 | 15 | 0 | False | ac1__9c410aa4 | 0.7684542586750789 | 0.6984542586750788 | 1.0 | True | ac1__9c410aa4 | 0.7684542586750789 | 0.6984542586750788 | 1.0 |
+| fast | CUSUM | 15 | 15 | 0 | False | cusum__d0ad25c6 | 0.7518401682439537 | 0.6818401682439537 | 1.0 | True | cusum__d0ad25c6 | 0.7518401682439537 | 0.6818401682439537 | 1.0 |
+| fast | Page-Hinkley | 15 | 15 | 0 | False | page_hinkley__1a3eb752 | 0.7684542586750789 | 0.6984542586750788 | 1.0 | True | page_hinkley__1a3eb752 | 0.7684542586750789 | 0.6984542586750788 | 1.0 |
+| slow | Matrix Profile | 25 | 25 | 0 | False | matrix_profile__44b81bd6 | 0.0136698212407991 | 0.0163301787592008 | 0.1106677158273381 | True | matrix_profile__44b81bd6 | 0.0136698212407991 | 0.0163301787592008 | 0.1106677158273381 |
+| slow | Permutation Entropy | 20 | 20 | 0 | False | permutation_entropy__14168dce | 1.0 | 0.93 | 1.0 | True | permutation_entropy__14168dce | 1.0 | 0.93 | 1.0 |

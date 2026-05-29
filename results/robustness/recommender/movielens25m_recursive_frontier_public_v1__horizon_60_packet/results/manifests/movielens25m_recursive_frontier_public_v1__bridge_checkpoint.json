@@ -1,0 +1,67 @@
+{
+  "benchmark_counts": {
+    "n_control_units": 3996,
+    "n_event_units": 36343,
+    "n_excluded_units": 122202,
+    "n_included_units": 40339,
+    "n_total_users_processed": 162541
+  },
+  "benchmark_freeze_holds": true,
+  "benchmark_id": "movielens25m_recursive_frontier_public_v1",
+  "bridge_checkpoint_sha256": "a36268a1f2424f501544da652e8d2a23f9bb5d90505c219393ea45222e71ad1a",
+  "checkpoint_note": {
+    "authority_note": "Formal bridge decisions for robustness and manuscript use must be taken from bridge_check.py, not this checkpoint artifact.",
+    "manuscript_status": "Do not treat this telemetry checkpoint as a manuscript-final bridge decision.",
+    "summary": "Benchmark freeze holds and telemetry completed. This artifact records an exploratory telemetry checkpoint only."
+  },
+  "checkpoint_status": "telemetry_checkpoint_only",
+  "decision": "PASS",
+  "frozen_contract": {
+    "contract_equal_fp_band": {
+      "lower": 0.03,
+      "upper": 0.07
+    },
+    "engine_hash": "56c1cff225d60c09"
+  },
+  "frozen_inputs": {
+    "benchmark_freeze": {
+      "benchmark_freeze_sha256": "b59a54d1dd1944eb810d731db58cd7843428e920f1ff4208c4b13aca9cf4a86c",
+      "path": "/Users/david/Dev/loopzero-paper-public/results/frozen/movielens25m_recursive_frontier_public_v1__benchmark_freeze_state.json",
+      "sha256": "1cbb2881becfd38bd2c6af1b0f9a3636ee3298855898f77b1eb90c9c9c57232f"
+    },
+    "telemetry_summary": {
+      "path": "/Users/david/Dev/loopzero-paper-public/results/manifests/movielens25m_recursive_frontier_public_v1__telemetry_summary.json",
+      "sha256": "df88dd7f43712d49ec632a7ede72491b97c90e8a1f9fbe6af9469b06ef6a9044"
+    }
+  },
+  "next_steps": [
+    "Use bridge_check.py as the formal bridge decision artifact.",
+    "Use gate2_check.py for fast-family adjudication.",
+    "Use merged comparator summaries and the paper-facing table for comparator claims.",
+    "Treat this checkpoint as descriptive telemetry provenance only."
+  ],
+  "proxy_alignment": {
+    "G_aligned": true,
+    "aligned_count": 3,
+    "delta_aligned": true,
+    "p_aligned": true
+  },
+  "proxy_values": {
+    "precollapse_events": {
+      "G_mean": 0.06058198642809157,
+      "delta_mean": 0.5997551700069771,
+      "p_mean": 0.208219100465888
+    },
+    "reference_controls": {
+      "G_mean": 0.029034045700712365,
+      "delta_mean": 0.6010488987900375,
+      "p_mean": 0.20714670695320847
+    }
+  },
+  "recommended_action": "Bridge appears directionally aligned under the current telemetry package. Proceed to a formal bridge-check stage and, if confirmed, then to fast-family comparator calibration.",
+  "stage": "bridge_checkpoint",
+  "telemetry_completed": true,
+  "telemetry_window": {
+    "precollapse_window": 10
+  }
+}

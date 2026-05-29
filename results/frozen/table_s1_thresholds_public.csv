@@ -1,0 +1,5 @@
+scope,diversity_regime,self_reinforcement_regime,gain_regime,notes
+cross-domain publication summary,0.15-0.30,0.25-0.45,1.00-1.10,"Coarsened publication-grade ranges supporting threshold stability without disclosing production tuning surfaces."
+adaptive decision systems,0.15-0.30,0.25-0.45,1.00-1.10,"Publication-safe summary across toy, LinUCB, and epsilon-greedy analyses."
+recommender and market systems,0.15-0.30,0.25-0.45,1.00-1.10,"Publication-safe summary across MovieLens and markets analyses."
+model replay and cognition,0.15-0.30,0.25-0.45,1.00-1.10,"Publication-safe summary across recursive model replay and cognition analyses."

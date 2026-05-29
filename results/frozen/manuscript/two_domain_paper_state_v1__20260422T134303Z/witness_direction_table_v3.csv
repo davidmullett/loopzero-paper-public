@@ -1,0 +1,10 @@
+domain,benchmark_id,window_definition,late_window_min,n_event_units,n_control_units,witness,event_mean,control_mean,event_minus_control,expected_direction,observed_relation,directionally_consistent
+markets,volmageddon_covid_public_v2,canonical_unit_windows_last_30min,30.0,16,38,G,2099335.4537029797,2.7299914063740918,2099332.7237115735,event_gt_control,event > control,1
+markets,volmageddon_covid_public_v2,canonical_unit_windows_last_30min,30.0,16,38,p,0.014280913978494618,0.010738539898132426,0.0035423740803621918,event_gt_control,event > control,1
+markets,volmageddon_covid_public_v2,canonical_unit_windows_last_30min,30.0,16,38,delta_change,-0.05744060066418613,-0.012161351879377894,-0.04527924878480824,event_lt_control,event < control,1
+markets,volmageddon_covid_public_v2,canonical_unit_windows_last_60min,60.0,16,38,G,7808592.994797963,589125.63252009,7219467.362277873,event_gt_control,event > control,1
+markets,volmageddon_covid_public_v2,canonical_unit_windows_last_60min,60.0,16,38,p,0.013652838184454109,0.00855622663215415,0.005096611552299958,event_gt_control,event > control,1
+markets,volmageddon_covid_public_v2,canonical_unit_windows_last_60min,60.0,16,38,delta_change,0.01253372638014999,-0.018570951311382113,0.031104677691532103,event_lt_control,event >= control,0
+recommender,movielens25m_recursive_frontier_public_v1__canonical_h50,canonical_50step_precollapse_units,,35584,4755,G,0.060664234518354336,0.05102939121866564,0.009634843299688695,event_gt_control,event > control,1
+recommender,movielens25m_recursive_frontier_public_v1__canonical_h50,canonical_50step_precollapse_units,,35584,4755,p,0.20948010439987164,0.19791730860643164,0.011562795793439995,event_gt_control,event > control,1
+recommender,movielens25m_recursive_frontier_public_v1__canonical_h50,canonical_50step_precollapse_units,,35584,4755,delta,0.5986624304456841,0.6061128024059365,-0.007450371960252333,event_lt_control,event < control,1

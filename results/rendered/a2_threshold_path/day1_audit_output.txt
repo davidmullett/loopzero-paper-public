@@ -1,0 +1,44 @@
+================================================================================
+A2 DAY 1 AUDIT — threshold-path interpolation feasibility
+FPR sweep targets: {0.01, 0.025, 0.05, 0.075, 0.10}
+================================================================================
+
+=== markets h=nan ===
+  ac1_ews               :  25 unique FPs | range=[0.1316, 0.9211] | 0/5 sweep targets bracketed; 5 below min
+  cusum                 :  15 unique FPs | range=[0.3684, 0.8158] | 0/5 sweep targets bracketed; 5 below min
+  page_hinkley          :   6 unique FPs | range=[0.6842, 0.8158] | 0/5 sweep targets bracketed; 5 below min
+  variance_ews          :  20 unique FPs | range=[0.4474, 1.0000] | 0/5 sweep targets bracketed; 5 below min
+
+=== recsys h=40.0 ===
+  ac1                   :   3 unique FPs | range=[0.6410, 0.6928] | 0/5 sweep targets bracketed; 5 below min
+  cusum                 :   4 unique FPs | range=[0.6111, 0.6928] | 0/5 sweep targets bracketed; 5 below min
+  matrix_profile        :   2 unique FPs | range=[0.0236, 0.7164] | 4/5 sweep targets bracketed; 1 below min
+  page_hinkley          :   4 unique FPs | range=[0.6410, 0.7164] | 0/5 sweep targets bracketed; 5 below min
+  permutation_entropy   :   1 unique FPs | range=[N/A, N/A] | insufficient data: 1 unique FPs
+  variance_ews          :   6 unique FPs | range=[0.0000, 0.6928] | 5/5 sweep targets bracketed
+
+=== recsys h=60.0 ===
+  ac1                   :   3 unique FPs | range=[0.8669, 0.8851] | 0/5 sweep targets bracketed; 5 below min
+  cusum                 :   4 unique FPs | range=[0.8584, 0.8851] | 0/5 sweep targets bracketed; 5 below min
+  matrix_profile        :   2 unique FPs | range=[0.0088, 0.8939] | 5/5 sweep targets bracketed
+  page_hinkley          :   4 unique FPs | range=[0.8669, 0.8939] | 0/5 sweep targets bracketed; 5 below min
+  permutation_entropy   :   1 unique FPs | range=[N/A, N/A] | insufficient data: 1 unique FPs
+  variance_ews          :   6 unique FPs | range=[0.0000, 0.8851] | 5/5 sweep targets bracketed
+
+================================================================================
+h=50 canonical (selected markers only)
+================================================================================
+  ac1                   : 1 markers at FP=[0.7685], TPR=[1.0]
+  cusum                 : 1 markers at FP=[0.7518], TPR=[1.0]
+  matrix_profile        : 1 markers at FP=[0.0137], TPR=[0.1107]
+  page_hinkley          : 1 markers at FP=[0.7685], TPR=[1.0]
+  permutation_entropy   : 1 markers at FP=[1.0], TPR=[1.0]
+  variance_ews          : 2 markers at FP=[0.0, 0.7125], TPR=[0.0, 1.0]
+
+================================================================================
+LOOPZERO bracketing at current q-grid {90, 95, 99}, k=3
+================================================================================
+  markets  h=nan: q=[90.0, 95.0, 99.0] | fp=[0.0, 0.0, 0.0] | tpr=[0.0, 0.0, 0.0] | bracketed: 0/5 (all at fp=0)
+  recsys   h=40.0: q=[90.0, 95.0, 99.0] | fp=[0.0, 0.0, 0.0] | tpr=[0.0, 0.0, 0.0] | bracketed: 0/5 (all at fp=0)
+  recsys   h=50.0: q=[90.0, 95.0, 99.0] | fp=[0.0, 0.0, 0.0] | tpr=[0.0, 0.0, 0.0] | bracketed: 0/5 (all at fp=0)
+  recsys   h=60.0: q=[90.0, 95.0, 99.0] | fp=[0.0, 0.0, 0.0] | tpr=[0.0, 0.0, 0.0] | bracketed: 0/5 (all at fp=0)

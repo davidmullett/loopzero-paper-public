@@ -1,0 +1,101 @@
+{
+  "freeze_name": "markets_slow_fullgrid_state_v1",
+  "freeze_basename": "markets_slow_fullgrid_state_v1",
+  "created_utc": "2026-04-18T16:20:32.043873+00:00",
+  "parent_fast_freeze": "results/frozen/comparators/markets_state_v1",
+  "description": "Canonical full-grid slow comparator freeze for markets benchmark.",
+  "collision_proof": true,
+  "files": [
+    {
+      "filename": "markets_matrix_profile_fullgrid_calibration_v1.csv",
+      "source_path": "results/rendered/comparators/markets_matrix_profile_fullgrid_calibration_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/markets_matrix_profile_fullgrid_calibration_v1.csv",
+      "sha256": "c08b5e4bcea1443bbd0a4f53baa38325492eb33f394603c19f558e83d2ad1244",
+      "size_bytes": 20859
+    },
+    {
+      "filename": "markets_permutation_entropy_fullgrid_calibration_v1.csv",
+      "source_path": "results/rendered/comparators/markets_permutation_entropy_fullgrid_calibration_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/markets_permutation_entropy_fullgrid_calibration_v1.csv",
+      "sha256": "730e481b40b368f51d415fcf27b66e6905dbd0ba10ea6b1b90867d0bacba166b",
+      "size_bytes": 170579
+    },
+    {
+      "filename": "markets_slow_comparator_calibration_fullgrid_v1.csv",
+      "source_path": "results/rendered/comparators/markets_slow_comparator_calibration_fullgrid_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/markets_slow_comparator_calibration_fullgrid_v1.csv",
+      "sha256": "55e2eb8c9f7c437534bed8fe663ca5f64b392b36e75562e63618cce458023dfc",
+      "size_bytes": 189628
+    },
+    {
+      "filename": "comparator_input_manifest_v1.csv",
+      "source_path": "results/rendered/comparators/comparator_input_manifest_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/comparator_input_manifest_v1.csv",
+      "sha256": "9c005e8b92013c59d3924b92425ee02ce385b2288c28691391d36ca891e3ccb7",
+      "size_bytes": 768
+    },
+    {
+      "filename": "comparator_acceptance_matrix_v1.csv",
+      "source_path": "results/rendered/comparators/comparator_acceptance_matrix_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/comparator_acceptance_matrix_v1.csv",
+      "sha256": "f6d248f2e65f241e5731a488052b8372810ddc58d24df8e6251161c75d990547",
+      "size_bytes": 412781
+    },
+    {
+      "filename": "comparator_unavailable_cases_v1.csv",
+      "source_path": "results/rendered/comparators/comparator_unavailable_cases_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/comparator_unavailable_cases_v1.csv",
+      "sha256": "845777736f036b56a31e9f1d4aee9d710ebdf9d9d48f653e4da0070579920258",
+      "size_bytes": 1836
+    },
+    {
+      "filename": "markets_comparator_state_summary_v1.csv",
+      "source_path": "results/rendered/comparators/markets_comparator_state_summary_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/markets_comparator_state_summary_v1.csv",
+      "sha256": "04ef874623a0787097b69576e22902c0a2885515541d4cc4f98dc842bbb2c5d6",
+      "size_bytes": 669
+    },
+    {
+      "filename": "markets_state_v1_freeze_manifest.json",
+      "source_path": "results/frozen/comparators/markets_state_v1/freeze_manifest.json",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/markets_state_v1_freeze_manifest.json",
+      "sha256": "9c19d25544b55b281f10923918d6c58ecf0fc40ed27f8f02eaca236c2a9133f5",
+      "size_bytes": 757
+    },
+    {
+      "filename": "markets_state_v1_LOCK_NOTE.md",
+      "source_path": "results/frozen/comparators/markets_state_v1/LOCK_NOTE.md",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/markets_state_v1_LOCK_NOTE.md",
+      "sha256": "aefe45475ff32d209405af507dd26e47b3d1dae494264209e6ed854f11b7ac28",
+      "size_bytes": 964
+    },
+    {
+      "filename": "markets_matrix_profile_fullgrid_runlog_v1.txt",
+      "source_path": "results/rendered/comparators/markets_matrix_profile_fullgrid_runlog_v1.txt",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/markets_matrix_profile_fullgrid_runlog_v1.txt",
+      "sha256": "8ed5551ef57e57a313b15165040a4223a1b0a7bb2c88d7c1d0a97df9f12114d3",
+      "size_bytes": 16716
+    },
+    {
+      "filename": "markets_permutation_entropy_fullgrid_runlog_v1.txt",
+      "source_path": "results/rendered/comparators/markets_permutation_entropy_fullgrid_runlog_v1.txt",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/markets_permutation_entropy_fullgrid_runlog_v1.txt",
+      "sha256": "d7a826f0367094616d1ac012920eb661323adee6d12913f477f1eba37c12dfdf",
+      "size_bytes": 45167
+    },
+    {
+      "filename": "LOCK_NOTE.md",
+      "source_path": "generated_by_analysis/13ak_freeze_markets_comparator_slow_fullgrid_state_v1.py",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/LOCK_NOTE.md",
+      "sha256": "6868e507e235d3420651368e83da129df9b4a9290acf047abd27c8287852903a",
+      "size_bytes": 1078
+    },
+    {
+      "filename": "markets_slow_fullgrid_state_v1__LATEST.txt",
+      "source_path": "generated_by_analysis/13ak_freeze_markets_comparator_slow_fullgrid_state_v1.py",
+      "frozen_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1__LATEST.txt",
+      "sha256": "eabe5f3cc9820adeaa125e49a1b5d1914247322e3af108c6b0462ac10b28bbf0",
+      "size_bytes": 58
+    }
+  ]
+}

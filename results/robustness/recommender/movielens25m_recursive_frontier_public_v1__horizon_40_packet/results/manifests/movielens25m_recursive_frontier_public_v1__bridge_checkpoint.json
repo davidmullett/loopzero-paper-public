@@ -1,0 +1,67 @@
+{
+  "benchmark_counts": {
+    "n_control_units": 6562,
+    "n_event_units": 33777,
+    "n_excluded_units": 122202,
+    "n_included_units": 40339,
+    "n_total_users_processed": 162541
+  },
+  "benchmark_freeze_holds": true,
+  "benchmark_id": "movielens25m_recursive_frontier_public_v1",
+  "bridge_checkpoint_sha256": "3dd59db7c3eb2c0a5d654948039ef0a0c0fb0f3cadf387d35b4868b68824ab02",
+  "checkpoint_note": {
+    "authority_note": "Formal bridge decisions for robustness and manuscript use must be taken from bridge_check.py, not this checkpoint artifact.",
+    "manuscript_status": "Do not treat this telemetry checkpoint as a manuscript-final bridge decision.",
+    "summary": "Benchmark freeze holds and telemetry completed. This artifact records an exploratory telemetry checkpoint only."
+  },
+  "checkpoint_status": "telemetry_checkpoint_only",
+  "decision": "PARTIAL",
+  "frozen_contract": {
+    "contract_equal_fp_band": {
+      "lower": 0.03,
+      "upper": 0.07
+    },
+    "engine_hash": "56c1cff225d60c09"
+  },
+  "frozen_inputs": {
+    "benchmark_freeze": {
+      "benchmark_freeze_sha256": "b7a8cae19dd8a339fc1f6a1ed59c164d9b6cd4350302771c7d0593605e6a8604",
+      "path": "/Users/david/Dev/loopzero-paper-public/results/frozen/movielens25m_recursive_frontier_public_v1__benchmark_freeze_state.json",
+      "sha256": "3efe87843331f596244a98fd4ab692fe12e4107393d41c929f38f7881d82af9b"
+    },
+    "telemetry_summary": {
+      "path": "/Users/david/Dev/loopzero-paper-public/results/manifests/movielens25m_recursive_frontier_public_v1__telemetry_summary.json",
+      "sha256": "5f7d24760682109b3e5653baf8cc8a7616417b598ef2698b0cb32bc61244a6d2"
+    }
+  },
+  "next_steps": [
+    "Use bridge_check.py as the formal bridge decision artifact.",
+    "Use gate2_check.py for fast-family adjudication.",
+    "Use merged comparator summaries and the paper-facing table for comparator claims.",
+    "Treat this checkpoint as descriptive telemetry provenance only."
+  ],
+  "proxy_alignment": {
+    "G_aligned": false,
+    "aligned_count": 2,
+    "delta_aligned": true,
+    "p_aligned": true
+  },
+  "proxy_values": {
+    "precollapse_events": {
+      "G_mean": 0.06085479581127507,
+      "delta_mean": 0.5968521773531568,
+      "p_mean": 0.2127795290931448
+    },
+    "reference_controls": {
+      "G_mean": 0.08175988899853573,
+      "delta_mean": 0.6084493348409566,
+      "p_mean": 0.1869710246859902
+    }
+  },
+  "recommended_action": "Benchmark freeze holds and telemetry completed, but the theorem-to-observable bridge is only partially aligned. Treat this as an exploratory checkpoint, not manuscript-final, and refine the proxy definitions before comparator calibration.",
+  "stage": "bridge_checkpoint",
+  "telemetry_completed": true,
+  "telemetry_window": {
+    "precollapse_window": 10
+  }
+}

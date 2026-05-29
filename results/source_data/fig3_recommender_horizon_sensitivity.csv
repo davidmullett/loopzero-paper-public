@@ -1,0 +1,4 @@
+label,horizon,bridge_decision,bridge_aligned_count,bridge_all_aligned,accepted_comparator_count,no_comparator_accepted,nearest_family,nearest_control_fp,nearest_band_distance,nearest_event_alarm_rate
+horizon_40,40,PARTIAL,2,False,0,True,matrix_profile,0.02362084730265163,0.006379152697348369,0.11658821091275128
+canonical_50,50,PASS,3,True,0,True,matrix_profile,0.013669821240799159,0.016330178759200842,0.11066771582733813
+horizon_60,60,PASS,3,True,0,True,matrix_profile,0.008758758758758759,0.02124124124124124,0.10835649230938557

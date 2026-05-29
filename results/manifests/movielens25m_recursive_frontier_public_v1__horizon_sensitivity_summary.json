@@ -1,0 +1,93 @@
+{
+  "benchmark_id": "movielens25m_recursive_frontier_public_v1",
+  "horizon_sensitivity_summary_sha256": "29dd7d172c7e2b741b3bb7ddd41a5f62d9a9cc55bc444f39cbfd2f0362ba7c46",
+  "horizons": [
+    {
+      "accepted_comparator_count": 0,
+      "benchmark_freeze_sha256": "daa7b8fa84178a575cfc1b484266b9865d32d7ed06df8580ecb15df9c22404ba",
+      "bridge_aligned_count": 3,
+      "bridge_all_aligned": true,
+      "bridge_decision": "PASS",
+      "bridge_recommended_action": "Bridge check passes under the current telemetry package. Proceed to fast-family comparator calibration.",
+      "horizon": 50,
+      "label": "canonical_50",
+      "no_comparator_accepted": true,
+      "overall_nearest": {
+        "band_distance": 0.016330178759200842,
+        "config_id": "matrix_profile__44b81bd6",
+        "control_fp": 0.013669821240799159,
+        "event_alarm_rate": 0.11066771582733813,
+        "family": "matrix_profile",
+        "nontrivial": true
+      },
+      "overall_nearest_nontrivial": {
+        "band_distance": 0.016330178759200842,
+        "config_id": "matrix_profile__44b81bd6",
+        "control_fp": 0.013669821240799159,
+        "event_alarm_rate": 0.11066771582733813,
+        "family": "matrix_profile"
+      }
+    },
+    {
+      "accepted_comparator_count": 0,
+      "benchmark_freeze_sha256": "b7a8cae19dd8a339fc1f6a1ed59c164d9b6cd4350302771c7d0593605e6a8604",
+      "bridge_aligned_count": 2,
+      "bridge_all_aligned": false,
+      "bridge_decision": "PARTIAL",
+      "bridge_recommended_action": "Bridge check is only partially aligned. Refine telemetry proxies before comparator calibration.",
+      "horizon": 40,
+      "label": "horizon_40",
+      "no_comparator_accepted": true,
+      "overall_nearest": {
+        "band_distance": 0.006379152697348369,
+        "config_id": "matrix_profile__44b81bd6",
+        "control_fp": 0.02362084730265163,
+        "event_alarm_rate": 0.11658821091275128,
+        "family": "matrix_profile",
+        "nontrivial": true
+      },
+      "overall_nearest_nontrivial": {
+        "band_distance": 0.006379152697348369,
+        "config_id": "matrix_profile__44b81bd6",
+        "control_fp": 0.02362084730265163,
+        "event_alarm_rate": 0.11658821091275128,
+        "family": "matrix_profile"
+      }
+    },
+    {
+      "accepted_comparator_count": 0,
+      "benchmark_freeze_sha256": "b59a54d1dd1944eb810d731db58cd7843428e920f1ff4208c4b13aca9cf4a86c",
+      "bridge_aligned_count": 3,
+      "bridge_all_aligned": true,
+      "bridge_decision": "PASS",
+      "bridge_recommended_action": "Bridge check passes under the current telemetry package. Proceed to fast-family comparator calibration.",
+      "horizon": 60,
+      "label": "horizon_60",
+      "no_comparator_accepted": true,
+      "overall_nearest": {
+        "band_distance": 0.02124124124124124,
+        "config_id": "matrix_profile__44b81bd6",
+        "control_fp": 0.008758758758758759,
+        "event_alarm_rate": 0.10835649230938557,
+        "family": "matrix_profile",
+        "nontrivial": true
+      },
+      "overall_nearest_nontrivial": {
+        "band_distance": 0.02124124124124124,
+        "config_id": "matrix_profile__44b81bd6",
+        "control_fp": 0.008758758758758759,
+        "event_alarm_rate": 0.10835649230938557,
+        "family": "matrix_profile"
+      }
+    }
+  ],
+  "stage": "merge_horizon_sensitivity_results",
+  "summary": {
+    "canonical_accepted_comparators": 0,
+    "canonical_bridge_decision": "PASS",
+    "h40_accepted_comparators": 0,
+    "h40_bridge_decision": "PARTIAL",
+    "h60_accepted_comparators": 0,
+    "h60_bridge_decision": "PASS"
+  }
+}

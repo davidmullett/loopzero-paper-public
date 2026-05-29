@@ -1,0 +1,46 @@
+family,config_id,params_json,series_name,available,unavailable_reason,required_min_len,observed_min_len,control_alarm_count,event_alarm_count,n_control_users,n_event_users,control_fp,event_alarm_rate,accepted,nontrivial,band_distance
+matrix_profile,matrix_profile__80f9f82d,"{""threshold"": 0.2, ""window"": 4}",miss_run_fraction,True,,5,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__da0929f7,"{""threshold"": 0.3, ""window"": 4}",miss_run_fraction,True,,5,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__59b514e5,"{""threshold"": 0.4, ""window"": 4}",miss_run_fraction,True,,5,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__92508e40,"{""threshold"": 0.5, ""window"": 4}",miss_run_fraction,True,,5,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__4d16d621,"{""threshold"": 0.6, ""window"": 4}",miss_run_fraction,True,,5,15,155,0,6562,33777,0.02362084730265163,0.0,False,True,0.006379152697348369
+matrix_profile,matrix_profile__a745f39e,"{""threshold"": 0.2, ""window"": 5}",miss_run_fraction,True,,6,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__9e33487d,"{""threshold"": 0.3, ""window"": 5}",miss_run_fraction,True,,6,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__c853a0ff,"{""threshold"": 0.4, ""window"": 5}",miss_run_fraction,True,,6,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__37779b8a,"{""threshold"": 0.5, ""window"": 5}",miss_run_fraction,True,,6,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__58795dcc,"{""threshold"": 0.6, ""window"": 5}",miss_run_fraction,True,,6,15,155,0,6562,33777,0.02362084730265163,0.0,False,True,0.006379152697348369
+matrix_profile,matrix_profile__1a8710a6,"{""threshold"": 0.2, ""window"": 6}",miss_run_fraction,True,,7,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__a0362fca,"{""threshold"": 0.3, ""window"": 6}",miss_run_fraction,True,,7,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__3d1a96f7,"{""threshold"": 0.4, ""window"": 6}",miss_run_fraction,True,,7,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__1333b207,"{""threshold"": 0.5, ""window"": 6}",miss_run_fraction,True,,7,15,155,0,6562,33777,0.02362084730265163,0.0,False,True,0.006379152697348369
+matrix_profile,matrix_profile__24bace0b,"{""threshold"": 0.6, ""window"": 6}",miss_run_fraction,True,,7,15,155,0,6562,33777,0.02362084730265163,0.0,False,True,0.006379152697348369
+matrix_profile,matrix_profile__048884e7,"{""threshold"": 0.2, ""window"": 7}",miss_run_fraction,True,,8,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__45f61deb,"{""threshold"": 0.3, ""window"": 7}",miss_run_fraction,True,,8,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__24458379,"{""threshold"": 0.4, ""window"": 7}",miss_run_fraction,True,,8,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__a1969c5e,"{""threshold"": 0.5, ""window"": 7}",miss_run_fraction,True,,8,15,155,0,6562,33777,0.02362084730265163,0.0,False,True,0.006379152697348369
+matrix_profile,matrix_profile__6508e72a,"{""threshold"": 0.6, ""window"": 7}",miss_run_fraction,True,,8,15,155,0,6562,33777,0.02362084730265163,0.0,False,True,0.006379152697348369
+matrix_profile,matrix_profile__5e970762,"{""threshold"": 0.2, ""window"": 8}",miss_run_fraction,True,,9,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__5de00043,"{""threshold"": 0.3, ""window"": 8}",miss_run_fraction,True,,9,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__54481a30,"{""threshold"": 0.4, ""window"": 8}",miss_run_fraction,True,,9,15,4701,33777,6562,33777,0.7163974398049375,1.0,False,True,0.6463974398049375
+matrix_profile,matrix_profile__6c8537ca,"{""threshold"": 0.5, ""window"": 8}",miss_run_fraction,True,,9,15,155,3938,6562,33777,0.02362084730265163,0.11658821091275128,False,True,0.006379152697348369
+matrix_profile,matrix_profile__44b81bd6,"{""threshold"": 0.6, ""window"": 8}",miss_run_fraction,True,,9,15,155,3938,6562,33777,0.02362084730265163,0.11658821091275128,False,True,0.006379152697348369
+permutation_entropy,permutation_entropy__14168dce,"{""delay"": 1, ""order"": 3, ""threshold"": 0.2}",miss_run_fraction,True,,4,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__ca1b3b18,"{""delay"": 1, ""order"": 3, ""threshold"": 0.35}",miss_run_fraction,True,,4,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__3b2013ec,"{""delay"": 1, ""order"": 3, ""threshold"": 0.5}",miss_run_fraction,True,,4,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__27ef1edf,"{""delay"": 1, ""order"": 3, ""threshold"": 0.65}",miss_run_fraction,True,,4,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__47b91390,"{""delay"": 1, ""order"": 3, ""threshold"": 0.8}",miss_run_fraction,True,,4,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__a3457005,"{""delay"": 2, ""order"": 3, ""threshold"": 0.2}",miss_run_fraction,True,,6,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__a5c2c177,"{""delay"": 2, ""order"": 3, ""threshold"": 0.35}",miss_run_fraction,True,,6,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__ca0b4e6d,"{""delay"": 2, ""order"": 3, ""threshold"": 0.5}",miss_run_fraction,True,,6,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__acf1699b,"{""delay"": 2, ""order"": 3, ""threshold"": 0.65}",miss_run_fraction,True,,6,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__55effee5,"{""delay"": 2, ""order"": 3, ""threshold"": 0.8}",miss_run_fraction,True,,6,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__45e93ec9,"{""delay"": 1, ""order"": 4, ""threshold"": 0.2}",miss_run_fraction,True,,5,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__57077864,"{""delay"": 1, ""order"": 4, ""threshold"": 0.35}",miss_run_fraction,True,,5,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__85cadabf,"{""delay"": 1, ""order"": 4, ""threshold"": 0.5}",miss_run_fraction,True,,5,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__642bb0a8,"{""delay"": 1, ""order"": 4, ""threshold"": 0.65}",miss_run_fraction,True,,5,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__207d4f82,"{""delay"": 1, ""order"": 4, ""threshold"": 0.8}",miss_run_fraction,True,,5,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__35d11d16,"{""delay"": 2, ""order"": 4, ""threshold"": 0.2}",miss_run_fraction,True,,8,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__5131dd23,"{""delay"": 2, ""order"": 4, ""threshold"": 0.35}",miss_run_fraction,True,,8,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__f0a4e00f,"{""delay"": 2, ""order"": 4, ""threshold"": 0.5}",miss_run_fraction,True,,8,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__2f376ec5,"{""delay"": 2, ""order"": 4, ""threshold"": 0.65}",miss_run_fraction,True,,8,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999
+permutation_entropy,permutation_entropy__8439a3f3,"{""delay"": 2, ""order"": 4, ""threshold"": 0.8}",miss_run_fraction,True,,8,15,6562,33777,6562,33777,1.0,1.0,False,True,0.9299999999999999

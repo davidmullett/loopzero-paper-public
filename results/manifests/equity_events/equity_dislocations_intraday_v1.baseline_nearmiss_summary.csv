@@ -1,0 +1,5 @@
+family,best_any_config_id,best_any_n_event_success,best_any_n_controls_with_alarm,best_any_control_window_fp_rate,best_any_median_lead_bars,best_fp_close_config_id,best_fp_close_n_event_success,best_fp_close_n_controls_with_alarm,best_fp_close_control_window_fp_rate,best_fp_close_fp_gap,best_fp_close_median_lead_bars
+ac1,ac1_w60_a0.4,2,13,0.8125,370.64166666666665,ac1_w60_a0.6,0,3,0.1875,0.1375,
+cusum,cusum_w16_a0.75_b3.0,2,14,0.875,403.14166666666665,cusum_w16_a0.75_b4.0,1,8,0.5,0.45,201.28333333333333
+page_hinkley,page_hinkley_w16_a0.05_b2.0,2,16,1.0,632.1416666666667,page_hinkley_w16_a0.05_b2.0,2,16,1.0,0.95,632.1416666666667
+variance_z,variance_z_w16_a2.0,2,15,0.9375,430.14166666666665,variance_z_w16_a2.5,1,9,0.5625,0.5125,204.28333333333333

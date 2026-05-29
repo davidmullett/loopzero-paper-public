@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="816">
+<style>text{font-family:Arial,Helvetica,sans-serif;font-size:12px;fill:#222}</style>
+<text x="220" y="20">Figure 3. Lead-time source (publication-grade rendering)</text>
+<line x1="220.0" y1="35" x2="220.0" y2="796" stroke="#e0e0e0" stroke-width="1"/>
+<text x="212.0" y="811">0</text>
+<line x1="443.3009708737864" y1="35" x2="443.3009708737864" y2="796" stroke="#e0e0e0" stroke-width="1"/>
+<text x="435.3009708737864" y="811">100</text>
+<line x1="666.6019417475728" y1="35" x2="666.6019417475728" y2="796" stroke="#e0e0e0" stroke-width="1"/>
+<text x="658.6019417475728" y="811">200</text>
+<line x1="889.9029126213592" y1="35" x2="889.9029126213592" y2="796" stroke="#e0e0e0" stroke-width="1"/>
+<text x="881.9029126213592" y="811">300</text>
+<line x1="1113.2038834951456" y1="35" x2="1113.2038834951456" y2="796" stroke="#e0e0e0" stroke-width="1"/>
+<text x="1105.2038834951456" y="811">400</text>
+<text x="10" y="56">Toy</text>
+<text x="110" y="54">Loopzero</text>
+<rect x="220" y="40" width="734.6601941747573" height="14" fill="#444444"/>
+<text x="960.6601941747573" y="52">329</text>
+<text x="110" y="76">Variance</text>
+<text x="220" y="74">not accepted</text>
+<text x="110" y="98">AC1</text>
+<rect x="220" y="84" width="133.98058252427182" height="14" fill="#BBBBBB"/>
+<text x="359.9805825242718" y="96">60</text>
+<text x="10" y="148">LinUCB</text>
+<text x="110" y="146">Loopzero</text>
+<rect x="220" y="132" width="705.6310679611651" height="14" fill="#444444"/>
+<text x="931.6310679611651" y="144">316</text>
+<text x="110" y="168">Variance</text>
+<text x="220" y="166">not accepted</text>
+<text x="110" y="190">AC1</text>
+<rect x="220" y="176" width="133.98058252427182" height="14" fill="#BBBBBB"/>
+<text x="359.9805825242718" y="188">60</text>
+<text x="10" y="240">Epsilon-greedy</text>
+<text x="110" y="238">Loopzero</text>
+<rect x="220" y="224" width="705.6310679611651" height="14" fill="#444444"/>
+<text x="931.6310679611651" y="236">316</text>
+<text x="110" y="260">Variance</text>
+<text x="220" y="258">not accepted</text>
+<text x="110" y="282">AC1</text>
+<rect x="220" y="268" width="133.98058252427182" height="14" fill="#BBBBBB"/>
+<text x="359.9805825242718" y="280">60</text>
+<text x="10" y="332">MovieLens</text>
+<text x="110" y="330">Loopzero</text>
+<rect x="220" y="316" width="920.0" height="14" fill="#444444"/>
+<text x="1146.0" y="328">412</text>
+<text x="110" y="352">Variance</text>
+<rect x="220" y="338" width="80.38834951456312" height="14" fill="#888888"/>
+<text x="306.3883495145631" y="350">36</text>
+<text x="110" y="374">AC1</text>
+<text x="220" y="372">not accepted</text>
+<text x="10" y="424">Markets</text>
+<text x="110" y="422">Loopzero</text>
+<rect x="220" y="408" width="902.135922330097" height="14" fill="#444444"/>
+<text x="1128.135922330097" y="420">404</text>
+<text x="110" y="444">Variance</text>
+<rect x="220" y="430" width="71.45631067961165" height="14" fill="#888888"/>
+<text x="297.45631067961165" y="442">32</text>
+<text x="110" y="466">AC1</text>
+<text x="220" y="464">not accepted</text>
+<text x="10" y="516">Recursive model replay</text>
+<text x="110" y="514">Loopzero</text>
+<rect x="220" y="500" width="844.0776699029127" height="14" fill="#444444"/>
+<text x="1070.0776699029127" y="512">378</text>
+<text x="110" y="536">Variance</text>
+<rect x="220" y="522" width="69.22330097087377" height="14" fill="#888888"/>
+<text x="295.22330097087377" y="534">31</text>
+<text x="110" y="558">AC1</text>
+<rect x="220" y="544" width="136.2135922330097" height="14" fill="#BBBBBB"/>
+<text x="362.2135922330097" y="556">61</text>
+<text x="10" y="608">Cognition</text>
+<text x="110" y="606">Loopzero</text>
+<rect x="220" y="592" width="801.6504854368932" height="14" fill="#444444"/>
+<text x="1027.6504854368932" y="604">359</text>
+<text x="110" y="628">Variance</text>
+<rect x="220" y="614" width="71.45631067961165" height="14" fill="#888888"/>
+<text x="297.45631067961165" y="626">32</text>
+<text x="110" y="650">AC1</text>
+<rect x="220" y="636" width="131.747572815534" height="14" fill="#BBBBBB"/>
+<text x="357.747572815534" y="648">59</text>
+<text x="10" y="700">Culture</text>
+<text x="110" y="698">Loopzero</text>
+<rect x="220" y="684" width="500.19417475728153" height="14" fill="#444444"/>
+<text x="726.1941747572815" y="696">224</text>
+<text x="110" y="720">Variance</text>
+<text x="220" y="718">not accepted</text>
+<text x="110" y="742">AC1</text>
+<text x="220" y="740">not accepted</text>
+</svg>

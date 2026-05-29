@@ -1,0 +1,61 @@
+{
+  "authoritative_inputs": {
+    "benchmark_freeze_state": {
+      "path": "/Users/david/Dev/loopzero-paper-public/results/frozen/movielens25m_recursive_frontier_public_v1__benchmark_freeze_state.json",
+      "sha256": "050aa725e6608f659b3f7eb103731bb7fbabaa23aeefdc4b11043999b7fed4cf"
+    },
+    "bridge_check": {
+      "path": "/Users/david/Dev/loopzero-paper-public/results/manifests/movielens25m_recursive_frontier_public_v1__bridge_check.json",
+      "sha256": "3b71e5e9988e4552b092638ee4447513b9a7c7362c3c043c04ab056705f01d29"
+    },
+    "gate2_report": {
+      "path": "/Users/david/Dev/loopzero-paper-public/results/manifests/movielens25m_recursive_frontier_public_v1__gate2_report.json",
+      "sha256": "c277468670fc51b598258fb55c21ab3bd8d9d761b610e7ebefe1abd06663f356"
+    },
+    "gate3_report": {
+      "path": "/Users/david/Dev/loopzero-paper-public/results/manifests/movielens25m_recursive_frontier_public_v1__gate3_report.json",
+      "sha256": "b6c1f0425e7ca776eef72b73de9e65b9bf8c81b9357a93ca41b606ae268d9de8"
+    },
+    "horizon_sensitivity_summary": {
+      "path": "/Users/david/Dev/loopzero-paper-public/results/manifests/movielens25m_recursive_frontier_public_v1__horizon_sensitivity_summary.json",
+      "sha256": "b5d7ef3b5ca10f9e446a9792bc7d677a323913c66c087e753c6de944a8b7f215"
+    },
+    "merged_comparator_summary": {
+      "path": "/Users/david/Dev/loopzero-paper-public/results/manifests/movielens25m_recursive_frontier_public_v1__merged_comparator_summary.json",
+      "sha256": "497cf43cab10f175b70518cb48631ac73c6e6d370c4160c6cc6f922d782838de"
+    },
+    "paper_facing_comparator_table": {
+      "path": "/Users/david/Dev/loopzero-paper-public/results/manifests/movielens25m_recursive_frontier_public_v1__paper_facing_comparator_table.csv",
+      "sha256": "863d9da4d3f16267ab1ac5dbab1b9b89c33e472f121216abbc19e3617166b79c"
+    }
+  },
+  "benchmark_freeze_sha": "daa7b8fa84178a575cfc1b484266b9865d32d7ed06df8580ecb15df9c22404ba",
+  "benchmark_id": "movielens25m_recursive_frontier_public_v1",
+  "bridge_check_sha": "3b71e5e9988e4552b092638ee4447513b9a7c7362c3c043c04ab056705f01d29",
+  "canonical_key_facts": {
+    "canonical_50": {
+      "accepted_comparators": 0,
+      "bridge_decision": "PASS"
+    },
+    "horizon_40": {
+      "accepted_comparators": 0,
+      "bridge_decision": "PARTIAL"
+    },
+    "horizon_60": {
+      "accepted_comparators": 0,
+      "bridge_decision": "PASS"
+    },
+    "nearest_canonical_control_fp": 0.013669821240799159,
+    "overall_nearest_comparator": "matrix_profile__44b81bd6"
+  },
+  "final_framing": "corroborating_second_flagship_benchmark_with_bounded_bridge_sensitivity",
+  "gate2_sha": "c277468670fc51b598258fb55c21ab3bd8d9d761b610e7ebefe1abd06663f356",
+  "gate3_sha": "b6c1f0425e7ca776eef72b73de9e65b9bf8c81b9357a93ca41b606ae268d9de8",
+  "horizon_sensitivity_summary_sha": "b5d7ef3b5ca10f9e446a9792bc7d677a323913c66c087e753c6de944a8b7f215",
+  "manuscript_anchor_note": "This artifact freezes the final evidence anchor for manuscript drafting for the canonical recommender branch. All manuscript claims should trace back to these frozen inputs and the final framing recorded here.",
+  "manuscript_freeze_state_sha256": "a196abc997fc7d5cdd7802c7cde8be232dec4baff79b38a60a396bc9bad9d38d",
+  "merged_comparator_summary_sha": "497cf43cab10f175b70518cb48631ac73c6e6d370c4160c6cc6f922d782838de",
+  "paper_facing_comparator_table_sha": "863d9da4d3f16267ab1ac5dbab1b9b89c33e472f121216abbc19e3617166b79c",
+  "stage": "freeze_manuscript_state",
+  "status": "frozen_for_manuscript_drafting"
+}

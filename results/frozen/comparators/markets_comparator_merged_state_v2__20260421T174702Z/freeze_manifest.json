@@ -1,0 +1,102 @@
+{
+  "freeze_name": "markets_comparator_merged_state_v2__20260421T174702Z",
+  "freeze_basename": "markets_comparator_merged_state_v2",
+  "created_utc": "2026-04-21T17:47:02.920702+00:00",
+  "parent_fast_freeze": "results/frozen/comparators/markets_state_v1",
+  "parent_slow_fullgrid_freeze": "results/frozen/comparators/markets_slow_fullgrid_state_v1",
+  "description": "Merged comparator freeze for canonical markets benchmark after completion of full-grid slow-family calibration.",
+  "collision_proof": true,
+  "files": [
+    {
+      "filename": "comparator_acceptance_matrix_v1.csv",
+      "source_path": "results/rendered/comparators/comparator_acceptance_matrix_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/comparator_acceptance_matrix_v1.csv",
+      "sha256": "a3f64fdb6a350ebc0ed3ebc8a2e62a21700428163052eea506789cde3cb1b0bc",
+      "size_bytes": 410853
+    },
+    {
+      "filename": "comparator_unavailable_cases_v1.csv",
+      "source_path": "results/rendered/comparators/comparator_unavailable_cases_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/comparator_unavailable_cases_v1.csv",
+      "sha256": "845777736f036b56a31e9f1d4aee9d710ebdf9d9d48f653e4da0070579920258",
+      "size_bytes": 1836
+    },
+    {
+      "filename": "markets_comparator_state_summary_v1.csv",
+      "source_path": "results/rendered/comparators/markets_comparator_state_summary_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/markets_comparator_state_summary_v1.csv",
+      "sha256": "04ef874623a0787097b69576e22902c0a2885515541d4cc4f98dc842bbb2c5d6",
+      "size_bytes": 669
+    },
+    {
+      "filename": "markets_slow_comparator_calibration_fullgrid_v1.csv",
+      "source_path": "results/rendered/comparators/markets_slow_comparator_calibration_fullgrid_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/markets_slow_comparator_calibration_fullgrid_v1.csv",
+      "sha256": "55e2eb8c9f7c437534bed8fe663ca5f64b392b36e75562e63618cce458023dfc",
+      "size_bytes": 189628
+    },
+    {
+      "filename": "markets_comparator_merged_summary_v2.csv",
+      "source_path": "results/rendered/comparators/markets_comparator_merged_summary_v2.csv",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/markets_comparator_merged_summary_v2.csv",
+      "sha256": "fe1d60f14f98ae87888afe8773c084daa2f358bf83048233ff41e7cd919da208",
+      "size_bytes": 1118
+    },
+    {
+      "filename": "markets_comparator_merged_summary_v2.md",
+      "source_path": "results/rendered/comparators/markets_comparator_merged_summary_v2.md",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/markets_comparator_merged_summary_v2.md",
+      "sha256": "19e881cfbf642e47d3827c744820ea6848ff7a4386fc119b33a73f77cffebf6a",
+      "size_bytes": 2321
+    },
+    {
+      "filename": "comparator_input_manifest_v1.csv",
+      "source_path": "results/rendered/comparators/comparator_input_manifest_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/comparator_input_manifest_v1.csv",
+      "sha256": "9c005e8b92013c59d3924b92425ee02ce385b2288c28691391d36ca891e3ccb7",
+      "size_bytes": 768
+    },
+    {
+      "filename": "markets_state_v1_freeze_manifest.json",
+      "source_path": "results/frozen/comparators/markets_state_v1/freeze_manifest.json",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/markets_state_v1_freeze_manifest.json",
+      "sha256": "9c19d25544b55b281f10923918d6c58ecf0fc40ed27f8f02eaca236c2a9133f5",
+      "size_bytes": 757
+    },
+    {
+      "filename": "markets_state_v1_LOCK_NOTE.md",
+      "source_path": "results/frozen/comparators/markets_state_v1/LOCK_NOTE.md",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/markets_state_v1_LOCK_NOTE.md",
+      "sha256": "aefe45475ff32d209405af507dd26e47b3d1dae494264209e6ed854f11b7ac28",
+      "size_bytes": 964
+    },
+    {
+      "filename": "markets_slow_fullgrid_state_v1_freeze_manifest.json",
+      "source_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/freeze_manifest.json",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/markets_slow_fullgrid_state_v1_freeze_manifest.json",
+      "sha256": "68504c71acb0375d0cccbe69077d9324147a36676f7f53638d7dd65b939c699e",
+      "size_bytes": 5563
+    },
+    {
+      "filename": "markets_slow_fullgrid_state_v1_LOCK_NOTE.md",
+      "source_path": "results/frozen/comparators/markets_slow_fullgrid_state_v1/LOCK_NOTE.md",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/markets_slow_fullgrid_state_v1_LOCK_NOTE.md",
+      "sha256": "6868e507e235d3420651368e83da129df9b4a9290acf047abd27c8287852903a",
+      "size_bytes": 1078
+    },
+    {
+      "filename": "LOCK_NOTE.md",
+      "source_path": "generated_by_analysis/13al_freeze_markets_comparator_merged_state_v2.py",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__20260421T174702Z/LOCK_NOTE.md",
+      "sha256": "7194af75386f38b249ce3e35d811b5c57ee379b2a0cde49d2e942ff87ac27344",
+      "size_bytes": 2167
+    },
+    {
+      "filename": "markets_comparator_merged_state_v2__LATEST.txt",
+      "source_path": "generated_by_analysis/13al_freeze_markets_comparator_merged_state_v2.py",
+      "frozen_path": "results/frozen/comparators/markets_comparator_merged_state_v2__LATEST.txt",
+      "sha256": "c4f4884da9a9f2029267cb4f7fec2461f452a53560d60f6ccc17cd8c811d316f",
+      "size_bytes": 80
+    }
+  ]
+}

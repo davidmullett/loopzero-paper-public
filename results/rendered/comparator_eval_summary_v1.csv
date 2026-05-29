@@ -1,0 +1,17 @@
+domain_family,str,Retained domain family
+instantiation,str,Specific domain instantiation or slice family
+detector_family,str,Detector key
+config_id,str,Selected accepted configuration id
+available_flag,int,1 if accepted config exists else 0
+unavailable_reason,str,Blank if available else reason
+split_protocol,str,grouped_train_test_split | grouped_leave_one_unit_out
+split_id,str,Evaluation split identifier or aggregate fold label
+n_control_units_eval,int,Number of held-out control units
+n_event_units_eval,int,Number of held-out event units
+fp_eval,float,Held-out false-positive rate
+median_lead_eval,float,Held-out median lead time
+iqr_lead_eval_low,float,25th percentile held-out lead
+iqr_lead_eval_high,float,75th percentile held-out lead
+mean_lead_eval,float,Held-out mean lead time
+alarm_coverage_eval,float,Share of event units with at least one gated alarm before collapse
+notes,str,Optional diagnostics

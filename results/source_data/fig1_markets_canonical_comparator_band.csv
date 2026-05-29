@@ -1,0 +1,4 @@
+family,nearest_fp,nearest_event_alarm_rate,nearest_nontrivial_fp,nearest_nontrivial_event_alarm_rate,nearest_config_id,nearest_nontrivial_config_id,accepted_count,family_display
+AC1,0.131579,0.0625,0.131579,0.0625,ac1_ews__632f23b2,ac1_ews__632f23b2,0,AC1
+Matrix Profile,0.0,0.0,,,matrix_profile__0a536aa4,,0,Matrix Profile
+Permutation Entropy,0.0,0.0,0.368421,0.25,permutation_entropy__001577c8,permutation_entropy__259c1b96,0,Permutation Entropy

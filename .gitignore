@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Folders
+untitled folder/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Build artifacts and intermediate renders
+manuscript/build/*.aux
+manuscript/build/*.log
+manuscript/build/pandoc_*.log
+manuscript/build/xelatex_*.log
+manuscript/build/paper_dry_render*.pdf
+manuscript/build/paper_dry_render*.tex
+manuscript/build/paper_dry_render*.aux
+manuscript/build/paper_dry_render*.log
+manuscript/build/supplementary_v*.pdf
+manuscript/build/supplementary_v*.tex
+manuscript/build/supplementary_v*.aux
+manuscript/build/supplementary_v*.log

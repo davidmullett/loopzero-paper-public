@@ -1,0 +1,892 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  11pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% seqsplit for breaking long monospace identifiers in tables
+\usepackage{seqsplit}
+
+% Unicode -> LaTeX command mapping for math symbols and Greek letters
+\usepackage{newunicodechar}
+
+% Greek letters (lowercase)
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{β}{\ensuremath{\beta}}
+\newunicodechar{γ}{\ensuremath{\gamma}}
+\newunicodechar{δ}{\ensuremath{\delta}}
+\newunicodechar{ε}{\ensuremath{\varepsilon}}
+\newunicodechar{η}{\ensuremath{\eta}}
+\newunicodechar{θ}{\ensuremath{\theta}}
+\newunicodechar{κ}{\ensuremath{\kappa}}
+\newunicodechar{λ}{\ensuremath{\lambda}}
+\newunicodechar{μ}{\ensuremath{\mu}}
+\newunicodechar{ν}{\ensuremath{\nu}}
+\newunicodechar{π}{\ensuremath{\pi}}
+\newunicodechar{ρ}{\ensuremath{\rho}}
+\newunicodechar{σ}{\ensuremath{\sigma}}
+\newunicodechar{τ}{\ensuremath{\tau}}
+\newunicodechar{φ}{\ensuremath{\varphi}}
+\newunicodechar{χ}{\ensuremath{\chi}}
+\newunicodechar{ψ}{\ensuremath{\psi}}
+\newunicodechar{ω}{\ensuremath{\omega}}
+
+% Greek letters (uppercase)
+\newunicodechar{Δ}{\ensuremath{\Delta}}
+\newunicodechar{Σ}{\ensuremath{\Sigma}}
+\newunicodechar{Π}{\ensuremath{\Pi}}
+\newunicodechar{Ω}{\ensuremath{\Omega}}
+
+% Math relations and operators
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{∉}{\ensuremath{\notin}}
+\newunicodechar{≈}{\ensuremath{\approx}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≠}{\ensuremath{\neq}}
+\newunicodechar{∼}{\ensuremath{\sim}}
+\newunicodechar{∞}{\ensuremath{\infty}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{·}{\ensuremath{\cdot}}
+\newunicodechar{±}{\ensuremath{\pm}}
+\newunicodechar{−}{\ensuremath{-}}
+\newunicodechar{∝}{\ensuremath{\propto}}
+\newunicodechar{∑}{\ensuremath{\sum}}
+\newunicodechar{∫}{\ensuremath{\int}}
+\newunicodechar{∂}{\ensuremath{\partial}}
+
+% Arrows
+\newunicodechar{→}{\ensuremath{\rightarrow}}
+\newunicodechar{←}{\ensuremath{\leftarrow}}
+\newunicodechar{↔}{\ensuremath{\leftrightarrow}}
+\newunicodechar{⇒}{\ensuremath{\Rightarrow}}
+\newunicodechar{⇐}{\ensuremath{\Leftarrow}}
+
+% Decorative
+\newunicodechar{★}{\ensuremath{\star}}
+
+% Diacritics
+\newunicodechar{ä}{\"a}
+\newunicodechar{ü}{\"u}
+\newunicodechar{ö}{\"o}
+\newunicodechar{é}{\'e}
+\newunicodechar{è}{\`e}
+
+% Wider column gutters for table readability
+\setlength{\tabcolsep}{10pt}
+
+% Strongly discourage hyphenation (was breaking 'Systems' as 'sys-tems' in title)
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\hyphenation{systems Systems SYSTEMS}
+\setlength{\emergencystretch}{3em}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Benchmarking Recursive-Collapse Warning Claims — Supplementary Materials},
+  pdfauthor={David Mullett},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Supplementary Materials}\label{supplementary-materials}
+
+\subsection{Benchmarking Recursive-Collapse Warning Claims Under Matched
+False-Positive
+Control}\label{benchmarking-recursive-collapse-warning-claims-under-matched-false-positive-control}
+
+\textbf{David Mullett} · ORCID: 0009-0004-2543-1664 ·
+\href{mailto:d@loopzero.org}{\nolinkurl{d@loopzero.org}} · Independent
+Researcher
+
+This document contains the supplementary materials referenced in the
+main manuscript: one figure (S1) and four tables (S2, S3, S4, S5).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Supplementary Figure S1}\label{supplementary-figure-s1}
+
+\textbf{Supplementary Figure S1. Fast-family segmentation and band
+sensitivity on the canonical markets benchmark.} No fast-family
+comparator was accepted at 60-, 120-, or 180-minute segmentation under
+the prespecified equal-false-positive band {[}0.03, 0.07{]}. Under
+widened post-processing bands with upper cutoff 0.08, acceptance
+appeared only for the 60-minute AC1 configuration; the canonical
+120-minute and 180-minute segmentations remained non-accepted across all
+tested bands.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Band
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Segmentation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Band reachable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Any fast accepted
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Nearest family
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Nearest FP
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Distance to band
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+{[}0.02, 0.08{]} & 60 min & Yes & Yes & \texttt{ac1\_ews} & 0.0800 &
+0.0000 \\
+{[}0.02, 0.08{]} & 120 min & Yes & No & \texttt{ac1\_ews} & 0.1316 &
+0.0516 \\
+{[}0.02, 0.08{]} & 180 min & Yes & No & \texttt{ac1\_ews} & 0.1304 &
+0.0504 \\
+{[}0.03, 0.07{]} & 60 min & Yes & No & \texttt{ac1\_ews} & 0.0800 &
+0.0100 \\
+{[}0.03, 0.07{]} & 120 min & Yes & No & \texttt{ac1\_ews} & 0.1316 &
+0.0616 \\
+{[}0.03, 0.07{]} & 180 min & Yes & No & \texttt{ac1\_ews} & 0.1304 &
+0.0604 \\
+{[}0.04, 0.08{]} & 60 min & Yes & Yes & \texttt{ac1\_ews} & 0.0800 &
+0.0000 \\
+{[}0.04, 0.08{]} & 120 min & Yes & No & \texttt{ac1\_ews} & 0.1316 &
+0.0516 \\
+{[}0.04, 0.08{]} & 180 min & Yes & No & \texttt{ac1\_ews} & 0.1304 &
+0.0504 \\
+\end{longtable}
+}
+
+Source:
+\texttt{\seqsplit{results/frozen/comparators/markets\_fast\_robustness\_packet\_v1\_\_20260421T175531Z/markets\_fast\_band\_sensitivity\_summary\_v1.csv}}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Supplementary Table S2}\label{supplementary-table-s2}
+
+\textbf{Supplementary Table S2. Effect sizes with bootstrap 95\%
+confidence intervals.} Per-witness Cohen's d, Glass's d, and rank AUC at
+each benchmark/horizon (4 benchmarks × 3 witnesses × 3 effect measures =
+36 cells), with both BCa-adjusted and percentile bootstrap confidence
+intervals from cluster-aware resampling (10,000 iterations). Markets
+uses segment-level resampling (n=38 controls + 16 events); recommender
+(all horizons) uses user-level resampling (n = 40,339 user clusters).
+Canonical h=50 group is bolded throughout. A sensitivity section flags
+cells where BCa and percentile CI endpoints differ by ≥ 0.05 (markets
+p-witness cells only --- the bootstrap distribution is right-skewed at
+low n, and BCa is the more honest read there). Full numerics rendered
+deterministically by
+\texttt{\seqsplit{analysis/17\_render\_a3\_supplementary\_table\_s2.py}} from the
+per-cell bootstrap output at
+\texttt{\seqsplit{results/rendered/effect\_sizes/a3\_effect\_sizes\_full.csv}}.
+
+\textbf{Source:}
+\texttt{\seqsplit{results/rendered/effect\_sizes/a3\_effect\_sizes\_full.csv}}
+(commit \texttt{d8908dd})\\
+\textbf{Generator:}
+\texttt{\seqsplit{analysis/17\_render\_a3\_supplementary\_table\_s2.py}}
+
+Per-witness (G, p, δ) effect sizes at each benchmark/horizon with 95\%
+BCa confidence intervals from cluster-aware bootstrap (10,000
+iterations). Cohen's d, Glass's d, and Rank AUC are reported as
+complementary magnitude metrics. BCa is the primary CI method;
+percentile CIs are reported alongside for the cells where they differ
+meaningfully (sensitivity section below).
+
+\subsection{Sign convention}\label{sign-convention}
+
+Predicted direction by witness (event vs control):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{G} (amplification): event \textgreater{} control predicted;
+  positive d / AUC \textgreater{} 0.5 confirms
+\item
+  \textbf{p} (concentration): event \textgreater{} control predicted;
+  positive d / AUC \textgreater{} 0.5 confirms
+\item
+  \textbf{δ} (contraction): event \textless{} control predicted;
+  negative d / AUC \textless{} 0.5 confirms
+\end{itemize}
+
+\subsection{Bootstrap unit grain}\label{bootstrap-unit-grain}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Markets:} segment-level resampling (n = 38 controls + 16
+  events; \textasciitilde30 rows per segment)
+\item
+  \textbf{Recsys} (all horizons): user-level resampling (n = 40,339 user
+  clusters; 10 rows per cluster)
+\end{itemize}
+
+\subsection{Effect sizes by benchmark}\label{effect-sizes-by-benchmark}
+
+\subsubsection{Markets (Volmageddon +
+COVID-MWCB)}\label{markets-volmageddon-covid-mwcb}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Witness
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cohen's d {[}BCa 95\% CI{]}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Glass's d {[}BCa 95\% CI{]}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Rank AUC {[}BCa 95\% CI{]}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G & -0.029 {[}-0.169, +0.147{]} & -0.028 {[}-0.155, +0.160{]} & 0.507
+{[}0.459, 0.555{]} \\
+p & +0.097 {[}-0.488, +0.941{]} & +0.119 {[}-0.412, +2.094{]} & 0.482
+{[}0.398, 0.614{]} \\
+δ & +0.029 {[}-0.568, +0.617{]} & +0.029 {[}-0.563, +0.617{]} & 0.516
+{[}0.353, 0.680{]} \\
+\end{longtable}
+}
+
+\subsubsection{Recsys h=40 (off-pre-reg)}\label{recsys-h40-off-pre-reg}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Witness
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cohen's d {[}BCa 95\% CI{]}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Glass's d {[}BCa 95\% CI{]}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Rank AUC {[}BCa 95\% CI{]}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G & -0.214 {[}-0.235, -0.192{]} & -0.213 {[}-0.233, -0.192{]} & 0.441
+{[}0.436, 0.447{]} \\
+p & +0.180 {[}+0.155, +0.205{]} & +0.172 {[}+0.147, +0.197{]} & 0.555
+{[}0.549, 0.562{]} \\
+δ & -0.268 {[}-0.299, -0.237{]} & -0.219 {[}-0.245, -0.190{]} & 0.415
+{[}0.407, 0.423{]} \\
+\end{longtable}
+}
+
+\subsubsection{\texorpdfstring{\textbf{Recsys h=50 (canonical,
+pre-registered)}}{Recsys h=50 (canonical, pre-registered)}}\label{recsys-h50-canonical-pre-registered}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Witness
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cohen's d {[}BCa 95\% CI{]}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Glass's d {[}BCa 95\% CI{]}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Rank AUC {[}BCa 95\% CI{]}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{G} & \textbf{+0.100 {[}+0.076, +0.124{]}} & \textbf{+0.112
+{[}+0.084, +0.139{]}} & \textbf{0.519 {[}0.513, 0.525{]}} \\
+\textbf{p} & \textbf{+0.080 {[}+0.049, +0.111{]}} & \textbf{+0.073
+{[}+0.043, +0.102{]}} & \textbf{0.531 {[}0.523, 0.539{]}} \\
+\textbf{δ} & \textbf{-0.168 {[}-0.208, -0.128{]}} & \textbf{-0.125
+{[}-0.155, -0.095{]}} & \textbf{0.457 {[}0.447, 0.467{]}} \\
+\end{longtable}
+}
+
+\subsubsection{Recsys h=60 (off-pre-reg)}\label{recsys-h60-off-pre-reg}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Witness
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Cohen's d {[}BCa 95\% CI{]}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Glass's d {[}BCa 95\% CI{]}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Rank AUC {[}BCa 95\% CI{]}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G & +0.333 {[}+0.310, +0.354{]} & +0.453 {[}+0.411, +0.495{]} & 0.575
+{[}0.570, 0.580{]} \\
+p & +0.007 {[}-0.028, +0.043{]} & +0.006 {[}-0.026, +0.038{]} & 0.513
+{[}0.504, 0.522{]} \\
+δ & -0.029 {[}-0.072, +0.016{]} & -0.021 {[}-0.053, +0.011{]} & 0.508
+{[}0.497, 0.520{]} \\
+\end{longtable}
+}
+
+\subsection{BCa-vs-percentile
+sensitivity}\label{bca-vs-percentile-sensitivity}
+
+BCa correction matters where the bootstrap distribution is skewed (small
+n; right-skewed tails on small-n p-witness). Cells where \textbar BCa
+endpoint − percentile endpoint\textbar{} ≥ 0.05 on either side:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llllll@{}}
+\toprule\noalign{}
+Benchmark & Witness & Measure & Percentile CI & BCa CI & max Δ \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Markets & p & glasss\_d & {[}-0.492, +1.356{]} & {[}-0.412, +2.094{]} &
+0.74 \\
+Markets & p & cohens\_d & {[}-0.589, +0.695{]} & {[}-0.488, +0.941{]} &
+0.25 \\
+\end{longtable}
+}
+
+\subsection{Notes}\label{notes}
+
+\begin{itemize}
+\item
+  \textbf{Recsys BCa correction is empirically negligible.} Across all
+  27 recsys cells at n = 40,339, \textbar BCa − percentile\textbar{}
+  \textless{} 0.01 on every endpoint. Consistent with BCa's O(1/√n)
+  second-order correction theory: at this n the correction is below the
+  bootstrap Monte Carlo noise floor. Percentile CIs would suffice for
+  recsys; BCa is reported for completeness and procedural consistency
+  with markets.
+\item
+  \textbf{Markets BCa correction is substantive for the p witness.} The
+  Glass's d markets p cell upper bound shifts from percentile +1.357 to
+  BCa +2.094 (54\% right-shift). Bootstrap distribution is right-skewed
+  at n=54; percentile CIs systematically understate the right tail. BCa
+  is the honest read here.
+\item
+  \textbf{Canonical h=50 is the only configuration where all three
+  witnesses align in the predicted direction with CIs clear of 0}
+  (bolded above). Adjacent recsys horizons degrade asymmetrically: h=40
+  G flips sign while p and δ hold; h=60 G strengthens while p and δ
+  collapse to null. The pre-registered horizon delivers the cleanest
+  signature --- evidence that pre-registration was load-bearing for the
+  bridge claim.
+\item
+  \textbf{Markets row-level effects are uniformly null} (all three
+  witnesses, all three measures, all CIs span 0 or 0.5). The directional
+  bridge claim for markets operates at unit-level aggregation grain
+  (mean per unit, then compare unit means across the n=38+16 segments);
+  the row-level effect-size table above is honest data at the finer
+  grain. See main text Cross-domain evidence section for the unit-level
+  framing.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{See also:} Figure 6 (effect-size forest plot,
+results/figures/a3\_effect\_size\_forest.\{png,pdf\}); Cross-domain
+evidence section of the main manuscript.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Supplementary Table S3}\label{supplementary-table-s3}
+
+\textbf{Supplementary Table S3. Alert-count exact-matching sensitivity
+check.} Re-expression of the envelope-boundary matched-FP comparison
+(main-text Table 2) in integer alarm counts. For each panel at the
+canonical k = 3, Loopzero is reported at its envelope-boundary alarm
+counts (n\_control\_alarmed, n\_event\_alarmed); each comparator
+family's frozen pre-registered calibration grid is searched for the
+operating point with the nearest n\_control\_alarmed value, with status
+classified as \texttt{exact\_match} (comparator has an operating point
+at Loopzero's exact alarm count), \texttt{bounded\_gap} (Loopzero's
+alarm count falls between two adjacent comparator operating points, with
+\texttt{gap} quantifying the calibration coverage gap),
+\texttt{no\_overlap\_above} (all comparator operating points have higher
+alarm counts), or \texttt{insufficient\_data}. On the markets benchmark,
+ac1\_ews exhibits \texttt{exact\_match} at Loopzero's envelope-boundary
+anchor: both methods alarm on exactly 9 of 38 controls and detect
+exactly 3 of 16 events. On the recommender benchmark, variance\_ews
+exhibits the widest bounded gaps across Loopzero's envelope boundary:
+3559 alarms at h = 40 (Loopzero at 97 of 6562 controls) and 3345 alarms
+at h = 60 (Loopzero at 2 of 3996 controls), in each case with the
+upper-bound comparator operating point detecting all panel event units
+(TPR = 1.0). At h = 50, no comparator family produced a non-trivial
+breakpoint at Loopzero's envelope-boundary FP of 0.002313; accordingly,
+h = 50 is reported for transparency but excluded from the cross-horizon
+comparator-envelope comparison. Full numerics rendered by
+\texttt{\seqsplit{analysis/21\_compute\_a2\_alert\_count\_exact.py}} from frozen
+calibration data at
+\texttt{\seqsplit{results/rendered/a4\_roc\_lowfp/a4\_roc\_data.parquet}} and
+operating-point data at
+\texttt{results/rendered/bridge/a1\_loopzero\_operating\_points\{,\_h40\_h60\}.csv}.
+Columns renamed in this rendering for compactness: \texttt{lower} and
+\texttt{upper} abbreviate \texttt{comp\_lower} and \texttt{comp\_upper};
+\texttt{gap} abbreviates \texttt{\seqsplit{gap\_width\_n\_control}}; \texttt{n\_bp}
+abbreviates \texttt{n\_breakpoints}.
+
+Companion to
+\texttt{a2\_threshold\_path\_envelope\_boundary.\{csv,md\}}. Re-frames
+the envelope-boundary comparison in integer alarm counts to surface (a)
+discrete-FP-space coincidences as exact alarm-count matches, and (b)
+linear-interpolation gaps as quantitative gap widths in alarm-count
+space.
+
+Comparator alarm counts derived from
+\texttt{\seqsplit{round(fp\_comp\ *\ panel.n\_control\_units)}} and
+\texttt{\seqsplit{round(tpr\_comp\ *\ panel.n\_event\_units)}}. Status legend:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{\seqsplit{loopzero\_envelope\_boundary}} --- Loopzero's anchor at panel
+  max FP, k=3
+\item
+  \texttt{exact\_match} --- comparator has a breakpoint at exactly
+  Loopzero's alarm count
+\item
+  \texttt{bounded\_gap} --- Loopzero's alarm count falls strictly
+  between two adjacent comparator breakpoints; \texttt{gap} records the
+  gap size
+\item
+  \texttt{no\_overlap\_above} --- all comparator breakpoints have higher
+  alarm counts
+\item
+  \texttt{no\_overlap\_below} --- all comparator breakpoints have lower
+  alarm counts
+\item
+  \texttt{insufficient\_data} --- comparator has \textless1 useful
+  breakpoint
+\end{itemize}
+
+\subsection{Panel: markets}\label{panel-markets}
+
+Panel n\_control\_units=38, n\_event\_units=16. Loopzero at envelope
+boundary (q=50, k=3): \textbf{9 false alarms / 38 controls}
+(FP=0.236842), \textbf{3 true detections / 16 events} (TPR=0.1875).
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llllll@{}}
+\toprule\noalign{}
+family & status & lower (ctrl, evt) & upper (ctrl, evt) & gap & n\_bp \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+ac1\_ews & exact\_match & (9, 3) & (9, 3) & 0 & 25 \\
+cusum & no\_overlap\_above & --- & (14, 5) & --- & 15 \\
+page\_hinkley & no\_overlap\_above & --- & (26, 14) & --- & 6 \\
+variance\_ews & no\_overlap\_above & --- & (17, 5) & --- & 20 \\
+\end{longtable}
+}
+
+\subsection{Panel: recsys\_h40}\label{panel-recsys_h40}
+
+Panel n\_control\_units=6562, n\_event\_units=33777. Loopzero at
+envelope boundary (q=50, k=3): \textbf{97 false alarms / 6562 controls}
+(FP=0.014782), \textbf{3113 true detections / 33777 events}
+(TPR=0.0922).
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llllll@{}}
+\toprule\noalign{}
+family & status & lower (ctrl, evt) & upper (ctrl, evt) & gap & n\_bp \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+ac1 & no\_overlap\_above & --- & (4206, 33777) & --- & 3 \\
+cusum & no\_overlap\_above & --- & (4010, 33777) & --- & 4 \\
+matrix\_profile & no\_overlap\_above & --- & (155, 3938) & --- & 2 \\
+page\_hinkley & no\_overlap\_above & --- & (4206, 33777) & --- & 4 \\
+permutation\_entropy & no\_overlap\_above & --- & (6562, 33777) & --- &
+1 \\
+variance\_ews & bounded\_gap & (0, 0) & (3559, 33777) & 3559 & 6 \\
+\end{longtable}
+}
+
+\subsection{Panel: recsys\_h50}\label{panel-recsys_h50}
+
+Panel n\_control\_units=4755, n\_event\_units=35584. Loopzero at
+envelope boundary (q=50, k=3): \textbf{11 false alarms / 4755 controls}
+(FP=0.002313), \textbf{2681 true detections / 35584 events}
+(TPR=0.0753).
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+family
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+lower (ctrl, evt)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+upper (ctrl, evt)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+gap
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+n\_bp
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{no comparator breakpoint at this boundary FP} &
+\texttt{insufficient\_data} & --- & --- & --- & 0 \\
+\end{longtable}
+}
+
+\subsection{Panel: recsys\_h60}\label{panel-recsys_h60}
+
+Panel n\_control\_units=3996, n\_event\_units=36343. Loopzero at
+envelope boundary (q=50, k=3): \textbf{2 false alarms / 3996 controls}
+(FP=0.000501), \textbf{2004 true detections / 36343 events}
+(TPR=0.0551).
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llllll@{}}
+\toprule\noalign{}
+family & status & lower (ctrl, evt) & upper (ctrl, evt) & gap & n\_bp \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+ac1 & no\_overlap\_above & --- & (3464, 36343) & --- & 3 \\
+cusum & no\_overlap\_above & --- & (3430, 36343) & --- & 4 \\
+matrix\_profile & no\_overlap\_above & --- & (35, 3938) & --- & 2 \\
+page\_hinkley & no\_overlap\_above & --- & (3464, 36343) & --- & 4 \\
+permutation\_entropy & no\_overlap\_above & --- & (3996, 36343) & --- &
+1 \\
+variance\_ews & bounded\_gap & (0, 0) & (3345, 36343) & 3345 & 6 \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Supplementary Table S4}\label{supplementary-table-s4}
+
+\textbf{Supplementary Table S4. Cluster-robust sensitivity at scenario
+grain (markets benchmark).} Per-witness effect sizes (Cohen's d, Glass's
+d, rank AUC) on the markets benchmark at the A3 segment grain (n = 54
+segments) and the B3 scenario grain (n = 7 clusters: 2 event scenarios
+--- \texttt{\seqsplit{volmageddon\_2018\_xiv}} with 8 segments and
+\texttt{\seqsplit{covid\_mwcb\_2020\_03\_18}} with 8 segments; 5 control scenarios
+--- \texttt{\seqsplit{covid\_noncollapse\_2020\_03\_11}} with 8 segments,
+\texttt{\seqsplit{volmageddon\_control\_2018\_01\_29}} with 8 segments,
+\texttt{\seqsplit{volmageddon\_control\_2018\_02\_08}} with 8 segments,
+\texttt{\seqsplit{covid\_noncollapse\_2020\_03\_13}} with 7 segments,
+\texttt{\seqsplit{volmageddon\_control\_2018\_01\_25}} with 7 segments). Bootstrap
+iterations: 10,000 per cell; CI level: 0.95; RNG seed for scenario
+grain: 43 (distinct from A3 segment grain seed: 42). For
+\texttt{p}\textbar Glass's d at scenario grain, 2 of 10,000 iterations
+produced degenerate samples (control SD ≈ 0 from same-scenario cluster
+resamples); finite-filter applied to remaining 9,998 iterations. All
+other 8 cells: n\_degenerate = 0. Scenario-grain CIs are reported as
+sensitivity, not primary inference; the segment-grain baseline
+(Supplementary Table S2) remains the primary report.
+
+\subsection{Cluster composition}\label{cluster-composition}
+
+Event-side scenario clusters (derived from \texttt{unit\_id} parsing;
+n=2):
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Cluster & Segments \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+volmageddon\_2018\_xiv & 8 \\
+covid\_mwcb\_2020\_03\_18 & 8 \\
+\end{longtable}
+}
+
+Control-side scenario clusters (n=5):
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Cluster & Segments \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+covid\_noncollapse\_2020\_03\_11 & 8 \\
+volmageddon\_control\_2018\_01\_29 & 8 \\
+volmageddon\_control\_2018\_02\_08 & 8 \\
+covid\_noncollapse\_2020\_03\_13 & 7 \\
+volmageddon\_control\_2018\_01\_25 & 7 \\
+\end{longtable}
+}
+
+Total cluster units: 7 (2 event + 5 control), down from 54 segment units
+in A3.
+
+\subsection{Methodological framing}\label{methodological-framing}
+
+Cluster-aware bootstrap (10,000 iterations) at scenario grain. Reported
+as a \textbf{dependence-sensitivity diagnostic} at n = 2 event clusters;
+at this sample size the bootstrap intervals are not reliable
+conservative inferential intervals. Wild cluster bootstrap (Cameron,
+Gelbach \& Miller 2008) --- the methodologically appropriate response to
+the small-cluster regime --- is deferred to follow-up work.
+
+\subsection{Effect sizes at scenario grain
+(B3)}\label{effect-sizes-at-scenario-grain-b3}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+Witness & Measure & Point & Percentile 95\% CI & BCa 95\% CI \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G & cohens\_d & -0.0293 & {[}-0.0916, +0.0489{]} & {[}-0.0932,
++0.0473{]} \\
+G & glasss\_d & -0.0285 & {[}-0.0934, +0.0472{]} & {[}-0.0938,
++0.0472{]} \\
+G & rank\_auc & +0.5073 & {[}+0.4569, +0.5581{]} & {[}+0.4520,
++0.5530{]} \\
+p & cohens\_d & +0.0966 & {[}-0.3309, +0.4082{]} & {[}-0.3285,
++0.4313{]} \\
+p & glasss\_d & +0.1188 & {[}-0.2952, +0.7102{]} & {[}-0.2950,
++0.7102{]} \\
+p & rank\_auc & +0.4823 & {[}+0.4376, +0.5310{]} & {[}+0.4361,
++0.5305{]} \\
+delta & cohens\_d & +0.0286 & {[}-0.1534, +0.1993{]} & {[}-0.1534,
++0.1993{]} \\
+delta & glasss\_d & +0.0287 & {[}-0.1610, +0.1928{]} & {[}-0.1610,
++0.1928{]} \\
+delta & rank\_auc & +0.5162 & {[}+0.4495, +0.5773{]} & {[}+0.4495,
++0.5757{]} \\
+\end{longtable}
+}
+
+\subsection{Side-by-side: A3 segment grain vs B3 scenario grain (BCa
+95\%
+CI)}\label{side-by-side-a3-segment-grain-vs-b3-scenario-grain-bca-95-ci}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1047}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1047}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3023}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.3023}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1860}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Witness
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Measure
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+A3 segment grain (n=54)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+B3 scenario grain (n=7)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+CI width ratio
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+G & cohens\_d & {[}-0.1686, +0.1469{]} & {[}-0.0932, +0.0473{]} &
+0.45× \\
+G & glasss\_d & {[}-0.1552, +0.1598{]} & {[}-0.0938, +0.0472{]} &
+0.45× \\
+G & rank\_auc & {[}+0.4592, +0.5552{]} & {[}+0.4520, +0.5530{]} &
+1.05× \\
+p & cohens\_d & {[}-0.4884, +0.9409{]} & {[}-0.3285, +0.4313{]} &
+0.53× \\
+p & glasss\_d & {[}-0.4123, +2.0944{]} & {[}-0.2950, +0.7102{]} &
+0.40× \\
+p & rank\_auc & {[}+0.3979, +0.6141{]} & {[}+0.4361, +0.5305{]} &
+0.44× \\
+delta & cohens\_d & {[}-0.5682, +0.6167{]} & {[}-0.1534, +0.1993{]} &
+0.30× \\
+delta & glasss\_d & {[}-0.5632, +0.6174{]} & {[}-0.1610, +0.1928{]} &
+0.30× \\
+delta & rank\_auc & {[}+0.3527, +0.6799{]} & {[}+0.4495, +0.5757{]} &
+0.39× \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{Supplementary Table S5. Reproducibility anchor
+hashes}\label{supplementary-table-s5.-reproducibility-anchor-hashes}
+
+Freeze-manifest SHA-256 hashes for the empirical components anchoring
+all results in this paper. Each frozen directory additionally contains a
+\texttt{LOCK\_NOTE.md} documenting that freeze's scientific and
+editorial scope.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Component
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Freeze path
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+SHA-256
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Recsys benchmark freeze state (canonical) &
+\texttt{\seqsplit{results/frozen/movielens25m\_recursive\_frontier\_public\_v1\_\_benchmark\_freeze\_state.json}}
+&
+\texttt{\seqsplit{050aa725e6608f659b3f7eb103731bb7fbabaa23aeefdc4b11043999b7fed4cf}} \\
+Recsys contract freeze &
+\texttt{\seqsplit{results/frozen/movielens25m\_recursive\_frontier\_public\_v1\_\_contract\_freeze.json}}
+&
+\texttt{\seqsplit{f361d937cc07cbb946753ac9e5e2d1d386c8706a6bb43841229ec846fd69ecd6}} \\
+Recsys manuscript freeze state &
+\texttt{\seqsplit{results/frozen/movielens25m\_recursive\_frontier\_public\_v1\_\_manuscript\_freeze\_state.json}}
+&
+\texttt{\seqsplit{bc8542cc0b76cdfad9726a4085c760d38ed7ace24772f0e3c6103fba962891b8}} \\
+Markets comparator merged state (v2) &
+\texttt{\seqsplit{results/frozen/comparators/markets\_comparator\_merged\_state\_v2\_\_20260421T174702Z/freeze\_manifest.json}}
+&
+\texttt{\seqsplit{784895418953b1646bd40eb7b5266e39901326b1335b2ec5f2390b70af4642c7}} \\
+Markets fast robustness packet (v1) &
+\texttt{\seqsplit{results/frozen/comparators/markets\_fast\_robustness\_packet\_v1\_\_20260421T175531Z/freeze\_manifest.json}}
+&
+\texttt{\seqsplit{f8f8c5c58d10796d4b71545282a8b352c47dc9590fc268fcb96cfb84c181adec}} \\
+Witness-direction bridge state (v3, canonical) &
+\texttt{\seqsplit{results/frozen/bridge/witness\_direction\_bridge\_state\_v3\_\_20260422T130759Z/freeze\_manifest.json}}
+&
+\texttt{\seqsplit{bd47e75851fcaea1e6d843f9b74156ec036ddb487ca76e815d7b6fb0cf258f94}} \\
+Manuscript two-domain state (v1) &
+\texttt{\seqsplit{results/frozen/manuscript/two\_domain\_paper\_state\_v1\_\_20260422T134303Z/freeze\_manifest.json}}
+&
+\texttt{\seqsplit{1763b04cb128a274dd12313a8cccdb2a04e2845d176d3444d6214e0aafe2e1d5}} \\
+Recsys horizon sensitivity manifest (covers h=40, h=50, h=60) &
+\texttt{\seqsplit{results/manifests/movielens25m\_recursive\_frontier\_public\_v1\_\_horizon\_sensitivity\_summary.json}}
+&
+\texttt{\seqsplit{b5d7ef3b5ca10f9e446a9792bc7d677a323913c66c087e753c6de944a8b7f215}} \\
+MovieLens-25M source archive (upstream) &
+\texttt{\seqsplit{https://files.grouplens.org/datasets/movielens/ml-25m.zip}}
+(GroupLens; not redistributed) &
+\texttt{\seqsplit{8b21cfb7eb1706b4ec0aac894368d90acf26ebdfb6aced3ebd4ad5bd1eb9c6aa}} \\
+\end{longtable}
+}
+
+Engine: \texttt{\seqsplit{movielens\_recursive\_replay\_engine}} v1.0.0
+(\texttt{\seqsplit{item\_item\_collaborative\_filtering}}, hash
+\texttt{56c1cff225d60c09}). Recsys contract: SHA-256
+\texttt{\seqsplit{2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d}}.
+All hashes are SHA-256 in lowercase hexadecimal.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\emph{Generated 2026-05-28 alongside the main manuscript v17.17 render.
+Companion to the main paper PDF.}
+
+\end{document}

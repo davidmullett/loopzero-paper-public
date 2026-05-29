@@ -1,0 +1,123 @@
+{
+  "event_family": "equity_dislocations_intraday_v2",
+  "grid_size": 2160,
+  "grid_size_expected": 2160,
+  "target_fp": 0.05,
+  "fp_min": 0.03,
+  "fp_max": 0.07,
+  "n_controls": 28,
+  "window_fp_feasible_with_current_controls": true,
+  "note": "With 20 control windows, window-level false-positive calibration is now feasible: 1 alarm window out of 20 gives FP = 0.05 exactly. Accordingly, this scan treats control_window_fp_accepted as the primary acceptance flag, retains control_row_fp_rate as a secondary density diagnostic, and applies k-consecutive plus warmup gating.",
+  "gating_ladder": {
+    "focused_pmin_scan": true,
+    "k_consec_alarm_values": [
+      5
+    ],
+    "warmup_bars_values": [
+      0
+    ],
+    "p_min_values": [
+      0.02,
+      0.05,
+      0.1
+    ]
+  },
+  "n_configs_window_fp_accepted": 349,
+  "n_configs_row_fp_accepted": 0,
+  "top_config_ids": [
+    "cfg_000581",
+    "cfg_000587",
+    "cfg_000593",
+    "cfg_000599",
+    "cfg_000605",
+    "cfg_000611",
+    "cfg_000677",
+    "cfg_000683",
+    "cfg_000689",
+    "cfg_000695",
+    "cfg_000701",
+    "cfg_000707",
+    "cfg_000347",
+    "cfg_000359",
+    "cfg_000371",
+    "cfg_000383",
+    "cfg_000395",
+    "cfg_000407",
+    "cfg_000419",
+    "cfg_000431",
+    "cfg_000443",
+    "cfg_000455",
+    "cfg_000467",
+    "cfg_000479",
+    "cfg_001333"
+  ],
+  "best_config": {
+    "config_id": "cfg_000581",
+    "delta_window": 16,
+    "p_window": 60,
+    "g_window": 30,
+    "eps_g": 0.02,
+    "tau_delta": -0.05,
+    "tau_p": 0.0,
+    "p_min": 0.1,
+    "p_z_threshold": 1.0,
+    "k_consec_alarm": 5,
+    "warmup_bars": 0,
+    "n_events": 2,
+    "n_event_success": 1,
+    "n_event_fail": 1,
+    "event_success_rate": 0.5,
+    "event_success_ids": [
+      "covid_mwcb_2020_03_18"
+    ],
+    "event_fail_ids": [
+      "volmageddon_2018_xiv"
+    ],
+    "median_lead_minutes": 5.283333333333333,
+    "median_lead_bars": 5.0,
+    "total_alarm_count_events": 3,
+    "total_pre_collapse_alarm_count": 3,
+    "n_controls": 28,
+    "n_controls_with_alarm": 1,
+    "n_controls_without_alarm": 27,
+    "control_alarm_ids": [
+      "covid_noncollapse_2020_03_11"
+    ],
+    "control_silent_ids": [
+      "volmageddon_control_2018_01_23",
+      "volmageddon_control_2018_01_24",
+      "volmageddon_control_2018_01_25",
+      "volmageddon_control_2018_01_26",
+      "volmageddon_control_2018_01_29",
+      "volmageddon_control_2018_01_30",
+      "volmageddon_control_2018_01_31",
+      "volmageddon_control_2018_02_01",
+      "volmageddon_control_2018_02_02",
+      "volmageddon_control_2018_02_06",
+      "volmageddon_control_2018_02_07",
+      "volmageddon_control_2018_02_08",
+      "covid_noncollapse_2020_03_10",
+      "covid_noncollapse_2020_03_13",
+      "covid_noncollapse_2020_03_17",
+      "covid_noncollapse_2020_03_19",
+      "covid_noncollapse_2020_03_20",
+      "covid_noncollapse_2020_03_23",
+      "covid_noncollapse_2020_03_24",
+      "covid_noncollapse_2020_03_25",
+      "covid_noncollapse_2020_03_26",
+      "covid_noncollapse_2020_03_27",
+      "covid_noncollapse_2020_03_30",
+      "covid_noncollapse_2020_03_31",
+      "covid_noncollapse_2020_04_01",
+      "covid_noncollapse_2020_04_02",
+      "covid_noncollapse_2020_04_03"
+    ],
+    "control_window_fp_rate": 0.03571428571428571,
+    "control_row_fp_rate": 4.043835173278337e-05,
+    "control_window_fp_accepted": true,
+    "control_row_fp_accepted": false,
+    "total_control_alarm_rows": 1,
+    "total_control_rows": 24729,
+    "provisional_score": 969812.1832954945
+  }
+}

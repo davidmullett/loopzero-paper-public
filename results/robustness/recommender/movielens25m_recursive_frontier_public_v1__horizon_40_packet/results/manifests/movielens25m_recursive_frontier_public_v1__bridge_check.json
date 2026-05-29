@@ -1,0 +1,78 @@
+{
+  "aligned_count": 2,
+  "all_aligned": false,
+  "benchmark_freeze_sha256": "b7a8cae19dd8a339fc1f6a1ed59c164d9b6cd4350302771c7d0593605e6a8604",
+  "benchmark_id": "movielens25m_recursive_frontier_public_v1",
+  "bootstrap": {
+    "note": "User-level bootstrap is descriptive uncertainty only; bridge decision is directional, not a significance test.",
+    "reps": 1000,
+    "seed": 0,
+    "unit": "user"
+  },
+  "bridge_check_sha256": "5c5295cd3b601dd7d0b97831165ae11a5b403a82ca7735fe361ceb6d609672aa",
+  "counts": {
+    "n_control_rows_in_bridge_window": 65620,
+    "n_control_users_in_bridge_window": 6562,
+    "n_event_rows_in_bridge_window": 337770,
+    "n_event_users_in_bridge_window": 33777,
+    "n_unique_users_in_panel": 40339
+  },
+  "decision": "PARTIAL",
+  "engine_hash": "56c1cff225d60c09",
+  "metrics": {
+    "G": {
+      "aligned": false,
+      "difference_event_minus_control": -0.02090509318726065,
+      "expected_direction": "event>control",
+      "precollapse_events": {
+        "ci_lower": 0.06073842694035427,
+        "ci_upper": 0.060964345045302494,
+        "mean": 0.060854795811275064,
+        "n_users": 33777
+      },
+      "reference_controls": {
+        "ci_lower": 0.0796950186103645,
+        "ci_upper": 0.08387034394539725,
+        "mean": 0.08175988899853572,
+        "n_users": 6562
+      }
+    },
+    "delta": {
+      "aligned": true,
+      "difference_event_minus_control": -0.01159715748779988,
+      "expected_direction": "event<control",
+      "precollapse_events": {
+        "ci_lower": 0.596437844207866,
+        "ci_upper": 0.5972776582137561,
+        "mean": 0.5968521773531568,
+        "n_users": 33777
+      },
+      "reference_controls": {
+        "ci_lower": 0.6071617578946368,
+        "ci_upper": 0.6097574532342738,
+        "mean": 0.6084493348409566,
+        "n_users": 6562
+      }
+    },
+    "p": {
+      "aligned": true,
+      "difference_event_minus_control": 0.025808504407154625,
+      "expected_direction": "event>control",
+      "precollapse_events": {
+        "ci_lower": 0.21153817444200934,
+        "ci_upper": 0.21411497967456666,
+        "mean": 0.2127795290931448,
+        "n_users": 33777
+      },
+      "reference_controls": {
+        "ci_lower": 0.18361050328991974,
+        "ci_upper": 0.19031726924374437,
+        "mean": 0.18697102468599017,
+        "n_users": 6562
+      }
+    }
+  },
+  "precollapse_window": 10,
+  "recommended_action": "Bridge check is only partially aligned. Refine telemetry proxies before comparator calibration.",
+  "stage": "bridge_check"
+}

@@ -1,0 +1,78 @@
+{
+  "freeze_name": "markets_fast_robustness_packet_v1",
+  "created_utc": "2026-04-21T17:55:31.963586+00:00",
+  "description": "Manuscript-facing robustness packet for the fast-family markets comparator branch, including canonical robustness and relaxed-band sensitivity artifacts.",
+  "parent_robustness_pointer": "results/frozen/comparators/markets_fast_band_robustness_state_v1__LATEST.txt",
+  "files": [
+    {
+      "filename": "markets_fast_band_sensitivity_summary_v1.csv",
+      "source_path": "results/rendered/comparators/markets_fast_band_sensitivity_summary_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_fast_robustness_packet_v1__20260421T175531Z/markets_fast_band_sensitivity_summary_v1.csv",
+      "sha256": "424099c31bcaa8f06d6bc830dde16d0a4cb843e8651efd4d131bda21b4ed2022",
+      "size_bytes": 3716
+    },
+    {
+      "filename": "markets_fast_band_sensitivity_summary_v1.md",
+      "source_path": "results/rendered/comparators/markets_fast_band_sensitivity_summary_v1.md",
+      "frozen_path": "results/frozen/comparators/markets_fast_robustness_packet_v1__20260421T175531Z/markets_fast_band_sensitivity_summary_v1.md",
+      "sha256": "f00b4e635d46e5d3cdc0d909ece3fda211765aab37f252cf61b57db69ae800c4",
+      "size_bytes": 2781
+    },
+    {
+      "filename": "markets_fast_segmentation_band_robustness_table_v1.csv",
+      "source_path": "results/rendered/comparators/markets_fast_segmentation_band_robustness_table_v1.csv",
+      "frozen_path": "results/frozen/comparators/markets_fast_robustness_packet_v1__20260421T175531Z/markets_fast_segmentation_band_robustness_table_v1.csv",
+      "sha256": "b84ebe06a2e4fec63aa0ac6130652af81490753d9fac1a51867f0b32be420942",
+      "size_bytes": 2426
+    },
+    {
+      "filename": "markets_fast_segmentation_band_robustness_table_v1.md",
+      "source_path": "results/rendered/comparators/markets_fast_segmentation_band_robustness_table_v1.md",
+      "frozen_path": "results/frozen/comparators/markets_fast_robustness_packet_v1__20260421T175531Z/markets_fast_segmentation_band_robustness_table_v1.md",
+      "sha256": "dbc875a4a987447fc0c713240d123f8fbfe09f4f2ce95051044246c17bc2b66b",
+      "size_bytes": 2075
+    },
+    {
+      "filename": "markets_fast_band_robustness_state_v1_freeze_manifest.json",
+      "source_path": "results/frozen/comparators/markets_fast_band_robustness_state_v1__20260421T175531Z/freeze_manifest.json",
+      "frozen_path": "results/frozen/comparators/markets_fast_robustness_packet_v1__20260421T175531Z/markets_fast_band_robustness_state_v1_freeze_manifest.json",
+      "sha256": "7c7125b6122f3e8efd1ccf0f6ec04b5eb726462f1c2f7470c71bc2f24d146712",
+      "size_bytes": 7301
+    },
+    {
+      "filename": "markets_fast_band_robustness_state_v1_LOCK_NOTE.md",
+      "source_path": "results/frozen/comparators/markets_fast_band_robustness_state_v1__20260421T175531Z/LOCK_NOTE.md",
+      "frozen_path": "results/frozen/comparators/markets_fast_robustness_packet_v1__20260421T175531Z/markets_fast_band_robustness_state_v1_LOCK_NOTE.md",
+      "sha256": "d452f8f541ca08254eb04557f429e9a1d2a333850ec712ab648fff621e451305",
+      "size_bytes": 2021
+    },
+    {
+      "filename": "markets_fast_band_robustness_state_v1__LATEST.txt",
+      "source_path": "results/frozen/comparators/markets_fast_band_robustness_state_v1__LATEST.txt",
+      "frozen_path": "results/frozen/comparators/markets_fast_robustness_packet_v1__20260421T175531Z/markets_fast_band_robustness_state_v1__LATEST.txt",
+      "sha256": "7db791d4685e95414426ac6f2848d6f4bb3ffc6802ce6dbc15a86afc9fa860be",
+      "size_bytes": 83
+    },
+    {
+      "filename": "LOCK_NOTE.md",
+      "source_path": "generated_by_analysis/13au_freeze_markets_fast_robustness_packet_v1.py",
+      "frozen_path": "results/frozen/comparators/markets_fast_robustness_packet_v1__20260421T175531Z/LOCK_NOTE.md",
+      "sha256": "ac413c9904e301b58755a4fad6b82515ee52049862e09f7dcab4fe59a36d07f3",
+      "size_bytes": 1644
+    },
+    {
+      "filename": "MANUSCRIPT_NOTE.md",
+      "source_path": "generated_by_analysis/13au_freeze_markets_fast_robustness_packet_v1.py",
+      "frozen_path": "results/frozen/comparators/markets_fast_robustness_packet_v1__20260421T175531Z/MANUSCRIPT_NOTE.md",
+      "sha256": "25424906e3fc9f7455d38a93192ff3cbce8eabd52dd5ea8dba658eaca083a8c7",
+      "size_bytes": 681
+    },
+    {
+      "filename": "markets_fast_robustness_packet_v1__LATEST.txt",
+      "source_path": "generated_by_analysis/13au_freeze_markets_fast_robustness_packet_v1.py",
+      "frozen_path": "results/frozen/comparators/markets_fast_robustness_packet_v1__20260421T175531Z/markets_fast_robustness_packet_v1__LATEST.txt",
+      "sha256": "7a54fa85f39fd5885f3b977971699e02e07575aa7f135d59ecbfb5d5cad26dd9",
+      "size_bytes": 79
+    }
+  ]
+}

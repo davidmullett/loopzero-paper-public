@@ -1,0 +1,14 @@
+domain_family,str,Retained domain family
+instantiation,str,Specific domain instantiation
+best_detector_family,str,Best accepted non-Loopzero detector family
+best_config_id,str,Selected config id for best family
+available_flag,int,1 if any non-Loopzero comparator is available else 0
+fp_eval,float,Held-out false-positive rate of best comparator
+median_lead_eval,float,Held-out median lead of best comparator
+iqr_lead_eval_low,float,25th percentile held-out lead
+iqr_lead_eval_high,float,75th percentile held-out lead
+loopzero_median_lead_eval,float,Loopzero held-out median lead
+delta_vs_loopzero,float,Best comparator median lead minus Loopzero median lead
+n_best_eval,int,Event count for best comparator
+n_loopzero_eval,int,Event count for Loopzero
+selection_basis,str,Short text explaining why this comparator was selected

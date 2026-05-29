@@ -1,0 +1,6 @@
+row_label,detector_family,config_id,fp_cal,control_alarm_units,control_units_total,control_alarm_fraction,event_alarm_units,event_units_total,event_alarm_fraction,distance_to_band,interpretation
+Nearest nontrivial fast comparator,ac1_ews,ac1_ews__632f23b2,0.131578947368421,5,38,5/38,1,16,1/16,0.061578947368421,Nearest nontrivial comparator overall under the locked equal-FP rule.
+Nearest numeric slow tie 1,matrix_profile,matrix_profile__0a536aa4,0.0,0,38,0/38,0,16,0/16,0.03,"Numerically nearest slow config to the band, but trivial-silent."
+Nearest numeric slow tie 2,permutation_entropy,permutation_entropy__001577c8,0.0,0,38,0/38,0,16,0/16,0.03,"Numerically nearest slow config to the band, but trivial-silent."
+Best nontrivial slow comparator,permutation_entropy,permutation_entropy__259c1b96,0.3684210526315789,14,38,14/38,4,16,4/16,0.2984210526315789,Best slow-family config with nonzero event alarms; still materially above band.
+Final conclusion,—,—,,,,—,,,—,,No tested fast or slow comparator configuration achieved the locked equal-FP band; AC1 remains the nearest nontrivial comparator.

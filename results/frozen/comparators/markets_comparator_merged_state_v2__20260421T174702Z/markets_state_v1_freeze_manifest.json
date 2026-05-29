@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-04-18T13:50:12.076809Z",
+  "files": {
+    "acceptance_matrix": {
+      "filename": "comparator_acceptance_matrix_v1.csv",
+      "sha256": "f6d248f2e65f241e5731a488052b8372810ddc58d24df8e6251161c75d990547"
+    },
+    "unavailable_cases": {
+      "filename": "comparator_unavailable_cases_v1.csv",
+      "sha256": "845777736f036b56a31e9f1d4aee9d710ebdf9d9d48f653e4da0070579920258"
+    },
+    "state_summary": {
+      "filename": "markets_comparator_state_summary_v1.csv",
+      "sha256": "04ef874623a0787097b69576e22902c0a2885515541d4cc4f98dc842bbb2c5d6"
+    },
+    "input_manifest": {
+      "filename": "comparator_input_manifest_v1.csv",
+      "sha256": "9c005e8b92013c59d3924b92425ee02ce385b2288c28691391d36ca891e3ccb7"
+    }
+  }
+}

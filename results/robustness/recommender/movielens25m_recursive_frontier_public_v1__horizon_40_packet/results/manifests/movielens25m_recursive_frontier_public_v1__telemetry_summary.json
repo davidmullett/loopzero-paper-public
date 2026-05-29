@@ -1,0 +1,62 @@
+{
+  "benchmark_freeze_sha256": "b7a8cae19dd8a339fc1f6a1ed59c164d9b6cd4350302771c7d0593605e6a8604",
+  "benchmark_id": "movielens25m_recursive_frontier_public_v1",
+  "contract_sha256": "2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d",
+  "engine_hash": "56c1cff225d60c09",
+  "group_means": {
+    "all_controls": {
+      "G_mean": 0.10566578316671375,
+      "delta_mean": 0.5956144948491097,
+      "label": "all_controls",
+      "n_rows": 262480,
+      "p_mean": 0.20041176515422404
+    },
+    "all_events": {
+      "G_mean": 0.13839512913233415,
+      "delta_mean": 0.5907603979796953,
+      "label": "all_events",
+      "n_rows": 774311,
+      "p_mean": 0.21211967551461267
+    },
+    "precollapse_events": {
+      "G_mean": 0.06085479581127507,
+      "delta_mean": 0.5968521773531568,
+      "label": "precollapse_events",
+      "n_rows": 337770,
+      "p_mean": 0.2127795290931448
+    },
+    "reference_controls": {
+      "G_mean": 0.08175988899853573,
+      "delta_mean": 0.6084493348409566,
+      "label": "reference_controls",
+      "n_rows": 65620,
+      "p_mean": 0.1869710246859902
+    }
+  },
+  "n_control_users": 6562,
+  "n_event_users": 33777,
+  "n_panel_rows": 1036791,
+  "n_unique_users": 40339,
+  "precollapse_window": 10,
+  "sanity_checks": {
+    "contains_control_rows": true,
+    "contains_event_rows": true,
+    "panel_engine_hash_matches_freeze": true,
+    "panel_users_match_frozen_included_units": true
+  },
+  "stage": "compute_telemetry",
+  "telemetry_ranges": {
+    "G": {
+      "max": 1.0,
+      "min": 0.0
+    },
+    "delta": {
+      "max": 0.9322147298169114,
+      "min": 0.0
+    },
+    "p": {
+      "max": 1.0,
+      "min": 0.0
+    }
+  }
+}

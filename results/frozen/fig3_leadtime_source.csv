@@ -1,0 +1,25 @@
+domain,method,median_dt,iqr,accepted,notes
+Toy,Loopzero,329,289-409,yes,Predicate
+Toy,Variance,,,no,No accepted variance baseline in current snapshot
+Toy,AC1,60,58-61,yes,Accepted AC1 baseline
+LinUCB,Loopzero,316,272-355,yes,Predicate
+LinUCB,Variance,,,no,No accepted variance baseline in current snapshot
+LinUCB,AC1,60,58-61,yes,Accepted AC1 baseline
+Epsilon-greedy,Loopzero,316,272-355,yes,Predicate
+Epsilon-greedy,Variance,,,no,No accepted variance baseline in current snapshot
+Epsilon-greedy,AC1,60,58-61,yes,Accepted AC1 baseline
+MovieLens,Loopzero,412,284-454,yes,Predicate
+MovieLens,Variance,36,23-48,yes,Accepted variance baseline
+MovieLens,AC1,,,no,No accepted AC1 baseline in current snapshot
+Markets,Loopzero,404,274-453,yes,Predicate
+Markets,Variance,32,18-46,yes,Accepted variance baseline
+Markets,AC1,,,no,No accepted AC1 baseline in current snapshot
+Recursive model replay,Loopzero,378,269-436,yes,Predicate
+Recursive model replay,Variance,31,14-43,yes,Accepted variance baseline
+Recursive model replay,AC1,61,57-62,yes,Accepted AC1 baseline
+Cognition,Loopzero,359,261-441,yes,Predicate
+Cognition,Variance,32,14-47,yes,Accepted variance baseline
+Cognition,AC1,59,54-60,yes,Accepted AC1 baseline
+Culture,Loopzero,224,148-430,yes,Predicate
+Culture,Variance,,,no,No accepted variance baseline in current snapshot
+Culture,AC1,,,no,No accepted AC1 baseline in current snapshot

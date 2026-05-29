@@ -1,0 +1,6 @@
+event_id,accepted_hit_count,best_config_id,delta_window,p_window,g_window,eps_g,tau_delta,p_min,p_z_threshold,n_controls_with_alarm,control_window_fp_rate,control_row_fp_rate,median_lead_bars
+volmageddon_2018_xiv,2,cfg_001803,45,45,30,0.1,-0.05,0.05,1.0,1,0.05,5.692167577413479e-05,98.0
+covid_mwcb_2020_03_09,0,,,,,,,,,,,,
+covid_mwcb_2020_03_12,0,,,,,,,,,,,,
+covid_mwcb_2020_03_16,0,,,,,,,,,,,,
+covid_mwcb_2020_03_18,49,cfg_001285,30,60,16,0.15,-0.05,0.02,1.0,1,0.05,5.692167577413479e-05,51.0

@@ -1,0 +1,15 @@
+{
+    "export_file_path": "no_progress_export.out",
+    "use_stdin": false,
+    "permitted_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "Lean.trustCompiler"
+    ],
+    "unpermitted_axiom_hard_error": false,
+    "nat_extension": true,
+    "string_extension": true,
+    "pp_to_stdout": false,
+    "print_success_message": true
+}

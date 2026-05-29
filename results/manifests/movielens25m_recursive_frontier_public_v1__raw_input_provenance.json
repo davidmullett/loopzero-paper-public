@@ -1,0 +1,101 @@
+{
+  "archive": {
+    "md5": "6b51fb2759a8657d3bfcbfc42b592ada",
+    "md5_verified": true,
+    "official_md5": "6b51fb2759a8657d3bfcbfc42b592ada",
+    "path": "/Users/david/Dev/loopzero-paper-public/data/external/movielens25m/ml-25m.zip",
+    "sha256": "8b21cfb7eb1706b4ec0aac894368d90acf26ebdfb6aced3ebd4ad5bd1eb9c6aa",
+    "size_bytes": 261978986
+  },
+  "benchmark_id": "movielens25m_recursive_frontier_public_v1",
+  "chronological_sort_rule": {
+    "raw_order": [
+      "userId",
+      "movieId"
+    ],
+    "required_by_contract": true,
+    "sorted_order": [
+      "userId",
+      "timestamp",
+      "movieId"
+    ]
+  },
+  "contract_sha256": "720c8b03ac1721e18afea7c248e46785c8c489bebf2c4331c9f86728eda21aaa",
+  "dataset": {
+    "archive_md5_url": "https://files.grouplens.org/datasets/movielens/ml-25m.zip.md5",
+    "archive_url": "https://files.grouplens.org/datasets/movielens/ml-25m.zip",
+    "name": "MovieLens-25M",
+    "readme_url": "https://files.grouplens.org/datasets/movielens/ml-25m-README.html",
+    "source": "GroupLens"
+  },
+  "extracted_files": [
+    {
+      "md5": "723d35b93bb6a3ba9cc3eb657e1e6eb1",
+      "path": "/Users/david/Dev/loopzero-paper-public/data/raw/movielens25m/ml-25m/README.txt",
+      "sha256": "3c3b3195c5bcff4950d0f4d7a127cf1b5a4e0dd5598e2641f58a743a79fdace1",
+      "size_bytes": 10460
+    },
+    {
+      "md5": "160028e7bd0abf7a7f99280eb527c869",
+      "path": "/Users/david/Dev/loopzero-paper-public/data/raw/movielens25m/ml-25m/genome-scores.csv",
+      "sha256": "dcee649a8ba5c02b14b5ac5ff34dd27edcf58beff1d902cdf9c114927d1f8f70",
+      "size_bytes": 435164157
+    },
+    {
+      "md5": "3a83b71493e852ec5a352fca3af93dab",
+      "path": "/Users/david/Dev/loopzero-paper-public/data/raw/movielens25m/ml-25m/genome-tags.csv",
+      "sha256": "c84bf1e2addbf38432426a2bb2a117a59d76c0873fc875fe8764e92842fd3bfb",
+      "size_bytes": 18103
+    },
+    {
+      "md5": "0f00371ceaaab5bb5eb78d5785bbb078",
+      "path": "/Users/david/Dev/loopzero-paper-public/data/raw/movielens25m/ml-25m/links.csv",
+      "sha256": "dd07bbd9aa8e76d263d8323ddd18ec87b6e00a79a68a5896afe9a737af22322b",
+      "size_bytes": 1368578
+    },
+    {
+      "md5": "52e9ec0de217791bca8742e9280acc4e",
+      "path": "/Users/david/Dev/loopzero-paper-public/data/raw/movielens25m/ml-25m/movies.csv",
+      "sha256": "c50dea6973e619f9bc1decd4afa3e35358b83a5fb663dac0ec82252a011d023d",
+      "size_bytes": 3038099
+    },
+    {
+      "md5": "b0e866381b9fa56c9e3f87afa46a618f",
+      "path": "/Users/david/Dev/loopzero-paper-public/data/raw/movielens25m/ml-25m/ratings.csv",
+      "sha256": "9c85525758597dca76e8d98cebb9c13e018c2317b09a0878b6d383179526e385",
+      "size_bytes": 678260987
+    },
+    {
+      "md5": "8181e069193b48a68d1c6037a24f5f3c",
+      "path": "/Users/david/Dev/loopzero-paper-public/data/raw/movielens25m/ml-25m/tags.csv",
+      "sha256": "84793c391a8e2a8b93190b5e780f781563a184c413d02ff2104cc2f442e2830a",
+      "size_bytes": 38810332
+    }
+  ],
+  "notes": [
+    "The raw MovieLens ratings file is not chronologically ordered within user.",
+    "Canonical replay should consume the sorted ratings artifact, not raw ratings.csv.",
+    "This manifest is upstream provenance only and does not yet define episodes."
+  ],
+  "ratings_row_count_raw_csv_excluding_header": 25000095,
+  "readme": {
+    "md5": "7f885d9b07c31bacf073d8e0e79b54d4",
+    "path": "/Users/david/Dev/loopzero-paper-public/data/external/movielens25m/ml-25m-README.html",
+    "sha256": "19c30d1f6160848f0740a6324be6246b90e5b8807748673b6ead2d7225870baa",
+    "size_bytes": 12290
+  },
+  "sorted_ratings": {
+    "md5": "07964f0b36c0ad62f6c177187f3bc53f",
+    "overwritten": true,
+    "path": "/Users/david/Dev/loopzero-paper-public/data/processed/movielens25m/ratings__sorted_by_user_time.csv.gz",
+    "sha256": "a6221995a640a15183f167633e08fdceb1a3f0c97d16b850562bc5ade93681f3",
+    "size_bytes": 160627922,
+    "sort_columns": [
+      "userId",
+      "timestamp",
+      "movieId"
+    ],
+    "stable_tie_break": "movieId ascending within identical timestamp"
+  },
+  "stage": "raw_input_provenance"
+}

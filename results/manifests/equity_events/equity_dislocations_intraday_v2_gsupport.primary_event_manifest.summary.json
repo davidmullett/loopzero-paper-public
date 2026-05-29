@@ -1,0 +1,29 @@
+{
+  "event_family": "equity_dislocations_intraday_v2_gsupport",
+  "n_catalog_rows": 2,
+  "n_active_rows": 2,
+  "n_primary_rows": 2,
+  "n_excluded_rows": 0,
+  "excluded_event_ids": [],
+  "panel_source_format": "parquet",
+  "panel_source_path": "data/public/equity_events/processed/equity_panel_1min.parquet",
+  "n_events_present_primary": 2,
+  "n_events_partial_primary": 0,
+  "n_events_missing_primary": 0,
+  "event_ids_present_primary": [
+    "volmageddon_2018_xiv",
+    "covid_mwcb_2020_03_18"
+  ],
+  "event_ids_partial_primary": [],
+  "event_ids_missing_primary": [],
+  "n_events_with_rows": 2,
+  "n_events_without_rows": 0,
+  "event_ids_with_rows": [
+    "volmageddon_2018_xiv",
+    "covid_mwcb_2020_03_18"
+  ],
+  "event_ids_without_rows": [],
+  "min_start_ts_utc": "2018-02-05T09:00:00Z",
+  "max_window_end_ts_utc": "2020-03-19T00:00:00Z",
+  "controls_status": "pending_not_yet_implemented"
+}

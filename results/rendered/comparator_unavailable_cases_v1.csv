@@ -1,0 +1,7 @@
+domain_family,str,Retained domain family
+instantiation,str,Specific domain instantiation
+detector_family,str,Detector key
+best_near_fp_cal,float,Calibration FP of nearest configuration to target
+nearest_config_id,str,Config id closest to acceptance target
+unavailable_reason,str,no accepted config within band | runtime failure | invalid score
+notes,str,Optional diagnostic detail

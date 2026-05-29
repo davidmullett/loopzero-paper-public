@@ -1,0 +1,18 @@
+domain_family,str,Retained domain family
+instantiation,str,Specific domain instantiation or slice family
+detector_family,str,Detector key from comparator_suite_v1.yaml
+config_id,str,Stable identifier for one parameter configuration
+split_id,str,Calibration/evaluation split identifier
+unit_scope,str,Granularity used for false-positive accounting
+n_control_units_cal,int,Number of calibration control units
+n_event_units_cal,int,Number of calibration event units if applicable
+fp_cal,float,Calibration false-positive rate
+accepted,int,1 if fp_cal is inside acceptance band else 0
+acceptance_reason,str,accepted | below_band | above_band | invalid | unavailable
+selection_rank,int,Rank among accepted configs after applying selection rule
+selected_flag,int,1 if chosen as final config for detector/domain pair else 0
+median_lead_cal,float,Median calibration lead time among event units
+iqr_lead_cal_low,float,25th percentile calibration lead
+iqr_lead_cal_high,float,75th percentile calibration lead
+param_json,str,Serialized parameter dictionary
+notes,str,Optional diagnostics

@@ -1,0 +1,4 @@
+family,n_configs,n_full_success_total,n_full_success_accepted,min_controls_for_full_success,best_full_config_id,best_full_controls_with_alarm,best_full_window_fp_rate,best_full_median_lead_bars
+equity_dislocations_intraday_v2,2160,72,0,3,cfg_001339,3,0.1071428571428571,74.5
+equity_dislocations_intraday_v2_valid,2160,72,0,2,cfg_001339,2,0.0769230769230769,74.5
+equity_dislocations_intraday_v2_gsupport,2160,72,0,2,cfg_001339,2,0.1052631578947368,74.5

@@ -1,0 +1,78 @@
+{
+  "aligned_count": 3,
+  "all_aligned": true,
+  "benchmark_freeze_sha256": "b59a54d1dd1944eb810d731db58cd7843428e920f1ff4208c4b13aca9cf4a86c",
+  "benchmark_id": "movielens25m_recursive_frontier_public_v1",
+  "bootstrap": {
+    "note": "User-level bootstrap is descriptive uncertainty only; bridge decision is directional, not a significance test.",
+    "reps": 1000,
+    "seed": 0,
+    "unit": "user"
+  },
+  "bridge_check_sha256": "2d6a9c0ce811bd02c694f35ff2320e10657a1b4770c16ea07ff67777bace7dbd",
+  "counts": {
+    "n_control_rows_in_bridge_window": 39960,
+    "n_control_users_in_bridge_window": 3996,
+    "n_event_rows_in_bridge_window": 363430,
+    "n_event_users_in_bridge_window": 36343,
+    "n_unique_users_in_panel": 40339
+  },
+  "decision": "PASS",
+  "engine_hash": "56c1cff225d60c09",
+  "metrics": {
+    "G": {
+      "aligned": true,
+      "difference_event_minus_control": 0.03154794072737923,
+      "expected_direction": "event>control",
+      "precollapse_events": {
+        "ci_lower": 0.06047947564905782,
+        "ci_upper": 0.060680752501495135,
+        "mean": 0.06058198642809158,
+        "n_users": 36343
+      },
+      "reference_controls": {
+        "ci_lower": 0.026979708438041754,
+        "ci_upper": 0.03109050192383524,
+        "mean": 0.02903404570071235,
+        "n_users": 3996
+      }
+    },
+    "delta": {
+      "aligned": true,
+      "difference_event_minus_control": -0.0012937287830605548,
+      "expected_direction": "event<control",
+      "precollapse_events": {
+        "ci_lower": 0.599318111741462,
+        "ci_upper": 0.6001654084126337,
+        "mean": 0.5997551700069769,
+        "n_users": 36343
+      },
+      "reference_controls": {
+        "ci_lower": 0.5992343954727084,
+        "ci_upper": 0.6029326644255132,
+        "mean": 0.6010488987900374,
+        "n_users": 3996
+      }
+    },
+    "p": {
+      "aligned": true,
+      "difference_event_minus_control": 0.001072393512679487,
+      "expected_direction": "event>control",
+      "precollapse_events": {
+        "ci_lower": 0.20692592863175036,
+        "ci_upper": 0.20962426483816748,
+        "mean": 0.20821910046588793,
+        "n_users": 36343
+      },
+      "reference_controls": {
+        "ci_lower": 0.20178562967165903,
+        "ci_upper": 0.21241054816411706,
+        "mean": 0.20714670695320844,
+        "n_users": 3996
+      }
+    }
+  },
+  "precollapse_window": 10,
+  "recommended_action": "Bridge check passes under the current telemetry package. Proceed to fast-family comparator calibration.",
+  "stage": "bridge_check"
+}

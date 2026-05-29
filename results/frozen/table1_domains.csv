@@ -1,0 +1,9 @@
+domain,recursive_substrate,operational_definition_of_collapse,notes
+Toy bandits,Adaptive decision loop in synthetic simulators,Reward deterioration or regret spike,Publication-safe domain summary
+LinUCB,Contextual adaptive decision policy,Reward deterioration or regret spike,Publication-safe domain summary
+Epsilon-greedy,Adaptive exploration-exploitation policy,Reward deterioration or regret spike,Publication-safe domain summary
+MovieLens,Recommender feedback loop,Precision@k decline,Publication-safe domain summary
+Markets,Market microstructure feedback loop,Volatility or liquidity disruption,Publication-safe domain summary
+Recursive model replay,Outputs entering future training or replay,Loss divergence or self-bleed,Publication-safe domain summary
+Cognition,Working-memory task proxy,Working-memory failure proxy,Publication-safe domain summary
+Culture,Topic recycling and saturation proxy,Saturation or topic recycling,Publication-safe boundary-case summary

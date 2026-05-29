@@ -1,0 +1,44 @@
+{
+  "benchmark_id": "movielens25m_recursive_frontier_public_v1",
+  "canonical_constants": {
+    "collapse_streak_len": 8,
+    "max_horizon_steps": 60,
+    "min_warning_runway": 15,
+    "positive_rating_threshold": 4.0,
+    "remaining_frontier_floor": 10,
+    "top_k": 10,
+    "warm_start_ratings": 30
+  },
+  "contract_sha256": "2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d",
+  "control_episode_end_step": {
+    "max": 60,
+    "median": 60.0,
+    "min": 60
+  },
+  "control_fp_grid_step": 0.00025025025025025025,
+  "engine_family": "item_item_collaborative_filtering",
+  "engine_hash": "56c1cff225d60c09",
+  "engine_name": "movielens_recursive_replay_engine",
+  "engine_version": "1.0.0",
+  "event_collapse_step": {
+    "max": 60,
+    "median": 22.0,
+    "min": 16
+  },
+  "event_warning_runway_steps": {
+    "max": 59,
+    "median": 21.0,
+    "min": 15
+  },
+  "exclusion_counts": {
+    "collapse_before_min_warning_runway": 63934,
+    "initial_frontier_below_remaining_frontier_floor": 27423,
+    "insufficient_total_ratings_for_warm_start": 30845
+  },
+  "n_control_units": 3996,
+  "n_event_units": 36343,
+  "n_excluded_units": 122202,
+  "n_included_units": 40339,
+  "n_total_users_processed": 162541,
+  "stage": "canonical_user_episode_manifest"
+}

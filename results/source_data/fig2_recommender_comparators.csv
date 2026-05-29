@@ -1,0 +1,7 @@
+group,family,nearest_fp,nearest_nontrivial_fp,accepted_configs,family_display
+fast,ac1,0.7684542586750789,0.7684542586750789,0,AC1
+fast,cusum,0.7518401682439537,0.7518401682439537,0,CUSUM
+fast,page_hinkley,0.7684542586750789,0.7684542586750789,0,Page-Hinkley
+fast,variance_ews,0.0,0.7125131440588854,0,Variance EWS
+slow,matrix_profile,0.013669821240799159,0.013669821240799159,0,Matrix Profile
+slow,permutation_entropy,1.0,1.0,0,Permutation Entropy

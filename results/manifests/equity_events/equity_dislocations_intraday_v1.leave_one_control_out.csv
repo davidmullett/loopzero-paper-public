@@ -1,0 +1,17 @@
+dropped_control_id,n_controls_after_drop,n_accepted_configs_after_drop,n_full_success_accepted_after_drop,seed_configs_surviving_after_drop,best_full_success_config_id,best_full_success_n_event_success,best_full_success_n_controls_with_alarm_loo,best_full_success_control_window_fp_rate_loo,best_full_success_median_lead_bars
+covid_noncollapse_2020_03_20,15,660,24,['cfg_002043'],cfg_002041,2,1,0.06666666666666667,74.5
+volmageddon_control_2018_02_02,15,717,18,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+covid_noncollapse_2020_03_24,15,737,12,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+covid_noncollapse_2020_03_26,15,698,12,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+covid_noncollapse_2020_03_17,15,631,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+covid_noncollapse_2020_03_19,15,733,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+covid_noncollapse_2020_03_23,15,731,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+covid_noncollapse_2020_03_25,15,689,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+covid_noncollapse_2020_03_27,15,695,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+volmageddon_control_2018_01_24,15,689,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+volmageddon_control_2018_01_26,15,689,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+volmageddon_control_2018_01_29,15,698,10,['cfg_001315'],cfg_001315,2,1,0.06666666666666667,74.5
+volmageddon_control_2018_01_30,15,689,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+volmageddon_control_2018_01_31,15,697,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+volmageddon_control_2018_02_01,15,689,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
+volmageddon_control_2018_02_06,15,707,10,"['cfg_001315', 'cfg_002043']",cfg_001315,2,1,0.06666666666666667,74.5
