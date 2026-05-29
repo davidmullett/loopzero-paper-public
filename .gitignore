@@ -25,3 +25,19 @@ manuscript/build/supplementary_v*.pdf
 manuscript/build/supplementary_v*.tex
 manuscript/build/supplementary_v*.aux
 manuscript/build/supplementary_v*.log
+
+# ── Non-publishable: data, backups, snapshots, internal ──
+data/
+_backups/
+_snapshots/
+CLAUDE.md
+Eliminates
+exports/
+citation_map/prompts_*.txt
+citation_map/raw/
+*.bak
+*.bak.*
+*.pre_*_backup
+PUBLIC_REPO_SCOPE.md
+docs/REPO_SCOPE_BOUNDARY.md
+A1_readiness_brief.md
