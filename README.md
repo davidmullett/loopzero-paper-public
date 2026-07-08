@@ -31,7 +31,12 @@ This work is a **benchmark and evaluation framework**, not a working early-warni
 - It does **not** redistribute raw vendor market data, and it does **not** include the upstream ingestion pipeline. Reproduction starts from the frozen derived packets, not from raw sources.
 - The model-collapse (LLM) material is a clearly labeled **secondary analysis** of published trajectories, not a third primary benchmark domain.
 
-The null is the point, not a disappointment: a matched-FP contract is exactly the discipline under which most informal "early-warning" claims quietly fail, and reporting that cleanly is the contribution.
+A note added July 2026 while preparing the revision: whether a detector family
+reaches an "accepted operating point" inside a fixed false-positive band depends
+heavily on the granularity of its predeclared calibration grid, so band
+non-acceptance is weaker evidence of comparator inadequacy than the v1 framing
+suggests. This is one reason the revision replaces band acceptance with full
+threshold-sweep, matched alarm-count comparison (see status note above).
 
 ## Repository structure
 
