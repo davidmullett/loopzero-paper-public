@@ -73,3 +73,9 @@ The frozen `.parquet` and `.csv` artifacts in `results/frozen/` and `results/ren
 
 - Paper, documentation, and data (Markdown, CSVs, JSON manifests, rendered manuscript outputs): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - Code (Python in `analysis/`, `src/`): [Apache 2.0](https://github.com/davidmullett/loopzero-paper-public/blob/main/LICENSE)
+
+## Disclosure
+
+The author is the founder of Loopzero, Inc., which has filed a U.S. provisional
+patent application related to methods described in this work. Full statement in
+the manuscript's Competing Interests section.
