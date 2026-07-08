@@ -1,7 +1,6 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 \documentclass[
   11pt,
 ]{article}
@@ -148,15 +147,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Benchmarking Recursive-Collapse Warning Claims Under Matched False-Positive Control},
-  pdfauthor={David Mullett},
-  pdfsubject={Matched false-positive benchmarking for recursive-collapse warning claims},
-  pdfkeywords={\xmpquote{recursive collapse, matched false-positive, early warning, benchmark framework, pre-collapse, falsifiable}},
-  colorlinks=true,
-  linkcolor={blue},
-  filecolor={Maroon},
-  citecolor={blue},
-  urlcolor={blue},
+  hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
 \author{}
@@ -229,7 +220,7 @@ over-band) are illustrative cases shown; permutation entropy (FP =
 0.368, far above band) completes the calibration outcome. The figure
 decomposes the underlying claim into four epistemic layers: (i) an
 elementary no-progress obstruction verified in Lean
-(\texttt{\seqsplit{collapse\_via\_progresscycle\_public}}); (ii) an assumed
+(\texttt{collapse\_via\_progresscycle\_public}); (ii) an assumed
 measurement map to observable G/p/δ telemetry, stated as a conditional
 bridge; (iii) the matched-false-positive protocol; and (iv) empirical
 testing on frozen public-artifact benchmarks. Comparator markers are
@@ -339,7 +330,7 @@ this triad.
 
 \emph{Scope summary.} (i) Lean verifies the abstract no-progress
 obstruction over preorders, the bridge lemma
-\texttt{\seqsplit{collapse\_via\_progresscycle\_public}}, and a schematic telemetry
+\texttt{collapse\_via\_progresscycle\_public}, and a schematic telemetry
 specialization. (ii) The conditional bridge assumes that real recursive
 systems admit a measurement function μ mapping observable telemetry into
 a preorder, under which the witness triad's directional structure
@@ -498,9 +489,9 @@ pre-registered operating point therefore falls under-band on both
 benchmarks. No tested operating point in either benchmark's locked
 equal-FP band {[}0.03, 0.07{]} achieves event recovery; full 9-cell q ×
 k sensitivity grids per benchmark are reported in
-\texttt{\seqsplit{results/rendered/bridge/a1\_loopzero\_operating\_points.md}}, and
+\texttt{results/rendered/bridge/a1\_loopzero\_operating\_points.md}, and
 the pre-registered specification is documented in
-\texttt{\seqsplit{analysis/14\_a1\_prereg.md}}. Under matched-FP discipline,
+\texttt{analysis/14\_a1\_prereg.md}. Under matched-FP discipline,
 Loopzero's pre-registered detector and the tested standard comparator
 families therefore both report non-acceptance on the canonical
 benchmarks. This consistency is itself a coherent outcome of the
@@ -542,17 +533,17 @@ Status
 \bottomrule\noalign{}
 \endlastfoot
 Markets (n=38 controls, 16 events) & AC1 (fast --- nearest nontrivial) &
-\texttt{\seqsplit{ac1\_ews\_\_632f23b2}} & 0.1316 (5/38) & 0.0625 (1/16) & +0.0616
+\texttt{ac1\_ews\_\_632f23b2} & 0.1316 (5/38) & 0.0625 (1/16) & +0.0616
 above & Above band \\
 Markets & Permutation entropy (slow --- best nontrivial) &
-\texttt{\seqsplit{permutation\_entropy\_\_259c1b96}} & 0.3684 (14/38) & 0.2500
+\texttt{permutation\_entropy\_\_259c1b96} & 0.3684 (14/38) & 0.2500
 (4/16) & +0.2984 above & Above band \\
 Markets & Matrix profile / permutation entropy (slow --- numerically
 nearest) & trivial-silent ties & 0.0000 (0/38) & 0.0000 (0/16) & --- &
 Trivial-silent \\
 Recommender (n=4,755 controls, 35,584 events; 105 configurations tested)
 & Matrix profile (slow --- overall nearest) &
-\texttt{\seqsplit{matrix\_profile\_\_44b81bd6}} & 0.01367 & 0.1107 & −0.0163 below
+\texttt{matrix\_profile\_\_44b81bd6} & 0.01367 & 0.1107 & −0.0163 below
 & Below band \\
 Recommender & Variance EWS (fast --- nearest) & trivial-silent & 0.0000
 & --- & --- & Trivial-silent \\
@@ -654,7 +645,7 @@ units (FP = 0.000) and 0 of 36,343 event units (event alarm rate =
 0.000). The detector's primary-cell non-acceptance pattern observed at
 h=50 therefore extends across all three tested horizons; full 9-cell q ×
 k sensitivity grids at h=40 and h=60 are reported in
-\texttt{\seqsplit{results/rendered/bridge/a1\_loopzero\_operating\_points\_h40\_h60.md}}.
+\texttt{results/rendered/bridge/a1\_loopzero\_operating\_points\_h40\_h60.md}.
 The recommender branch therefore supports a corroborating second
 flagship benchmark on the comparator claim, with a bounded robustness
 qualification on the bridge layer under adjacent horizon shortening
@@ -735,7 +726,7 @@ benchmark. Two procedural filters apply during calibration: a
 emit zero alarms across the entire benchmark and therefore satisfy any
 false-positive band by vacuous compliance --- these configurations are
 excluded from accepted-operating-point determination; an
-\texttt{\seqsplit{unreachable\_fp\_band}} filter excludes configurations whose
+\texttt{unreachable\_fp\_band} filter excludes configurations whose
 minimum-length pre-conditions reduce n\_control\_units below the
 discrete-grid floor required to reach the {[}0.03, 0.07{]} band,
 evaluated before calibration.
@@ -814,7 +805,7 @@ signal instead appeared in continuous witness quality, with the clearest
 confirmation in the corroborating intraday-grain witness configuration
 \texttt{cfg\_002053}, particularly against the post-Volmageddon
 volatility-cluster control segment of February 8, 2018
-(\texttt{\seqsplit{volmageddon\_control\_2018\_02\_08}}). We therefore treat this
+(\texttt{volmageddon\_control\_2018\_02\_08}). We therefore treat this
 residual as a bounded exception that sharpens the empirical
 interpretation rather than as a contradiction of the broader result.
 Across the retained domains, neither the bridge criterion nor the
@@ -942,7 +933,7 @@ First, on the late-30-minute ROC slice the markets slow families (matrix
 profile, permutation entropy) fail at the data-availability gate before
 reaching calibration: this short window leaves n\_control\_units = 6,
 below the discrete-grid floor required to reach the {[}0.03, 0.07{]}
-band, so they were filtered as \texttt{\seqsplit{unreachable\_fp\_band}} on this
+band, so they were filtered as \texttt{unreachable\_fp\_band} on this
 slice. These families are evaluated on the full-window canonical markets
 benchmark (Figure 4), where the nearest nontrivial slow configuration,
 permutation entropy, reaches 14/38 control units at FP = 0.368, above
@@ -1266,8 +1257,8 @@ Claim status
 \bottomrule\noalign{}
 \endlastfoot
 A0 & Lean-formalized recursive no-progress obstruction
-(\texttt{\seqsplit{collapse\_via\_progresscycle\_public}},
-\texttt{\seqsplit{telemetry\_bridge\_obstruction\_public}}) & Frozen Lean artifact
+(\texttt{collapse\_via\_progresscycle\_public},
+\texttt{telemetry\_bridge\_obstruction\_public}) & Frozen Lean artifact
 & Formal claim boundary only; does not verify empirical telemetry or
 measurement map \\
 A1 & Loopzero's primary quantile detector at canonical configuration (q
@@ -1337,24 +1328,24 @@ US-listed instruments SPY, QQQ, IWM, VXX, UVXY, SVXY across the
 canonical 2017--2020 window --- covering both the XIV/SVXY February 2018
 Volmageddon implosion and the March 2020 COVID-era Level 1 market-wide
 circuit breaker triggers --- were obtained via the Alpaca Markets
-historical market data API (\url{https://alpaca.markets/}, accessed
-2025). Under the vendor's terms of service, raw minute bars are not
+historical market data API (https://alpaca.markets/, accessed 2025).
+Under the vendor's terms of service, raw minute bars are not
 redistributed alongside this artifact; the ingestion and preprocessing
 pipeline is maintained in an upstream private repository and reproduces
 minute bars from an Alpaca subscription. Per-segment derived ingredient
 packets containing log returns, absolute returns, intraday stress flags,
 breadth indicators, and Loopzero telemetry features (G, p, δ) at
 one-minute resolution are released in this artifact at
-\texttt{\seqsplit{results/rendered/equity\_dislocation\_family/intraday\_v2\_ingredient\_packet/}};
-each canonical event window (\texttt{\seqsplit{volmageddon\_2018\_xiv}},
-\texttt{\seqsplit{covid\_mwcb\_2020\_03\_18}}) and matched control window is
+\texttt{results/rendered/equity\_dislocation\_family/intraday\_v2\_ingredient\_packet/};
+each canonical event window (\texttt{volmageddon\_2018\_xiv},
+\texttt{covid\_mwcb\_2020\_03\_18}) and matched control window is
 materialized as a 54-column packet over the 16-hour intraday window
 (typically 944 rows per segment). Event-window definitions, trigger
 semantics, and the canonical late-30-minute summary slice follow the
 post-event analyses cited in the references (Augustin et al., 2021; NYSE
 Market-Wide Circuit Breaker Working Group, 2021). The matched-FP
 comparator calibration runs against the frozen
-\texttt{\seqsplit{markets\_comparator\_merged\_state\_v2}} (Supplementary Table
+\texttt{markets\_comparator\_merged\_state\_v2} (Supplementary Table
 S5). The public-reproducibility scope of the markets benchmark is at the
 derived-packet level: the released ingredient packets contain all
 telemetry features (G, p, δ, breadth indicators, stress flags) and
@@ -1367,7 +1358,7 @@ vendor-licensed market data and does not affect verifiability of the
 matched-FP comparator-acceptance results reported in this paper.
 
 \textbf{Markets benchmark construction.} The canonical segmented markets
-benchmark \texttt{\seqsplit{volmageddon\_covid\_public\_v2}} (canonical Loopzero
+benchmark \texttt{volmageddon\_covid\_public\_v2} (canonical Loopzero
 configuration \texttt{cfg\_001339}) was constructed from a curated set
 of intraday packet ingredients drawn from minute-bar data for six
 US-listed instruments --- SPY, QQQ, IWM, VXX, UVXY, and SVXY ---
@@ -1380,8 +1371,8 @@ units. Each packet was sliced into 120-minute time-window segments
 (minimum 60 retained minute-bars per segment), and each (slice ×
 segment) pair became one comparator unit. Event/control assignment was
 made by membership of the slice identifier in a prespecified list of
-canonical event identifiers (e.g., \texttt{\seqsplit{volmageddon\_2018\_xiv}},
-\texttt{\seqsplit{covid\_mwcb\_2020\_03\_18}}), with hard negative controls drawn
+canonical event identifiers (e.g., \texttt{volmageddon\_2018\_xiv},
+\texttt{covid\_mwcb\_2020\_03\_18}), with hard negative controls drawn
 from non-event slices over the same instrument universe. Under this
 construction, 38 control units and 16 event units were retained,
 yielding an FP grid step of 1/38 = 0.026316. Calibration semantics are
@@ -1394,11 +1385,11 @@ bootstrap remains for follow-up work.
 
 \textbf{Recommender benchmark construction.} The canonical recursive
 recommender benchmark
-\texttt{\seqsplit{movielens25m\_recursive\_frontier\_public\_v1}} was constructed
+\texttt{movielens25m\_recursive\_frontier\_public\_v1} was constructed
 from the public MovieLens-25M dataset
-(\url{https://grouplens.org/datasets/movielens/25m/}). Per-user
-trajectories were sorted chronologically and reduced to one episode per
-user. Each episode was replayed under a deterministic item-item
+(https://grouplens.org/datasets/movielens/25m/). Per-user trajectories
+were sorted chronologically and reduced to one episode per user. Each
+episode was replayed under a deterministic item-item
 collaborative-filtering engine with a warm-start prefix and a held-out
 positive frontier; collapse was defined as failure to recover held-out
 positive-frontier items under frozen benchmark rules. The canonical
@@ -1415,7 +1406,7 @@ an independent unit in calibration. Full parameter specification ---
 including the positive-rating threshold, frontier size, warm-start
 prefix length, item-item engine configuration, and leakage-prevention
 rules --- is recorded in the canonical manuscript freeze state
-(\texttt{\seqsplit{movielens25m\_recursive\_frontier\_public\_v1\_\_manuscript\_freeze\_state.json}}),
+(\texttt{movielens25m\_recursive\_frontier\_public\_v1\_\_manuscript\_freeze\_state.json}),
 with construction details documented in the Supplementary Materials.
 
 \textbf{Comparator scope and exclusions.} The six comparator families
@@ -1445,7 +1436,7 @@ family-agnostic: any detector returning a per-unit alarm decision can be
 evaluated under the same locked contract; researchers extending the
 comparator suite should follow the pre-registered grid protocol and
 frozen calibration freeze pattern at
-\texttt{\seqsplit{results/frozen/comparators/}}.
+\texttt{results/frozen/comparators/}.
 
 \textbf{Envelope-boundary matched-FP contract.} Loopzero's
 pre-registered sensitivity grid (q ∈ \{90, 95, 99\}; k ∈ \{1, 3, 5\})
@@ -1469,8 +1460,8 @@ re-expresses this comparison in integer alarm counts, surfacing where
 discrete FP space forces rate coincidences into literal alarm-count
 equivalences and where linear interpolation fills quantitative gaps in
 the frozen pre-registered calibration grids. Full computation is at
-\texttt{\seqsplit{analysis/20\_compute\_a2\_threshold\_path.py}} and
-\texttt{\seqsplit{analysis/21\_compute\_a2\_alert\_count\_exact.py}}, with outputs
+\texttt{analysis/20\_compute\_a2\_threshold\_path.py} and
+\texttt{analysis/21\_compute\_a2\_alert\_count\_exact.py}, with outputs
 in \texttt{results/calibrated/}.
 
 \textbf{Cluster-robust sensitivity at scenario grain.} The markets
@@ -1507,22 +1498,22 @@ markets, where the right-skewed bootstrap distribution at finite n
 favors BCa as the more honest read.
 
 \textbf{Artifact availability.} The Lean keeper surface ---
-\texttt{\seqsplit{no\_progress\_cycle\_public}},
-\texttt{\seqsplit{no\_progress\_kcycle\_public}},
-\texttt{\seqsplit{collapse\_via\_progresscycle\_public}}, \texttt{TelemetryState},
-\texttt{telemetryμ}, \texttt{\seqsplit{telemetry\_bridge\_obstruction\_public}},
-and \texttt{\seqsplit{no\_telemetry\_forbidden\_cycle\_public}} --- is publicly
-archived at \url{https://github.com/davidmullett/loopzero-paper-public}
-(commit \texttt{\seqsplit{7afd763f38182ca49b2016fe38eeefff4560cdf0}}) and is
+\texttt{no\_progress\_cycle\_public},
+\texttt{no\_progress\_kcycle\_public},
+\texttt{collapse\_via\_progresscycle\_public}, \texttt{TelemetryState},
+\texttt{telemetryμ}, \texttt{telemetry\_bridge\_obstruction\_public},
+and \texttt{no\_telemetry\_forbidden\_cycle\_public} --- is publicly
+archived at https://github.com/davidmullett/loopzero-paper-public
+(commit \texttt{7afd763f38182ca49b2016fe38eeefff4560cdf0}) and is
 reproducible under Lean v4.30.0-rc2 with Mathlib at commit
-\texttt{\seqsplit{3ba1ec58ec69cd649b9e5c61485a98d1dd37a00f}}. The build runs
+\texttt{3ba1ec58ec69cd649b9e5c61485a98d1dd37a00f}. The build runs
 cleanly under \texttt{lake\ build}. An axiom audit verifies that the
-three obstruction theorems (\texttt{\seqsplit{no\_progress\_cycle\_public}},
-\texttt{\seqsplit{no\_progress\_kcycle\_public}},
-\texttt{\seqsplit{collapse\_via\_progresscycle\_public}}) compile without any axiom
+three obstruction theorems (\texttt{no\_progress\_cycle\_public},
+\texttt{no\_progress\_kcycle\_public},
+\texttt{collapse\_via\_progresscycle\_public}) compile without any axiom
 dependencies, while the two telemetry-bridge theorems
-(\texttt{\seqsplit{telemetry\_bridge\_obstruction\_public}},
-\texttt{\seqsplit{no\_telemetry\_forbidden\_cycle\_public}}) depend only on the
+(\texttt{telemetry\_bridge\_obstruction\_public},
+\texttt{no\_telemetry\_forbidden\_cycle\_public}) depend only on the
 standard Mathlib trusted base (\texttt{propext},
 \texttt{Classical.choice}, \texttt{Quot.sound}). No non-standard axioms
 appear in the keeper surface.
@@ -1549,19 +1540,19 @@ frontier-failure pattern reported here.
 \textbf{Reproducibility anchors.} All empirical results in this paper
 are anchored to immutable frozen artifacts indexed by SHA-256 hash. The
 recommender benchmark uses the
-\texttt{\seqsplit{movielens\_recursive\_replay\_engine}} v1.0.0 (family
-\texttt{\seqsplit{item\_item\_collaborative\_filtering}}, engine hash
+\texttt{movielens\_recursive\_replay\_engine} v1.0.0 (family
+\texttt{item\_item\_collaborative\_filtering}, engine hash
 \texttt{56c1cff225d60c09}) operating under contract SHA-256
-\texttt{\seqsplit{2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d}};
+\texttt{2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d};
 all three tested horizons (h=40, h=50 canonical, h=60) are generated
 parametrically from this engine and contract. The upstream MovieLens-25M
 archive is the canonical GroupLens release (\texttt{ml-25m.zip}, archive
 SHA-256
-\texttt{\seqsplit{8b21cfb7eb1706b4ec0aac894368d90acf26ebdfb6aced3ebd4ad5bd1eb9c6aa}},
+\texttt{8b21cfb7eb1706b4ec0aac894368d90acf26ebdfb6aced3ebd4ad5bd1eb9c6aa},
 MD5-verified against the official GroupLens checksum at
-\url{https://files.grouplens.org/datasets/movielens/ml-25m.zip.md5};
-raw-input provenance manifest at
-\texttt{\seqsplit{results/manifests/movielens25m\_recursive\_frontier\_public\_v1\_\_raw\_input\_provenance.json}}).
+https://files.grouplens.org/datasets/movielens/ml-25m.zip.md5; raw-input
+provenance manifest at
+\texttt{results/manifests/movielens25m\_recursive\_frontier\_public\_v1\_\_raw\_input\_provenance.json}).
 Frozen-state freeze-manifests for each empirical component are listed in
 Supplementary Table S5; each frozen directory additionally contains a
 \texttt{LOCK\_NOTE.md} documenting the scientific and editorial scope of
@@ -1597,7 +1588,7 @@ Supplementary materials accompanying this article comprise:
 
 These are submitted as an arXiv ancillary file and are also available at
 the public repository
-(\url{https://github.com/davidmullett/loopzero-paper-public}).
+(https://github.com/davidmullett/loopzero-paper-public).
 
 \subsection{Funding}\label{funding}
 
@@ -1611,7 +1602,11 @@ implemented all software and analyses, and wrote the manuscript.
 
 \subsection{Competing interests}\label{competing-interests}
 
-The author declares no competing interests.
+The author is the founder of Loopzero, Inc., which has filed a U.S.
+provisional patent application (No.~64/042,661, filed April 17, 2026)
+covering monitoring and verification methods related to the subject
+matter of this work; the author is the named inventor. The author
+declares no other competing interests.
 
 \subsection{Data and code
 availability}\label{data-and-code-availability}
@@ -1619,8 +1614,8 @@ availability}\label{data-and-code-availability}
 All public analysis code, derived telemetry packets, frozen calibration
 outputs, and reproducibility anchors needed to reproduce the reported
 analyses from the released artifacts are available at
-\url{https://github.com/davidmullett/loopzero-paper-public}; raw vendor
-market data and the upstream ingestion/preprocessing repository are not
+https://github.com/davidmullett/loopzero-paper-public; raw vendor market
+data and the upstream ingestion/preprocessing repository are not
 redistributed (see Markets data provenance). The repository includes:
 
 \begin{itemize}
@@ -1643,7 +1638,7 @@ External datasets used:
 \tightlist
 \item
   MovieLens-25M is publicly available from GroupLens
-  (\url{https://grouplens.org/datasets/movielens/})
+  (https://grouplens.org/datasets/movielens/)
 \item
   The Shumailov et al.~(2024) data shown in Figure 5 was digitized from
   the published figures of the cited Nature paper
@@ -1679,9 +1674,9 @@ cells where BCa and percentile CI endpoints differ by ≥ 0.05 (markets
 p-witness cells only --- the bootstrap distribution is right-skewed at
 low n, and BCa is the more honest read there). Full numerics rendered
 deterministically by
-\texttt{\seqsplit{analysis/17\_render\_a3\_supplementary\_table\_s2.py}} from the
+\texttt{analysis/17\_render\_a3\_supplementary\_table\_s2.py} from the
 per-cell bootstrap output at
-\texttt{\seqsplit{results/rendered/effect\_sizes/a3\_effect\_sizes\_full.csv}}.
+\texttt{results/rendered/effect\_sizes/a3\_effect\_sizes\_full.csv}.
 
 \textbf{Supplementary Table S3. Alert-count exact-matching sensitivity
 check.} Re-expression of the envelope-boundary matched-FP comparison
@@ -1693,7 +1688,7 @@ operating point with the nearest n\_control\_alarmed value, with status
 classified as \texttt{exact\_match} (comparator has an operating point
 at Loopzero's exact alarm count), \texttt{bounded\_gap} (Loopzero's
 alarm count falls between two adjacent comparator operating points, with
-\texttt{\seqsplit{gap\_width\_n\_control}} quantifying the calibration coverage
+\texttt{gap\_width\_n\_control} quantifying the calibration coverage
 gap), \texttt{no\_overlap\_above} (all comparator operating points have
 higher alarm counts), or \texttt{insufficient\_data}. On the markets
 benchmark, ac1\_ews exhibits \texttt{exact\_match} at Loopzero's
@@ -1704,9 +1699,9 @@ envelope boundary: 3559 alarms at h = 40 (Loopzero at 97 of 6562
 controls) and 3345 alarms at h = 60 (Loopzero at 2 of 3996 controls), in
 each case with the upper-bound comparator operating point detecting all
 panel event units (TPR = 1.0). Full numerics rendered by
-\texttt{\seqsplit{analysis/21\_compute\_a2\_alert\_count\_exact.py}} from frozen
+\texttt{analysis/21\_compute\_a2\_alert\_count\_exact.py} from frozen
 calibration data at
-\texttt{\seqsplit{results/rendered/a4\_roc\_lowfp/a4\_roc\_data.parquet}} and
+\texttt{results/rendered/a4\_roc\_lowfp/a4\_roc\_data.parquet} and
 operating-point data at
 \texttt{results/rendered/bridge/a1\_loopzero\_operating\_points\{,\_h40\_h60\}.csv}.
 
@@ -1714,13 +1709,13 @@ operating-point data at
 grain (markets benchmark).} Per-witness effect sizes (Cohen's d, Glass's
 d, rank AUC) on the markets benchmark at the A3 segment grain (n = 54
 segments) and the B3 scenario grain (n = 7 clusters: 2 event scenarios
---- \texttt{\seqsplit{volmageddon\_2018\_xiv}} with 8 segments and
-\texttt{\seqsplit{covid\_mwcb\_2020\_03\_18}} with 8 segments; 5 control scenarios
---- \texttt{\seqsplit{covid\_noncollapse\_2020\_03\_11}} with 8 segments,
-\texttt{\seqsplit{volmageddon\_control\_2018\_01\_29}} with 8 segments,
-\texttt{\seqsplit{volmageddon\_control\_2018\_02\_08}} with 8 segments,
-\texttt{\seqsplit{covid\_noncollapse\_2020\_03\_13}} with 7 segments,
-\texttt{\seqsplit{volmageddon\_control\_2018\_01\_25}} with 7 segments). Bootstrap
+--- \texttt{volmageddon\_2018\_xiv} with 8 segments and
+\texttt{covid\_mwcb\_2020\_03\_18} with 8 segments; 5 control scenarios
+--- \texttt{covid\_noncollapse\_2020\_03\_11} with 8 segments,
+\texttt{volmageddon\_control\_2018\_01\_29} with 8 segments,
+\texttt{volmageddon\_control\_2018\_02\_08} with 8 segments,
+\texttt{covid\_noncollapse\_2020\_03\_13} with 7 segments,
+\texttt{volmageddon\_control\_2018\_01\_25} with 7 segments). Bootstrap
 iterations: 10,000 per cell; CI level: 0.95; RNG seed for scenario
 grain: 43 (distinct from A3 segment grain seed: 42). For
 \texttt{p}\textbar Glass's d at scenario grain, 2 of 10,000 iterations
@@ -1734,9 +1729,9 @@ sensitivity, not primary inference; the segment-grain baseline
 Freeze-manifest SHA-256 hashes for the empirical components of this
 paper, plus the recommender engine identifiers (engine\_hash
 \texttt{56c1cff225d60c09}, contract SHA-256
-\texttt{\seqsplit{2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d}})
+\texttt{2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d})
 and the upstream MovieLens-25M archive hash
-(\texttt{\seqsplit{8b21cfb7eb1706b4ec0aac894368d90acf26ebdfb6aced3ebd4ad5bd1eb9c6aa}},
+(\texttt{8b21cfb7eb1706b4ec0aac894368d90acf26ebdfb6aced3ebd4ad5bd1eb9c6aa},
 MD5-verified against the GroupLens official checksum). Full table is in
 the Supplementary Materials.
 
@@ -1746,142 +1741,140 @@ the Supplementary Materials.
 
 Augustin, P., Cheng, I.-H. and Van den Bergen, L. (2021). Volmageddon
 and the failure of short volatility products. \emph{Financial Analysts
-Journal}. \url{https://doi.org/10.1080/0015198X.2021.1913040}
+Journal}. https://doi.org/10.1080/0015198X.2021.1913040
 
 Bandt, C. and Pompe, B. (2002). Permutation entropy: a natural
 complexity measure for time series. Physical Review Letters, 88, 174102.
-\url{https://doi.org/10.1103/PhysRevLett.88.174102}
+https://doi.org/10.1103/PhysRevLett.88.174102
 
 Boettiger, C. and Hastings, A. (2012a). Early warning signals and the
 prosecutor's fallacy. \emph{Proc. Royal Society B}.
-\url{https://doi.org/10.1098/rspb.2012.2085}
+https://doi.org/10.1098/rspb.2012.2085
 
 Boettiger, C. and Hastings, A. (2012b). Quantifying limits to detection
 of early warning for critical transitions. \emph{Journal of the Royal
-Society Interface}. \url{https://doi.org/10.1098/rsif.2012.0125}
+Society Interface}. https://doi.org/10.1098/rsif.2012.0125
 
 Brunnermeier, M.K. and Pedersen, L.H. (2009). Market liquidity and
 funding liquidity. \emph{Review of Financial Studies}.
-\url{https://doi.org/10.1093/rfs/hhn098}
+https://doi.org/10.1093/rfs/hhn098
 
 Buldyrev, S.V., Parshani, R., Paul, G., Stanley, H.E. and Havlin, S.
 (2010). Catastrophic cascade of failures in interdependent networks.
-\emph{Nature}. \url{https://doi.org/10.1038/nature08932}
+\emph{Nature}. https://doi.org/10.1038/nature08932
 
 Cameron, A.C., Gelbach, J.B. and Miller, D.L. (2008). Bootstrap-based
 improvements for inference with clustered errors. \emph{The Review of
 Economics and Statistics}, 90(3), 414-427.
-\url{https://doi.org/10.1162/rest.90.3.414}
+https://doi.org/10.1162/rest.90.3.414
 
 Carpenter, S.R., Cole, J.J., Pace, M.L., Batt, R., Brock, W.A., Cline,
 T. et al.~(2011). Early warnings of regime shifts: A whole-ecosystem
-experiment. \emph{Science}.
-\url{https://doi.org/10.1126/science.1203672}
+experiment. \emph{Science}. https://doi.org/10.1126/science.1203672
 
 CFTC and SEC Staff (2010). Findings Regarding the Market Events of May
 6, 2010. Report, SEC / CFTC.
-\url{https://www.sec.gov/news/studies/2010/marketevents-report.pdf}
+https://www.sec.gov/news/studies/2010/marketevents-report.pdf
 
 Chaney, A.J.B., Stewart, B.M. and Engelhardt, B.E. (2018). How
 algorithmic confounding in recommendation systems increases homogeneity
 and decreases utility. \emph{ACM RecSys}.
-\url{https://doi.org/10.1145/3240323.3240370}
+https://doi.org/10.1145/3240323.3240370
 
 Dakos, V., Carpenter, S.R., Brock, W.A., Ellison, A.M., Guttal, V.,
 Ives, A.R. et al.~(2012). Methods for detecting early warnings of
 critical transitions in time series illustrated using simulated
 ecological data. \emph{PLOS ONE}.
-\url{https://doi.org/10.1371/journal.pone.0041010}
+https://doi.org/10.1371/journal.pone.0041010
 
 de Moura, L. and Ullrich, S. (2021). The Lean 4 Theorem Prover and
 Programming Language. \emph{CADE-28}.
-\url{https://doi.org/10.1007/978-3-030-79876-5_37}
+https://doi.org/10.1007/978-3-030-79876-5\_37
 
 Efron, B. (1987). Better Bootstrap Confidence Intervals. Journal of the
 American Statistical Association, 82(397), 171-185.
-\url{https://doi.org/10.1080/01621459.1987.10478410}
+https://doi.org/10.1080/01621459.1987.10478410
 
 ESRB Advisory Scientific Committee (2019). Can ETFs Contribute to
 Systemic Risk? Report, ESRB.
-\url{https://www.esrb.europa.eu/pub/pdf/asc/esrb.asc190617_9_canetfscontributesystemicrisk~983ea11870.en.pdf}
+https://www.esrb.europa.eu/pub/pdf/asc/esrb.asc190617\_9\_canetfscontributesystemicrisk\textasciitilde983ea11870.en.pdf
 
 Fleder, D. and Hosanagar, K. (2009). Blockbuster culture's next rise or
 fall: The impact of recommender systems on sales diversity.
-\emph{Management Science}. \url{https://doi.org/10.1287/mnsc.1080.0974}
+\emph{Management Science}. https://doi.org/10.1287/mnsc.1080.0974
 
 Gao, J., Barzel, B. and Barabasi, A.-L. (2016). Universal resilience
 patterns in complex networks. \emph{Nature}.
-\url{https://doi.org/10.1038/nature16948}
+https://doi.org/10.1038/nature16948
 
 Hanley, J.A. and McNeil, B.J. (1982). The meaning and use of the area
 under a receiver operating characteristic (ROC) curve. \emph{Radiology}.
-\url{https://doi.org/10.1148/radiology.143.1.7063747}
+https://doi.org/10.1148/radiology.143.1.7063747
 
 Holling, C.S. (1973). Resilience and stability of ecological systems.
 \emph{Annual Review of Ecology and Systematics}.
-\url{https://doi.org/10.1146/annurev.es.04.110173.000245}
+https://doi.org/10.1146/annurev.es.04.110173.000245
 
 Jäger, G. and Füllsack, M. (2019). Systematically false positives in
 early warning signal analysis. \emph{PLOS ONE}.
-\url{https://doi.org/10.1371/journal.pone.0211072}
+https://doi.org/10.1371/journal.pone.0211072
 
 Jiang, R., Chiappa, S., Lattimore, T., Gyorgy, A. and Kohli, P. (2019).
 Degenerate feedback loops in recommender systems. \emph{AIES/ACM}.
-\url{https://doi.org/10.1145/3306618.3314288}
+https://doi.org/10.1145/3306618.3314288
 
 Mansoury, M., Abdollahpouri, H., Pechenizkiy, M., Mobasher, B. and
 Burke, R. (2020). Feedback loop and bias amplification in recommender
-systems. \emph{CIKM}. \url{https://doi.org/10.1145/3340531.3412152}
+systems. \emph{CIKM}. https://doi.org/10.1145/3340531.3412152
 
 NYSE Market-Wide Circuit Breaker (MWCB) Working Group (2021). Report of
 the Market-Wide Circuit Breaker (MWCB) Working Group. Report, NYSE /
 SEC.
-\url{https://www.nyse.com/publicdocs/nyse/markets/nyse/Report_of_the_Market-Wide_Circuit_Breaker_Working_Group.pdf}
+https://www.nyse.com/publicdocs/nyse/markets/nyse/Report\_of\_the\_Market-Wide\_Circuit\_Breaker\_Working\_Group.pdf
 
 Page, E.S. (1954). Continuous Inspection Schemes. Biometrika, 41,
-100-115. \url{https://doi.org/10.1093/biomet/41.1-2.100}
+100-115. https://doi.org/10.1093/biomet/41.1-2.100
 
 Scheffer, M., Carpenter, S., Foley, J.A., Folke, C. and Walker, B.
 (2001). Catastrophic shifts in ecosystems. \emph{Nature}.
-\url{https://doi.org/10.1038/35098000}
+https://doi.org/10.1038/35098000
 
 Scheffer, M., Bascompte, J., Brock, W.A., Brovkin, V., Carpenter, S.R.,
 Dakos, V. et al.~(2009). Early-warning signals for critical transitions.
-\emph{Nature}. \url{https://doi.org/10.1038/nature08227}
+\emph{Nature}. https://doi.org/10.1038/nature08227
 
 Scheffer, M., Carpenter, S.R., Lenton, T.M., Bascompte, J., Brock, W.,
 Dakos, V. et al.~(2012). Anticipating critical transitions.
-\emph{Science}. \url{https://doi.org/10.1126/science.1225244}
+\emph{Science}. https://doi.org/10.1126/science.1225244
 
 Schnabel, T., Swaminathan, A., Singh, A., Chandak, N. and Joachims, T.
 (2016). Recommendations as Treatments: Debiasing Learning and
-Evaluation. ICML.
-\url{https://proceedings.mlr.press/v48/schnabel16.html}
+Evaluation. ICML. https://proceedings.mlr.press/v48/schnabel16.html
 
 Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R. and
 Gal, Y. (2024). AI models collapse when trained on recursively generated
-data. \emph{Nature}. \url{https://doi.org/10.1038/s41586-024-07566-y}
+data. \emph{Nature}. https://doi.org/10.1038/s41586-024-07566-y
 
 Shumailov, I., Shumaylov, Z., Zhao, Y., Papernot, N., Anderson, R. and
 Gal, Y. (2025). Author Correction: AI models collapse when trained on
 recursively generated data. \emph{Nature}, 640, E6.
-\url{https://doi.org/10.1038/s41586-025-08905-3}
+https://doi.org/10.1038/s41586-025-08905-3
 
 The mathlib Community (2020). The Lean mathematical library. \emph{CPP
-(ACM SIGPLAN)}. \url{https://doi.org/10.1145/3372885.3373824}
+(ACM SIGPLAN)}. https://doi.org/10.1145/3372885.3373824
 
 Walker, B., Holling, C.S., Carpenter, S.R. and Kinzig, A. (2004).
 Resilience, adaptability and transformability in social-ecological
 systems. \emph{Ecology and Society}.
-\url{https://doi.org/10.5751/ES-00650-090205}
+https://doi.org/10.5751/ES-00650-090205
 
 Whaley, R.E. (2009). Understanding the VIX. \emph{Journal of Portfolio
-Management}. \url{https://doi.org/10.3905/jpm.2009.35.3.098}
+Management}. https://doi.org/10.3905/jpm.2009.35.3.098
 
 Yeh, C.-C.M., Zhu, Y., Ulanova, L., Begum, N., Ding, Y., Dau, H.A.,
 Silva, D.F., Mueen, A. and Keogh, E. (2016). Matrix Profile I: All Pairs
 Similarity Joins for Time Series: A Unifying View that Includes Motifs,
 Discords and Shapelets. IEEE ICDM, 1317-1322.
-\url{https://doi.org/10.1109/ICDM.2016.0179}
+https://doi.org/10.1109/ICDM.2016.0179
 
 \end{document}
