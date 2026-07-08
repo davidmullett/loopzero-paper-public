@@ -1,3 +1,13 @@
+> ## Status — July 2026
+>
+> **This manuscript is under major revision.** The forthcoming version narrows
+> the paper to the recommender benchmark and matched alert-budget evaluation,
+> adds pre-registered mechanism-control experiments (random, popularity-only,
+> matrix-factorization, and sequential baselines, plus covariate adjustments),
+> and replaces fixed false-positive-band acceptance with full threshold-sweep /
+> matched alarm-count comparison. Please treat the current arXiv version as
+> superseded-in-progress and check back before citing or building on it.
+
 # Loopzero — Benchmarking Recursive-Collapse Warning Claims Under Matched False-Positive Control
 
 **arXiv:** [2606.00329](https://arxiv.org/abs/2606.00329) · **License:** paper, documentation, and data — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); code — [Apache 2.0](https://github.com/davidmullett/loopzero-paper-public/blob/main/LICENSE)
