@@ -12,6 +12,7 @@ This file records the software stack used for the publication-facing research pa
 - matplotlib: 3.8.4
 - jsonschema: 4.25.1
 - pytest: 9.0.2
+- pyarrow: 23.0.1
 
 ## Lean formal environment
 - lean4: 4.19.0
