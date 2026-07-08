@@ -267,7 +267,11 @@ D.M. conceived the study, developed the theoretical framework, implemented all s
 
 ## Competing interests
 
-The author declares no competing interests.
+The author is the founder of Loopzero, Inc., which has filed a U.S.
+provisional patent application (No. 64/042,661, filed April 17, 2026)
+covering monitoring and verification methods related to the subject matter
+of this work; the author is the named inventor. The author declares no
+other competing interests.
 
 ## Data and code availability
 
