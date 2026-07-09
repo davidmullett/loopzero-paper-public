@@ -7,6 +7,10 @@
 > and replaces fixed false-positive-band acceptance with full threshold-sweep /
 > matched alarm-count comparison. Please treat the current arXiv version as
 > superseded-in-progress and check back before citing or building on it.
+>
+> A pre-registration for the narrowed v2 analysis has been filed on OSF
+> (embargoed): https://osf.io/7bvgz — full document released when the embargo
+> lifts.
 
 # Loopzero — Benchmarking Recursive-Collapse Warning Claims Under Matched False-Positive Control
 
