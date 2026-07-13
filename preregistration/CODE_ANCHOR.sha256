@@ -1,0 +1,27 @@
+# SHA-256 manifest of the V2 analysis code. Contents embargoed with the OSF pre-registration
+# (https://osf.io/7bvgz). Anchored BEFORE the controls sweep was run and BEFORE any decision
+# quantity (delta-TPR, incremental AUC, the four criteria) was computed, so the code's dating
+# is third-party provable and tamper-evident. Code released on embargo lift; these hashes
+# will verify it unaltered.
+#
+# Scope: all Python source under
+#   src/loopzero_paper/benchmarks/recommender/v2_controls/
+#   src/loopzero_paper/benchmarks/recommender/v2_prereg_primary.py
+# (__pycache__/ bytecode excluded). Body lines are sorted by path; format: <sha256>  <path>.
+# ROLLUP = SHA-256 of the exact bytes of the body lines below (between the BEGIN/END markers).
+#
+# ROLLUP  02de0dd9927bdbfa8e0dec43917a8aecd0f516f3eb611694184d0605a3df50d1
+# ---8<--- BEGIN BODY ---8<---
+9b7a88e63582c7b85a4d1913241e7b7e0c0b81c69a01179aaba6257cf9c20068  src/loopzero_paper/benchmarks/recommender/v2_controls/__init__.py
+0b57939d07a40a7f62e376275bd738eb068b8a3c065220005d8175585696a0f1  src/loopzero_paper/benchmarks/recommender/v2_controls/baselines.py
+24c70573a0a0ba0b9610a341085722b8c06a69dc3c6ec42731775f484afbcc7c  src/loopzero_paper/benchmarks/recommender/v2_controls/bootstrap.py
+2c29148ff7dfeeb90a4ae2ee3c986d34d0196f998f5836bbbd2dd9bb153d6568  src/loopzero_paper/benchmarks/recommender/v2_controls/config.py
+839f201b73467912265ff6d4e36552b15d5923b3b32dc2fdf203fd8142e88511  src/loopzero_paper/benchmarks/recommender/v2_controls/covariates.py
+bf30b7b51d6a8fcedf7c1b72cd128ec6d5dc235b1ba3a1e425f5a452e70d95b2  src/loopzero_paper/benchmarks/recommender/v2_controls/decision.py
+445c6e2e3aed01fee681c8542cd51bb13be8a7551a992c9975655d0a7784a375  src/loopzero_paper/benchmarks/recommender/v2_controls/gates.py
+e642647e92cda0f40c6a312383e5a6a99251909821042862acd611a8f5b4e2d7  src/loopzero_paper/benchmarks/recommender/v2_controls/indicators.py
+889502c8954bdb4753cc1104e1c8733186f08d5050c2f1a5ce341bf59f5eb8fd  src/loopzero_paper/benchmarks/recommender/v2_controls/population.py
+748b5d09f9ff7ba259231fbaeb36ef144e7d1a216b2c81f5f35bb4e373950255  src/loopzero_paper/benchmarks/recommender/v2_controls/run_phase2a.py
+96a97532e680817bbd69d078746b1a306c9d5da77930f876bcd07b9da5ed69e7  src/loopzero_paper/benchmarks/recommender/v2_controls/sweep.py
+981f2ecbe24302a6bc4e60b18a5be7732f54165ef2597df15aa0de6e01929f29  src/loopzero_paper/benchmarks/recommender/v2_prereg_primary.py
+# ---8<--- END BODY ---8<---
