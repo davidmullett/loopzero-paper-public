@@ -1,0 +1,8 @@
+<PASTE_HASH_HERE>  DEVIATIONS.md
+
+SHA-256 of the V2 deviations & interpretations log.
+Contents are embargoed with the OSF pre-registration (https://osf.io/7bvgz).
+This hash was committed BEFORE the controls sweep was run and BEFORE any decision
+quantity (delta-TPR, incremental AUC, the four criteria) was computed — so the log's
+dating is third-party provable and its contents are tamper-evident.
+The full log is released when the embargo lifts; this hash will verify it unaltered.

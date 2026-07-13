@@ -46,3 +46,4 @@ arxiv_submission/
 
 # Embargoed OSF v2 pre-registration document (pointer committed; PDF kept private)
 preregistration/*.pdf
+preregistration/DEVIATIONS.md
