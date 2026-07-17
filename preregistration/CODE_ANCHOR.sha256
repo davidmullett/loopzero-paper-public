@@ -4,16 +4,17 @@
 # (delta-TPR, incremental AUC, the four criteria) was computed. Covers: replay + control engines
 # (random/popularity/shuffled-ts), indicators, baselines, sweep, bootstrap, covariate_model,
 # decision (C4-dominance lattice), pre_census (Phase 2.5, build-only), block_orchestrator
-# (Phase 3, RATIFIED-guarded), configs, requirements-lock, sign-table generator + output.
+# (Phase 3, RATIFIED-guarded, cap-artifact-hash precondition), configs, requirements-lock,
+# sign-table generator + output, and v2_prereg_primary.py.
 # Payloads gitignored; only these hashes are public. Released on embargo lift; hashes verify unaltered.
 # Body sorted by path; format <sha256>  <path>. ROLLUP = SHA-256 of the body lines below.
 #
-# ROLLUP  423f65919f326fa275a0deb1f9a09cdfb7717af06c09086b6efd3698671da087
+# ROLLUP  ce76b3de7b88789ff3375c0c904fb5efed1e18dee103535b96c58df257cb4450
 # ---8<--- BEGIN BODY ---8<---
 76be341e9cb45842bc7746e9482d5f07170635d1826fe00b87a3f5a1e4bdcccc  results/v2_controls/v1_sign_convention_table.json
 9b7a88e63582c7b85a4d1913241e7b7e0c0b81c69a01179aaba6257cf9c20068  src/loopzero_paper/benchmarks/recommender/v2_controls/__init__.py
 f857a04923bdb2daab121a539f51140d75878b80671f237b7c7bce45990ae4b8  src/loopzero_paper/benchmarks/recommender/v2_controls/baselines.py
-acb950f1c180482de53871972633a74eece07ba98f987b05ba5b991308d9c675  src/loopzero_paper/benchmarks/recommender/v2_controls/block_orchestrator.py
+5c801adbc9e547748265ca37a857b6bda6a293f82329bfe771860a8d9a51f36a  src/loopzero_paper/benchmarks/recommender/v2_controls/block_orchestrator.py
 24c70573a0a0ba0b9610a341085722b8c06a69dc3c6ec42731775f484afbcc7c  src/loopzero_paper/benchmarks/recommender/v2_controls/bootstrap.py
 2c29148ff7dfeeb90a4ae2ee3c986d34d0196f998f5836bbbd2dd9bb153d6568  src/loopzero_paper/benchmarks/recommender/v2_controls/config.py
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/__init__.py
