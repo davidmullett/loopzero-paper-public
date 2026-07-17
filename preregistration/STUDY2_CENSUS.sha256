@@ -1,0 +1,13 @@
+# SHA-256 manifest of the Study 2 clean-control census (label-side accounting; OSF osf.io/wka72 §3).
+# Census contents are embargoed with the Study 2 pre-registration and kept local (gitignored,
+# under results/v2_controls/); only these hashes are public. Computed AFTER the frozen registration
+# was hash-anchored (commit 58721ac) and read ONLY label-side frontier accounting
+# (user_id, label, step, frontier_size_after) — no indicator/decision quantity. decision.RATIFIED=False.
+# Files released on embargo lift; these hashes will verify them unaltered.
+# Body sorted by path; format <sha256>  <path>. ROLLUP = SHA-256 of the body lines between the markers.
+#
+# ROLLUP  319a3b72625020ffa21444d2dd3ed2bb3e03c4e0bc1bad77b78c6a68c493f5c0
+# ---8<--- BEGIN BODY ---8<---
+f286952cd7011bd562aee449d68f221aaa6d0cae6a52350e4c2df2f256188cfc  results/v2_controls/study2_clean_control_census.csv
+994a2a5ab76894424e483436dec6d9c01e75a9918dfaeb1b1dfea0a64a1e8293  results/v2_controls/study2_clean_control_census_summary.json
+# ---8<--- END BODY ---8<---
