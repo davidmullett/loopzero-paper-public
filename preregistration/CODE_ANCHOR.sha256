@@ -1,27 +1,37 @@
-# SHA-256 manifest of the V2 analysis code. Contents embargoed with the OSF pre-registration
-# (https://osf.io/7bvgz). Anchored BEFORE the controls sweep was run and BEFORE any decision
-# quantity (delta-TPR, incremental AUC, the four criteria) was computed, so the code's dating
-# is third-party provable and tamper-evident. Code released on embargo lift; these hashes
-# will verify it unaltered.
+# SHA-256 manifest of the V2 analysis code (C*, final Study-2 execution tree). Contents embargoed
+# with the OSF pre-registrations (osf.io/7bvgz, osf.io/wka72). Anchored BEFORE the Phase 2.5
+# pre-census and the Phase 3 block were run and BEFORE any real-engine indicator x label quantity
+# (delta-TPR, incremental AUC, the four criteria) was computed. Covers: replay + control engines
+# (random/popularity/shuffled-ts), indicators, baselines, sweep, bootstrap, covariate_model,
+# decision (C4-dominance lattice), pre_census (Phase 2.5, build-only), block_orchestrator
+# (Phase 3, RATIFIED-guarded), configs, requirements-lock, sign-table generator + output.
+# Payloads gitignored; only these hashes are public. Released on embargo lift; hashes verify unaltered.
+# Body sorted by path; format <sha256>  <path>. ROLLUP = SHA-256 of the body lines below.
 #
-# Scope: all Python source under
-#   src/loopzero_paper/benchmarks/recommender/v2_controls/
-#   src/loopzero_paper/benchmarks/recommender/v2_prereg_primary.py
-# (__pycache__/ bytecode excluded). Body lines are sorted by path; format: <sha256>  <path>.
-# ROLLUP = SHA-256 of the exact bytes of the body lines below (between the BEGIN/END markers).
-#
-# ROLLUP  b2658724c200f35da923219b98a31bcc86b83adf209fb6c1cf51452db794fdcf
+# ROLLUP  423f65919f326fa275a0deb1f9a09cdfb7717af06c09086b6efd3698671da087
 # ---8<--- BEGIN BODY ---8<---
+76be341e9cb45842bc7746e9482d5f07170635d1826fe00b87a3f5a1e4bdcccc  results/v2_controls/v1_sign_convention_table.json
 9b7a88e63582c7b85a4d1913241e7b7e0c0b81c69a01179aaba6257cf9c20068  src/loopzero_paper/benchmarks/recommender/v2_controls/__init__.py
 f857a04923bdb2daab121a539f51140d75878b80671f237b7c7bce45990ae4b8  src/loopzero_paper/benchmarks/recommender/v2_controls/baselines.py
+acb950f1c180482de53871972633a74eece07ba98f987b05ba5b991308d9c675  src/loopzero_paper/benchmarks/recommender/v2_controls/block_orchestrator.py
 24c70573a0a0ba0b9610a341085722b8c06a69dc3c6ec42731775f484afbcc7c  src/loopzero_paper/benchmarks/recommender/v2_controls/bootstrap.py
 2c29148ff7dfeeb90a4ae2ee3c986d34d0196f998f5836bbbd2dd9bb153d6568  src/loopzero_paper/benchmarks/recommender/v2_controls/config.py
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/__init__.py
+485455836e1d0a140d1b1015d6c85cbcb28efc6cdd795d050f035883843a7d05  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/popularity_engine.py
+ca537c418ba3e86bd4cfaf48ccc6e2577f08d4f9c3946523968b5d873cc4d183  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/random_engine.py
+435d03977576b5a77f923aadc3fb45e31c1f5017fce570dcc7cc42ed6ee93c23  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/replay.py
+b84a823112ee438bae465ff96ba5323ea4ae43bc3059c818ac233994d4272cd8  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/shuffled_ts.py
+319b9ccfbe26f2611e93664b31645d5be0cb3b14f2bd4d921155cf5489e713d0  src/loopzero_paper/benchmarks/recommender/v2_controls/covariate_model.py
 839f201b73467912265ff6d4e36552b15d5923b3b32dc2fdf203fd8142e88511  src/loopzero_paper/benchmarks/recommender/v2_controls/covariates.py
-bf30b7b51d6a8fcedf7c1b72cd128ec6d5dc235b1ba3a1e425f5a452e70d95b2  src/loopzero_paper/benchmarks/recommender/v2_controls/decision.py
+3fd489721636eee75dcbf484256d2b31adeeb3a4d722171e4049a93d02059296  src/loopzero_paper/benchmarks/recommender/v2_controls/decision.py
 445c6e2e3aed01fee681c8542cd51bb13be8a7551a992c9975655d0a7784a375  src/loopzero_paper/benchmarks/recommender/v2_controls/gates.py
 e642647e92cda0f40c6a312383e5a6a99251909821042862acd611a8f5b4e2d7  src/loopzero_paper/benchmarks/recommender/v2_controls/indicators.py
 889502c8954bdb4753cc1104e1c8733186f08d5050c2f1a5ce341bf59f5eb8fd  src/loopzero_paper/benchmarks/recommender/v2_controls/population.py
+4178c1fe5d15e13daa39c2cdc68c820203ad5ab33081f89d0a0a5910facaee77  src/loopzero_paper/benchmarks/recommender/v2_controls/pre_census.py
+cdcb73c9b266f83db5219277b0e6bac5d4f2bce83bea5d238176ac7e2fdbc8db  src/loopzero_paper/benchmarks/recommender/v2_controls/requirements-lock.txt
 748b5d09f9ff7ba259231fbaeb36ef144e7d1a216b2c81f5f35bb4e373950255  src/loopzero_paper/benchmarks/recommender/v2_controls/run_phase2a.py
+f1387db1f9c047c4d9a3de72f8d641e1a200045bee35bb0a6fa68756a2d8cd0a  src/loopzero_paper/benchmarks/recommender/v2_controls/sign_table.py
 96a97532e680817bbd69d078746b1a306c9d5da77930f876bcd07b9da5ed69e7  src/loopzero_paper/benchmarks/recommender/v2_controls/sweep.py
+fa79d30051002a2f7d8700d11ea21e61b70f81ff3e454f2c38406a7cd693a6e9  src/loopzero_paper/benchmarks/recommender/v2_controls/tests_verdict_suite.py
 981f2ecbe24302a6bc4e60b18a5be7732f54165ef2597df15aa0de6e01929f29  src/loopzero_paper/benchmarks/recommender/v2_prereg_primary.py
 # ---8<--- END BODY ---8<---
