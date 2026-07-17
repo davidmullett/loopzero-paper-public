@@ -1,0 +1,11 @@
+# SHA-256 of the Phase 2.5 LABEL-SIDE dispositive-arm pre-census (I-10; OSF osf.io/wka72).
+# Ran the popularity-only and shuffled-TS 102+{0..4} arms under the frozen rules, reading ONLY
+# label-side frontier accounting (frontier_size_after/step/label/collapse_step) — no indicator,
+# S, baseline, or delta-TPR. Computed AFTER code freeze C* (CODE_ANCHOR ce/36e255cd… -> this run)
+# and BEFORE the Phase 3 block. RESULT: all arms/seeds clear the I-5a label-side floor
+# (>=100 clean controls & >=100 events per eval fold) -> route_cap = UNCONSTRAINED. Payload
+# gitignored (embargoed); only this hash is public. decision.RATIFIED=False; block not run.
+# ROLLUP  c8f110a5b0c2b4eeb63071b2996a66a8511c84aaa2d5c8ad0fe0aec1b26e6942
+# ---8<--- BEGIN BODY ---8<---
+28a73b3aad983b201c275ae159d24e453ed4a069cde79cfd1b616b11d27e3ee9  results/v2_controls/phase25_pre_census.json
+# ---8<--- END BODY ---8<---
