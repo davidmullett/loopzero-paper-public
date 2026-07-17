@@ -1,0 +1,8 @@
+# SHA-256 of the Phase-2 V-1 sign-convention table (six baseline families' alarm directions
+# vs the frozen v1 alarm functions; PE decreasing & fixed by negation; PC1 increasing per I-7).
+# Payload gitignored under results/v2_controls/; only this hash is public. Generated pre-sweep;
+# no indicator x label quantity. decision.RATIFIED=False.
+# ROLLUP  5b07aec9e9b852602239a1a0209da55bdd9e3105a5850c53f4f2b752c3f2a47e
+# ---8<--- BEGIN BODY ---8<---
+76be341e9cb45842bc7746e9482d5f07170635d1826fe00b87a3f5a1e4bdcccc  results/v2_controls/v1_sign_convention_table.json
+# ---8<--- END BODY ---8<---
