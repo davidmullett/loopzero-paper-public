@@ -1,11 +1,11 @@
 # SHA-256 manifest of the Study-2 known-answer VERDICT TEST SUITE + its results.
-# 10 cases (artifact->DIES, unmeasurable dispositive->UNINTERPRETABLE-BY-CONTROL-ARM,
-# one-of-five-seeds->DIES, clean->SURVIVES, miss->DIES, + PC1/PC2/power routes) all PASS;
-# plus a label-permuted synthetic debug of the sweep/BCa/covariate machinery (chance).
-# Payloads gitignored (embargoed); only these hashes are public. No real-engine
-# indicator x label quantity. decision.RATIFIED=False; Phase 3 not entered.
-# ROLLUP  c59eb55a4f48540c8b17f9ea30326967cd9e6a2397a4c8ad4bdf4a805d406297
+# 11 cases (artifact->DIES, unmeasurable dispositive->UNINTERPRETABLE-BY-CONTROL-ARM,
+# one-of-five-seeds->DIES, clean->SURVIVES, miss->DIES, criteria-fail+dispositive-unmeasurable
+# ->DIES (precedence), + PC1/PC2/power routes) all PASS; plus a label-permuted synthetic debug
+# of the sweep/BCa/covariate machinery (chance). Payloads gitignored (embargoed); only these
+# hashes are public. No real-engine indicator x label quantity. decision.RATIFIED=False; Phase 3 not entered.
+# ROLLUP  f8c61682433bc5e49a651861650d69f89a282fc9fefe3f25102c88ff45efa356
 # ---8<--- BEGIN BODY ---8<---
-1c454906a1b8f0c83146e18ec67ecc9fa30de3b6ddf68630664a2577f106e7a5  results/v2_controls/verdict_test_suite_results.json
-6632d299a8aa28bbdd9919d565338f96d4c33813be30857bbb378ba81b0b4e3d  src/loopzero_paper/benchmarks/recommender/v2_controls/tests_verdict_suite.py
+24837dc53e4e37cee260aa4051211d16fe88be5532d972fe2c18ba84e0c1dea9  results/v2_controls/verdict_test_suite_results.json
+824f27af4bf6c33209ca85694ea22a6158491f44a255da21a76a03b956c87e9d  src/loopzero_paper/benchmarks/recommender/v2_controls/tests_verdict_suite.py
 # ---8<--- END BODY ---8<---
