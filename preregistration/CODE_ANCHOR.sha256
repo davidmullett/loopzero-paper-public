@@ -1,15 +1,12 @@
 # SHA-256 manifest of the V2 analysis code (C*, final Study-2 execution tree). Contents embargoed
-# with the OSF pre-registrations (osf.io/7bvgz, osf.io/wka72). Anchored BEFORE the Phase 2.5
-# pre-census and the Phase 3 block were run and BEFORE any real-engine indicator x label quantity
-# (delta-TPR, incremental AUC, the four criteria) was computed. Covers: replay + control engines
-# (random/popularity/shuffled-ts), indicators, baselines, sweep, bootstrap, covariate_model,
-# decision (C4-dominance lattice), pre_census (Phase 2.5, build-only), block_orchestrator
-# (Phase 3, RATIFIED-guarded, cap-artifact-hash precondition), configs, requirements-lock,
-# sign-table generator + output, and v2_prereg_primary.py.
-# Payloads gitignored; only these hashes are public. Released on embargo lift; hashes verify unaltered.
+# with the OSF pre-registrations (osf.io/7bvgz, osf.io/wka72). Anchored BEFORE the Phase 2.5 pre-census
+# artifact and the Phase 3 block, and BEFORE any real-engine indicator x label quantity. Covers control
+# engines (random/popularity/shuffled-ts), analysis stack, decision (C4-dominance), pre_census (Phase 2.5),
+# block_orchestrator (Phase 3, RATIFIED-guarded + cap-artifact-hash precondition), config, requirements-lock,
+# sign-table generator + output, v2_prereg_primary.py. Payloads gitignored; hashes public.
 # Body sorted by path; format <sha256>  <path>. ROLLUP = SHA-256 of the body lines below.
 #
-# ROLLUP  ce76b3de7b88789ff3375c0c904fb5efed1e18dee103535b96c58df257cb4450
+# ROLLUP  36e255cdb45b317de7027b1dd014b3ce416578bfc60d0f14a4a1b3b4dfb68a56
 # ---8<--- BEGIN BODY ---8<---
 76be341e9cb45842bc7746e9482d5f07170635d1826fe00b87a3f5a1e4bdcccc  results/v2_controls/v1_sign_convention_table.json
 9b7a88e63582c7b85a4d1913241e7b7e0c0b81c69a01179aaba6257cf9c20068  src/loopzero_paper/benchmarks/recommender/v2_controls/__init__.py
@@ -28,7 +25,7 @@ b84a823112ee438bae465ff96ba5323ea4ae43bc3059c818ac233994d4272cd8  src/loopzero_p
 445c6e2e3aed01fee681c8542cd51bb13be8a7551a992c9975655d0a7784a375  src/loopzero_paper/benchmarks/recommender/v2_controls/gates.py
 e642647e92cda0f40c6a312383e5a6a99251909821042862acd611a8f5b4e2d7  src/loopzero_paper/benchmarks/recommender/v2_controls/indicators.py
 889502c8954bdb4753cc1104e1c8733186f08d5050c2f1a5ce341bf59f5eb8fd  src/loopzero_paper/benchmarks/recommender/v2_controls/population.py
-4178c1fe5d15e13daa39c2cdc68c820203ad5ab33081f89d0a0a5910facaee77  src/loopzero_paper/benchmarks/recommender/v2_controls/pre_census.py
+8c733e757390cdc4a278a666f434a256cbb90395c9249d08d2ae1a8c27bb261a  src/loopzero_paper/benchmarks/recommender/v2_controls/pre_census.py
 cdcb73c9b266f83db5219277b0e6bac5d4f2bce83bea5d238176ac7e2fdbc8db  src/loopzero_paper/benchmarks/recommender/v2_controls/requirements-lock.txt
 748b5d09f9ff7ba259231fbaeb36ef144e7d1a216b2c81f5f35bb4e373950255  src/loopzero_paper/benchmarks/recommender/v2_controls/run_phase2a.py
 f1387db1f9c047c4d9a3de72f8d641e1a200045bee35bb0a6fa68756a2d8cd0a  src/loopzero_paper/benchmarks/recommender/v2_controls/sign_table.py
