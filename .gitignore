@@ -47,6 +47,7 @@ arxiv_submission/
 # Embargoed OSF v2 pre-registration document (pointer committed; PDF kept private)
 preregistration/*.pdf
 preregistration/DEVIATIONS.md
+preregistration/STUDY2-prereg-frozen.pdf
 
 # Embargoed V2 analysis code + outputs (design encodes the pre-reg; hash-anchored only,
 # contents released on embargo lift — see preregistration/CODE_ANCHOR.sha256)

@@ -1,0 +1,6 @@
+2374e370c0c35c404cc2fec0cce519127ed0045160ad566580e53f485e219df9  STUDY2-prereg-frozen.pdf
+
+SHA-256 of the frozen Study 2 pre-registration (competing-risk corrected label).
+Registered on OSF at https://osf.io/wka72, embargoed. Anchored BEFORE the clean-control
+census was computed, so the run/no-run decision provably preceded its input. Full
+document released on embargo lift; this hash will verify it unaltered.
