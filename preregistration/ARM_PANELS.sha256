@@ -1,0 +1,13 @@
+# SHA-256 manifest of the six control-arm INDICATOR-side slate panels (popularity +
+# shuffled-TS 102+{0..4}). DATA PREP: slates logged under the frozen rules; NO delta-TPR /
+# no indicator-vs-label separation computed (same class as the real slate re-run). Payloads
+# gitignored (embargoed); only these hashes are public. decision.RATIFIED=False; block not run.
+# ROLLUP  b30ac8d05cace286bf2e00933222cabaf6352d20b9ffa798786a4912c97b58c7
+# ---8<--- BEGIN BODY ---8<---
+008f21be0dc83cc7e4e9220535cba8c26c713ed10ece4f3f1be913a45d5e95bb  results/v2_controls/arm_popularity_only__slate_panel.csv.gz
+767fa03999e4328cb6fb305b39b9e67c04081f7a8c04074bb7538021f86f6a10  results/v2_controls/arm_shuffled_ts_102__slate_panel.csv.gz
+7d95fb9efd640edaf8f2da1aa2ce3ef60d6a8b0c901ab0688ba69a62692567d2  results/v2_controls/arm_shuffled_ts_103__slate_panel.csv.gz
+2bd9d9fccc89debd5e7fb7800dc90053b0c36941021e77d374d849471cd8201d  results/v2_controls/arm_shuffled_ts_104__slate_panel.csv.gz
+c1655331dcd3450547f4e5ef62cdfb1eaffdd39a8a22df2ad4e2ad91675d5f94  results/v2_controls/arm_shuffled_ts_105__slate_panel.csv.gz
+f4f4047bad69167bb03f2c288002cc3d7e60097d9a82b1b248648962fce2b7d2  results/v2_controls/arm_shuffled_ts_106__slate_panel.csv.gz
+# ---8<--- END BODY ---8<---
