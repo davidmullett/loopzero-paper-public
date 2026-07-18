@@ -1,0 +1,9 @@
+# SHA-256 of the Study-2 §11 blind-block VERDICT record (OSF osf.io/wka72). One uninterrupted
+# pass under real CP-2: compute_summaries() -> run_block() with the anchored pre-census cap
+# (route UNCONSTRAINED). Information boundary held: only {verdict, reason, payload_sha256} left
+# the block; on the gate hard-stop the decision quantities were NEVER written. No human viewed
+# any real-engine number before this commit. Payload gitignored (embargoed); only this hash is public.
+# ROLLUP  fe6af9edf5dba1d48b5c4bd591881682f14a7365e304267a8fcbdf99ee764ad5
+# ---8<--- BEGIN BODY ---8<---
+33e94369e1f2f049fac6ce38b7718ac3b8ea4c9000b5e126749073dc1d4fb91e  results/v2_controls/s2_verdict_payload.json
+# ---8<--- END BODY ---8<---
