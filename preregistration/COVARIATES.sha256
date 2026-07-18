@@ -1,0 +1,9 @@
+# SHA-256 of the PRECOMPUTED real-arm §9 covariate cache (data prep; I-1 log_activity,
+# I-2 pop_affinity LOUO over all processed users). 25,020 real L2 units; definitions
+# unchanged. Computed as data prep so nothing runs first-time-at-scale inside the block
+# (compute_summaries reads this). Payload gitignored (embargoed); only this hash is public.
+# No indicator x label / decision quantity. decision.RATIFIED=False.
+# ROLLUP  17037515ec2de493e43d525e04edf9d7b9c493a40ca06a58567629251fad8c51
+# ---8<--- BEGIN BODY ---8<---
+1de4001f37c11d2e32236d838ad6715e966c253fd27b8ca29c9671dccff3d403  results/v2_controls/real_covariates.csv.gz
+# ---8<--- END BODY ---8<---
