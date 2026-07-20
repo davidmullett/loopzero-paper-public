@@ -1,0 +1,10 @@
+# SHA-256 manifest of the RULING-9 wka72 registration-params extract + config-equality test.
+# Embargoed content, kept local (gitignored under results/v2_controls/); only these
+# hashes are public. RULING 9 (2026-07-20). decision.RATIFIED=False.
+# Body sorted by path; format <sha256>  <path>. ROLLUP = SHA-256 of the body lines.
+#
+# ROLLUP  77ffb179b3987f0caa9eba3d7ea1ee5a7f7a384011b1fbb541cb7aa11c16c2f4
+# ---8<--- BEGIN BODY ---8<---
+499ff675ddab0d1ef1f1e266dacbf6659d7e88f8cef435429b379149b93107a4  results/v2_controls/test_wka72_config_conformance.py
+3df68b5038370a60f5f166a84396e89291194f4159d1dd4c56ab4152b1abaf66  results/v2_controls/wka72_registration_params.json
+# ---8<--- END BODY ---8<---

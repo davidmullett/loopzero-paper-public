@@ -1,0 +1,9 @@
+# SHA-256 manifest of the RULING-9 parameter diff table (7bvgz vs wka72 vs code-at-C*).
+# Embargoed content, kept local (gitignored under results/v2_controls/); only these
+# hashes are public. RULING 9 (2026-07-20). decision.RATIFIED=False.
+# Body sorted by path; format <sha256>  <path>. ROLLUP = SHA-256 of the body lines.
+#
+# ROLLUP  db59ccd4d63d60e171aced34d57b599d4c92af625601e2796c33e0ea771de8c5
+# ---8<--- BEGIN BODY ---8<---
+69f7c766a8e331ad457fc3c3e17bc2ab9f4991972dc4fca552f028069f924345  results/v2_controls/ruling9_param_diff_table.md
+# ---8<--- END BODY ---8<---
