@@ -624,6 +624,11 @@ def simulate_user_telemetry(
                 "consecutive_misses_after_step": int(consecutive_misses),
                 "recovered_movie_id": recovered_movie_id,
                 "topk_size": int(len(recs)),
+                # Additive slate logging for V2 pre-reg (recommendation-stream witnesses).
+                # Full ranked top-k slate + the self-reinforcement-ablated slate, as JSON
+                # int lists. Does not alter any existing column or engine behavior.
+                "slate_json": json.dumps([int(m) for m in recs]),
+                "slate_ablated_json": json.dumps([int(m) for m in recs_ablated]),
                 "profile_positive_size_after_step": int(len(positive_profile_items)),
                 "engine_hash": cfg.engine_hash,
                 "contract_sha256": cfg.contract_sha256,
