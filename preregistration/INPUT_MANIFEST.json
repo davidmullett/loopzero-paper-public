@@ -253,7 +253,7 @@
         "log_activity",
         "pop_affinity"
       ],
-      "_provisional": "decompressed_sha256 is the D-20 re-derivation target (b7a0aa36\u2026); to be re-verified/updated on task-3 PASS"
+      "_verified": "decompressed_sha256 b7a0aa36\u2026 re-derivation-verified byte-identical by build_real_covariates.py (D-20.R)"
     }
   ],
   "decision_RATIFIED": false
