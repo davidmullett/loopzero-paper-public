@@ -1,0 +1,59 @@
+{
+  "description": "Content manifest for the untracked (embargoed) slate telemetry panel and its companion summary. Records compression- and reorder-independent content hashes so every panel-derived quantity is verifiable from committed state. Remedies the root gap identified in DEVIATIONS D-16/D-17 (no committed manifest recorded any panel hash) and the uncommitted-provenance finding D-18. The panel files themselves remain untracked/embargoed; only these hashes are public. Released panels will verify against these hashes on embargo lift.",
+  "registration_pin": {
+    "source": "STUDY2-prereg-frozen.pdf (osf.io/wka72) §4, document SHA-256 2374e370c0c35c404cc2fec0cce519127ed0045160ad566580e53f485e219df9",
+    "slate_panel_sha256_ea972e2e": "the registered quantity is the DECOMPRESSED-content SHA-256 (ea972e2e…), NOT the gzip container hash; the live panel's decompressed bytes match it in full (see decompressed_sha256 below)",
+    "engine_hash": "56c1cff225d60c09",
+    "contract_sha256": "2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d"
+  },
+  "hash_conventions": {
+    "gzip_container_sha256": "SHA-256 of the .csv.gz bytes as stored; NON-reproducible across writes because pandas to_csv(compression='gzip') embeds a build mtime in the gzip header. Not a registered quantity.",
+    "decompressed_sha256": "SHA-256 of the decompressed CSV bytes; reproducible; equals the registration §4 pin.",
+    "canonical_content_sha256": "SHA-256 of: header line + rows sorted by (user_id, step), each row comma-joined verbatim, newline-separated. Reproducible under any re-compression AND any row reordering."
+  },
+  "provenance_column_constancy": {
+    "note": "R3 corroboration — verified constant across all 1,093,072 rows of the slate panel and matched to the frozen contract.",
+    "engine_hash": "56c1cff225d60c09 (CONSTANT; matches contract)",
+    "contract_sha256": "2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d (CONSTANT; matches contract)",
+    "benchmark_freeze_sha256": "daa7b8fa84178a575cfc1b484266b9865d32d7ed06df8580ecb15df9c22404ba (CONSTANT)"
+  },
+  "census_reproducibility": {
+    "note": "R4 closing verification — the clean-control census anchored at commit 6b6ac55 (STUDY2_CENSUS.sha256) re-derives BYTE-IDENTICALLY from this content-verified panel under the anchored label-side logic (population.fold, frontier floor 10, window 20, starve-window (20,50]).",
+    "census_sha256": "f286952cd7011bd562aee449d68f221aaa6d0cae6a52350e4c2df2f256188cfc",
+    "byte_identical": true
+  },
+  "panels": [
+    {
+      "path": "results/v2_prereg_slate_relog/movielens25m_recursive_frontier_public_v1__telemetry_panel__slate_v1.csv.gz",
+      "role": "Study-2 analysis input (config.PANEL / C.PANEL); the registered slate panel (registration §4). Untracked/embargoed.",
+      "tracked": false,
+      "gzip_container_sha256": "71e5e6ca45329617d8ea7d31e6d54b5eccfae914ddeadfcd7d2331a3afe91b87",
+      "decompressed_sha256": "ea972e2ef788801b8e947868fbcf9ea9250393ba88f67f5061dacefced930541",
+      "canonical_content_sha256": "5dce843d4df2bbc7f2640d49ff0fa94d0bbc4fd717ff6b44393026028f065427",
+      "decompressed_bytes": 408820409,
+      "rows": 1093072,
+      "columns": [
+        "user_id", "label", "step", "aligned_step", "collapse_step", "steps_to_collapse",
+        "natural_alarm_window_start_step", "natural_alarm_window_end_step", "is_precollapse_window",
+        "G", "p", "delta", "frontier_size_before", "frontier_size_after", "hit_this_step",
+        "consecutive_misses_after_step", "recovered_movie_id", "topk_size", "slate_json",
+        "slate_ablated_json", "profile_positive_size_after_step", "engine_hash", "contract_sha256",
+        "benchmark_freeze_sha256"
+      ],
+      "user_id_min": 2,
+      "user_id_max": 162541,
+      "step_min": 1,
+      "step_max": 50
+    }
+  ],
+  "companion_artifacts": [
+    {
+      "path": "results/v2_prereg_slate_relog/movielens25m_recursive_frontier_public_v1__telemetry_summary__slate_v1.json",
+      "role": "slate-relog run summary (records contract/engine/freeze hashes). Untracked/embargoed.",
+      "tracked": false,
+      "sha256": "3f74cc2d578898994c842034fac6aa9164e25cbc401ac3b6ca978a222b064b62"
+    }
+  ],
+  "generated_by": "compute_telemetry.py write_panel() (line ~679), pandas to_csv(compression='gzip'); slate columns added by the +5-line change committed under DEVIATIONS D-18.",
+  "decision_RATIFIED": false
+}
