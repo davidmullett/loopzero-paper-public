@@ -235,8 +235,12 @@ def build_sorted_ratings(
     )
 
     print(f"[write] {out_csv_gz}")
-    with gzip.open(out_csv_gz, "wt", encoding="utf-8", newline="") as gz:
-        df.to_csv(gz, index=False)
+    # G convention (C**): gzip with mtime=0 -> reproducible container (closes container-drift, D-16/D-21).
+    import io as _io
+    _buf = _io.BytesIO()
+    with gzip.GzipFile(fileobj=_buf, mode="wb", mtime=0) as _g:
+        _g.write(df.to_csv(index=False).encode())
+    Path(out_csv_gz).write_bytes(_buf.getvalue())
 
     return {
         "path": str(out_csv_gz),

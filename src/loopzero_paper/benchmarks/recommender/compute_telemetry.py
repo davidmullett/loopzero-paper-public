@@ -676,7 +676,12 @@ def build_included_seed_item_universe(
 def write_panel(rows: List[Dict[str, Any]], out_path: Path) -> pd.DataFrame:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     df = pd.DataFrame(rows)
-    df.to_csv(out_path, index=False, compression="gzip")
+    # G convention (C**): gzip with mtime=0 -> reproducible container (closes container-drift, D-16/D-21).
+    import gzip as _gz, io as _io
+    _buf = _io.BytesIO()
+    with _gz.GzipFile(fileobj=_buf, mode="wb", mtime=0) as _g:
+        _g.write(df.to_csv(index=False).encode())
+    out_path.write_bytes(_buf.getvalue())
     print(f"[ok] wrote telemetry panel: {out_path}")
     return df
 

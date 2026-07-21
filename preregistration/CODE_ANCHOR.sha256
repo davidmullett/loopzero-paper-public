@@ -1,10 +1,12 @@
-# SHA-256 manifest of the V2 analysis code + Phase-3 artifacts (C*). Embargoed (osf.io/7bvgz,
-# osf.io/wka72). Anchored BEFORE the blind block and BEFORE any real-engine indicator x label
-# quantity. Adds the precomputed real covariate cache; compute_summaries now READS it (no
-# first-time-at-scale covariate run inside the block). Payloads gitignored; hashes public.
-# Body sorted by path; ROLLUP = SHA-256 of the body lines below.
+# SHA-256 manifest of the V2 analysis code + Phase-3 artifacts (C**). Embargoed (osf.io/7bvgz,
+# osf.io/wka72). Fresh anchor closing D-7 (population filter), D-15 (budget grid {0.02,0.05,0.10,0.20}),
+# R1 (provenance comment -> wka72), and the G deterministic-compression convention (mtime=0). Adds
+# conformance.py (E input-gate + F population-conformance) and proof_covariate_subset.json (D-23.A
+# subset proof). Anchored BEFORE the blind block and BEFORE any real-engine indicator x label
+# quantity; decision.RATIFIED=False. Payloads gitignored; hashes public. Body sorted by path; the
+# roll-up below is the SHA-256 of the body lines between the markers.
 #
-# ROLLUP  096355fe95c283a3e521b8eb3b000da090e661595491e7b3646dd02c15f6984f
+# ROLLUP  8322f5600841ec270215a868d2eaba8c15fd11bb576fc62c6621e657fb758724
 # ---8<--- BEGIN BODY ---8<---
 008f21be0dc83cc7e4e9220535cba8c26c713ed10ece4f3f1be913a45d5e95bb  results/v2_controls/arm_popularity_only__slate_panel.csv.gz
 767fa03999e4328cb6fb305b39b9e67c04081f7a8c04074bb7538021f86f6a10  results/v2_controls/arm_shuffled_ts_102__slate_panel.csv.gz
@@ -12,34 +14,36 @@
 2bd9d9fccc89debd5e7fb7800dc90053b0c36941021e77d374d849471cd8201d  results/v2_controls/arm_shuffled_ts_104__slate_panel.csv.gz
 c1655331dcd3450547f4e5ef62cdfb1eaffdd39a8a22df2ad4e2ad91675d5f94  results/v2_controls/arm_shuffled_ts_105__slate_panel.csv.gz
 f4f4047bad69167bb03f2c288002cc3d7e60097d9a82b1b248648962fce2b7d2  results/v2_controls/arm_shuffled_ts_106__slate_panel.csv.gz
-052a959e8cbb24363d230f02cd12d7b4dce75deb7a60c6707aacf507c8e625af  results/v2_controls/producer_test_results.json
-1de4001f37c11d2e32236d838ad6715e966c253fd27b8ca29c9671dccff3d403  results/v2_controls/real_covariates.csv.gz
+be9659828114c4215ff609ebdd60eaf69aa15b2a0e39232205c92abbbf2a6ea0  results/v2_controls/producer_test_results.json
+736b5de2ecfad3684b343c04b551946e7f57860e0214a15b1038997e8a00b273  results/v2_controls/proof_covariate_subset.json
+408affb3305be60eb2423752b854f5e1ff3d0c6e7f7367325fc2c6e9206c340f  results/v2_controls/real_covariates.csv.gz
 76be341e9cb45842bc7746e9482d5f07170635d1826fe00b87a3f5a1e4bdcccc  results/v2_controls/v1_sign_convention_table.json
 a8d3cb6288eeafa93998e48b6b37d768134f0d327a3b04d635bb1a2984af8f46  results/v2_controls/verdict_test_suite_results.json
 9b7a88e63582c7b85a4d1913241e7b7e0c0b81c69a01179aaba6257cf9c20068  src/loopzero_paper/benchmarks/recommender/v2_controls/__init__.py
 f857a04923bdb2daab121a539f51140d75878b80671f237b7c7bce45990ae4b8  src/loopzero_paper/benchmarks/recommender/v2_controls/baselines.py
-41aee8130cceeeae83b2cd4d296ed312084e6ad8ffd7af17c1054695bd84da39  src/loopzero_paper/benchmarks/recommender/v2_controls/block_orchestrator.py
+bd8988f94ceac3e9129578db4db7018fa5af2e110da03e0cfe1732667d9a0101  src/loopzero_paper/benchmarks/recommender/v2_controls/block_orchestrator.py
 24c70573a0a0ba0b9610a341085722b8c06a69dc3c6ec42731775f484afbcc7c  src/loopzero_paper/benchmarks/recommender/v2_controls/bootstrap.py
-2c29148ff7dfeeb90a4ae2ee3c986d34d0196f998f5836bbbd2dd9bb153d6568  src/loopzero_paper/benchmarks/recommender/v2_controls/config.py
+e3ab58a4a21a9031187c49ca1de5a507b1d8adfe37e09460466ecd9155beccf0  src/loopzero_paper/benchmarks/recommender/v2_controls/config.py
+731ca50d4720ca7cb41551783a16721f229e84a434305a67e50d95fede2cbd3b  src/loopzero_paper/benchmarks/recommender/v2_controls/conformance.py
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/__init__.py
-447e3b9805c4ed9c4a8012a0cf85954c6433e83d562d759aa64eccc5c93642ee  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/generate_arm_panels.py
+68a7ba4de479cca3a6411c28b957e5fa765e4e7343566fca7f5151e15903c297  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/generate_arm_panels.py
 485455836e1d0a140d1b1015d6c85cbcb28efc6cdd795d050f035883843a7d05  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/popularity_engine.py
 ca537c418ba3e86bd4cfaf48ccc6e2577f08d4f9c3946523968b5d873cc4d183  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/random_engine.py
 435d03977576b5a77f923aadc3fb45e31c1f5017fce570dcc7cc42ed6ee93c23  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/replay.py
 b84a823112ee438bae465ff96ba5323ea4ae43bc3059c818ac233994d4272cd8  src/loopzero_paper/benchmarks/recommender/v2_controls/controls/shuffled_ts.py
 319b9ccfbe26f2611e93664b31645d5be0cb3b14f2bd4d921155cf5489e713d0  src/loopzero_paper/benchmarks/recommender/v2_controls/covariate_model.py
 1ad4fb8af7064d9f262dc292c3e52a24d7e086639c8686b6abc046c13dacf890  src/loopzero_paper/benchmarks/recommender/v2_controls/covariates.py
-3fd489721636eee75dcbf484256d2b31adeeb3a4d722171e4049a93d02059296  src/loopzero_paper/benchmarks/recommender/v2_controls/decision.py
+7eeb32dbb48265c82fbde093f461484180d8c2af251843242ece1c927a3b2bb0  src/loopzero_paper/benchmarks/recommender/v2_controls/decision.py
 445c6e2e3aed01fee681c8542cd51bb13be8a7551a992c9975655d0a7784a375  src/loopzero_paper/benchmarks/recommender/v2_controls/gates.py
 e642647e92cda0f40c6a312383e5a6a99251909821042862acd611a8f5b4e2d7  src/loopzero_paper/benchmarks/recommender/v2_controls/indicators.py
 889502c8954bdb4753cc1104e1c8733186f08d5050c2f1a5ce341bf59f5eb8fd  src/loopzero_paper/benchmarks/recommender/v2_controls/population.py
 8c733e757390cdc4a278a666f434a256cbb90395c9249d08d2ae1a8c27bb261a  src/loopzero_paper/benchmarks/recommender/v2_controls/pre_census.py
-4569705fee2e2b7ccc83f8966a3eb059988f6aded3d1f05e8313f70969ff1e76  src/loopzero_paper/benchmarks/recommender/v2_controls/producer.py
+5053a62625561f316c04c03917e851517b80c7258b4a9304af7974b069e99f5b  src/loopzero_paper/benchmarks/recommender/v2_controls/producer.py
 cdcb73c9b266f83db5219277b0e6bac5d4f2bce83bea5d238176ac7e2fdbc8db  src/loopzero_paper/benchmarks/recommender/v2_controls/requirements-lock.txt
 748b5d09f9ff7ba259231fbaeb36ef144e7d1a216b2c81f5f35bb4e373950255  src/loopzero_paper/benchmarks/recommender/v2_controls/run_phase2a.py
 f1387db1f9c047c4d9a3de72f8d641e1a200045bee35bb0a6fa68756a2d8cd0a  src/loopzero_paper/benchmarks/recommender/v2_controls/sign_table.py
 96a97532e680817bbd69d078746b1a306c9d5da77930f876bcd07b9da5ed69e7  src/loopzero_paper/benchmarks/recommender/v2_controls/sweep.py
-9b0161964564316ec788088eb4bdec5ee4241fd1da9c6892756bcfa4cc6f5eba  src/loopzero_paper/benchmarks/recommender/v2_controls/tests_producer.py
+6ce945f10f4ff84eb1e4178e43b3cc782839002a97877295786ac60ca3aece1b  src/loopzero_paper/benchmarks/recommender/v2_controls/tests_producer.py
 fa79d30051002a2f7d8700d11ea21e61b70f81ff3e454f2c38406a7cd693a6e9  src/loopzero_paper/benchmarks/recommender/v2_controls/tests_verdict_suite.py
 981f2ecbe24302a6bc4e60b18a5be7732f54165ef2597df15aa0de6e01929f29  src/loopzero_paper/benchmarks/recommender/v2_prereg_primary.py
 # ---8<--- END BODY ---8<---

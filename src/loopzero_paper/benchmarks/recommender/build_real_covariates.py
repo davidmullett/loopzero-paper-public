@@ -1,12 +1,14 @@
-"""Canonical §9 covariate-cache writer (after-the-fact; D-20 remedy, D-19 pattern).
+"""Canonical §9 covariate-cache writer (D-20 remedy; regenerated under C** per D-23/D-23.A).
 
-DISCLOSURE (DEVIATIONS D-20): the ORIGINAL writer that produced real_covariates.csv.gz
-(anchored under COVARIATES.sha256 / C*) was never committed and is unrecoverable. This module
-is the after-the-fact canonical writer, built from the anchored logic in
-v2_controls/covariates.py (I-1 log_activity, I-2 pop_affinity LOUO). It REPRODUCES — and did
-not produce — the anchored cache; the test is DECOMPRESSED-content byte-identity against
-b7a0aa3615966c8292dcb91d1780f4bf13ce5ee7020c82cc63e11afaa8ae43f9. Container identity
-(1de4001f…) is not reproducible (gzip mtime, D-16 mechanism) and is NOT the test.
+DISCLOSURE (D-20 / D-23.A): the ORIGINAL writer of real_covariates.csv.gz was never committed
+(D-20). This is the canonical writer, built from the anchored logic in v2_controls/covariates.py
+(I-1 log_activity, I-2 pop_affinity LOUO). Run under the CORRECTED load_arm_units (C**, D-7 fix)
+it produces the 21,725-row cache = 20,265 events + 1,460 CLEAN controls. The prior C* anchor
+b7a0aa36 (25,020 rows) was the artifact of the DEFECTIVE admission path (D-23.A reframe): its
+reproducibility was conditional on the bug; the C** cache is the anchored record made consistent
+with the registration. The C** cache is a byte-exact row-subset of b7a0aa36 (proof:
+proof_covariate_subset.py) — sound because pop_affinity is LOUO over ALL processed users (I-2),
+so shared rows are byte-identical. Container is written with mtime=0 (G convention).
 
 Inputs are content-gated BEFORE any computation (halt on any failure):
   slate panel decompressed  == ea972e2e… (registered §4 pin; D-16/D-17)
@@ -27,7 +29,7 @@ sys.path.insert(0, str(REPO / "src"))
 
 PANEL_DEC = "ea972e2ef788801b8e947868fbcf9ea9250393ba88f67f5061dacefced930541"
 RATINGS_DEC = "360fb2013956545d946d2c8f64f6db208ca407b81eac942ab4504a50dfc016e2"
-CACHE_DEC = "b7a0aa3615966c8292dcb91d1780f4bf13ce5ee7020c82cc63e11afaa8ae43f9"
+PRIOR_C_STAR_CACHE_DEC = "b7a0aa3615966c8292dcb91d1780f4bf13ce5ee7020c82cc63e11afaa8ae43f9"  # 25,020-row pre-fix cache
 
 
 def _dec_sha(p) -> str:
@@ -36,6 +38,15 @@ def _dec_sha(p) -> str:
         for b in iter(lambda: f.read(1 << 20), b""):
             h.update(b)
     return h.hexdigest()
+
+
+def _gzip_deterministic(data: bytes) -> bytes:
+    """G convention: gzip with mtime=0 so the container is reproducible (closes the container-drift
+    class — D-16/D-21). The decompressed content is the load-asserted canonical form regardless."""
+    buf = io.BytesIO()
+    with gzip.GzipFile(fileobj=buf, mode="wb", mtime=0) as gz:
+        gz.write(data)
+    return buf.getvalue()
 
 
 def input_gate(C):
@@ -56,7 +67,7 @@ def build(C, COV, PR) -> bytes:
     la = COV.log_activity_from_manifest()                 # I-1 : from MANIFEST
     profiles = COV.build_pre_episode_profiles()           # heavy 25M-row pass
     pa = COV.pop_affinity(profiles)                        # I-2 : LOUO over all processed users
-    units = PR.load_arm_units(C.PANEL)                    # user-set = L2 population (buggy incl.)
+    units = PR.load_arm_units(C.PANEL)                    # user-set = corrected L2 (events + CLEAN controls)
     user_set = sorted(int(u) for u in units.user_id)      # ascending
     buf = io.StringIO()
     w = csv.writer(buf)
@@ -93,8 +104,8 @@ def assert_rowset_invariance(C, COV, PR):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", type=Path, help="output .csv.gz path (never the anchored cache)")
-    ap.add_argument("--verify-decompressed", default=CACHE_DEC, help="anchored decompressed sha256 target")
+    ap.add_argument("--out", type=Path, help="output .csv.gz path")
+    ap.add_argument("--verify-decompressed", default=None, help="optional decompressed sha256 target to compare")
     ap.add_argument("--assert-invariance", action="store_true", help="run the row-set invariance property test")
     args = ap.parse_args()
     from loopzero_paper.benchmarks.recommender.v2_controls import config as C
@@ -105,11 +116,15 @@ def main():
         assert_rowset_invariance(C, COV, PR)
         return
     data = build(C, COV, PR)
-    args.out.write_bytes(gzip.compress(data))
+    container = _gzip_deterministic(data)                  # G: mtime=0 deterministic container
+    args.out.write_bytes(container)
     dec = hashlib.sha256(data).hexdigest()
-    print(f"re-derived DECOMPRESSED sha256 : {dec}")
-    print(f"anchored   DECOMPRESSED sha256 : {args.verify_decompressed}")
-    print(f"BYTE-IDENTITY (decompressed)   : {'PASS' if dec == args.verify_decompressed else 'FAIL'}")
+    n_rows = data.count(b"\n") - 1                          # rows excluding header (no value surfaced)
+    print(f"rows (excl header)             : {n_rows}")
+    print(f"DECOMPRESSED sha256            : {dec}")
+    print(f"container sha256 (mtime=0)     : {hashlib.sha256(container).hexdigest()}")
+    if args.verify_decompressed:
+        print(f"BYTE-IDENTITY vs {args.verify_decompressed[:12]}… : {'PASS' if dec == args.verify_decompressed else 'FAIL'}")
 
 
 if __name__ == "__main__":

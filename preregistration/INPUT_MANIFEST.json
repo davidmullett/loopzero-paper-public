@@ -241,7 +241,23 @@
     },
     {
       "path": "results/v2_controls/real_covariates.csv.gz",
-      "role": "\u00a79 covariate cache (log_activity, pop_affinity); feeds criterion 3 \u2014 PROVISIONAL pending D-20 re-derivation (task 3)",
+      "role": "\u00a79 covariate cache \u2014 C** EXECUTION cache (regenerated under corrected load_arm_units, D-7/D-23.A); feeds criterion 3",
+      "tracked": false,
+      "container_sha256": "408affb3305be60eb2423752b854f5e1ff3d0c6e7f7367325fc2c6e9206c340f",
+      "decompressed_sha256": "c338f55bd07dcb2369714cbeb30bc1dd8ffcdc19f2663cf7aca80ebf273b6ee0",
+      "canonical_content_sha256": "cb7ee6196c36c05042d15a395293d657263dc414cc98f01b52e1fb5fd24b37ff",
+      "line_ending": "CRLF",
+      "rows": 21725,
+      "columns": [
+        "user_id",
+        "log_activity",
+        "pop_affinity"
+      ],
+      "_c_star_star": "regenerated under the corrected D-7 admission path; byte-exact row-subset of the C* record (b7a0aa36); subset proof proof_covariate_subset.json sha256 736b5de2ecfad3684b343c04b551946e7f57860e0214a15b1038997e8a00b273"
+    },
+    {
+      "path": "results/v2_controls/real_covariates__c-star-25020.csv.gz",
+      "role": "\u00a79 covariate cache \u2014 C* RECORD (25,020 rows)",
       "tracked": false,
       "container_sha256": "1de4001f37c11d2e32236d838ad6715e966c253fd27b8ca29c9671dccff3d403",
       "decompressed_sha256": "b7a0aa3615966c8292dcb91d1780f4bf13ce5ee7020c82cc63e11afaa8ae43f9",
@@ -253,7 +269,7 @@
         "log_activity",
         "pop_affinity"
       ],
-      "_verified": "decompressed_sha256 b7a0aa36\u2026 re-derivation-verified byte-identical by build_real_covariates.py (D-20.R)"
+      "_reclassified": "C* record \u2014 artifact of the pre-fix admission path; superseded for execution by c338f55bd07dcb2369714cbeb30bc1dd8ffcdc19f2663cf7aca80ebf273b6ee0; subset relationship proven, proof at 736b5de2ecfad3684b343c04b551946e7f57860e0214a15b1038997e8a00b273"
     }
   ],
   "decision_RATIFIED": false
