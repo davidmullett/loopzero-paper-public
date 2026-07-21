@@ -36,7 +36,7 @@ def rederive(old_path: Path, out_path: Path):
     for a in old["arms"]:                                 # anchored counts, grid-independent -> reused
         ev = a["by_fold"]["eval"]
         floor_pass = ev["clean_controls"] >= FLOOR_CLEAN_CONTROLS and ev["events"] >= FLOOR_EVENTS
-        kb = {str(b): int(round(b * ev["controls"])) for b in budgets}   # mirrors _arm_record:51
+        kb = {str(b): int(round(b * ev["clean_controls"])) for b in budgets}   # D-26: §6 matched k over eval CLEAN controls (mirrors _arm_record:51)
         arms.append({
             "arm": a["arm"],
             "by_fold": a["by_fold"],
