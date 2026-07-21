@@ -1,13 +1,15 @@
 # SHA-256 manifest of the Phase-2.5 label-side pre-census (I-10 route-cap precondition).
-# I-10.1 supersession (D-15/D-24): the C* instance (28a73b3a, Study-1 k grid) is SUPERSEDED for
-# execution by the C** instance below (registered grid {0.02,0.05,0.10,0.20}); the ratified I-10
-# rule is UNCHANGED — only the artifact instance is versioned. route_cap = UNCONSTRAINED in both
-# (the I-5a floor is a fixed count over untouched populations; the cap did not change — D-24 tripwire
-# clear). C* record retained at __c-star.json. Embargoed; hash public. decision.RATIFIED=False.
+# I-10.2 supersession (D-26): the C** instance (8df3ff85, k over ALL controls) is SUPERSEDED for
+# execution by the C*** instance below (k over eval CLEAN controls, wka72 §6). The ratified I-10
+# rule is UNCHANGED — only the artifact instance is versioned (I-10.1 -> I-10.2). route_cap =
+# UNCONSTRAINED in all three instances (the I-5a floor reads clean_controls + events, untouched by
+# the k-denominator fix; the cap did not change — D-24.2 tripwire clear). Derived-layer only; no
+# replay re-run. C** and C* records retained. Embargoed; hash public. decision.RATIFIED=False.
 # Body sorted by path; the roll-up below is the SHA-256 of the body lines between the markers.
 #
-# ROLLUP  46262bfe41f81b9319d36161517cea2460b503b7713fc4a082faf5f64948e4c4
+# ROLLUP  a8a4747178a88a023a5f5bd105bf90ff5c87af987c059d2d31e3d782cd306269
 # ---8<--- BEGIN BODY ---8<---
-8df3ff85cf2065e443dd42d5783366ebe9cd08ba1871f9911efee8ba42777c8e  results/v2_controls/phase25_pre_census.json
+1f2d3366499d11e44ba826803799d7642d8c0a35c11cc694e8c08403ebca1cf3  results/v2_controls/phase25_pre_census.json
+8df3ff85cf2065e443dd42d5783366ebe9cd08ba1871f9911efee8ba42777c8e  results/v2_controls/phase25_pre_census__c-star-star.json
 28a73b3aad983b201c275ae159d24e453ed4a069cde79cfd1b616b11d27e3ee9  results/v2_controls/phase25_pre_census__c-star.json
 # ---8<--- END BODY ---8<---
