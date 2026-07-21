@@ -2,11 +2,12 @@
 # Embargoed payloads are gitignored; only these hashes are public. Decision quantities were
 # sealed pre-verdict and unsealed only after the verdict was anchored (D-36). All numbers
 # re-derive from the sealed verdict payload (472571471d94…); the t=20 known-answer arm
-# reproduces it exactly. RATIFIED=False in anchored source; C*** CODE_ANCHOR 42075400 unchanged.
+# reproduces it exactly. Item 6 split into two distinct control populations per D-41.
+# RATIFIED=False in anchored source; C*** CODE_ANCHOR 42075400 unchanged.
 # ---8<--- BEGIN BODY ---8<---
-2219b1f705232200a31cfd3029b6f6a654176bdaad07c4280ecb1b088b0c641c  s2_exec2_publication_tables.md
+7175795c785da0d6ae310e241486817406507b02d1699b7cd75254abf84b310e  s2_exec2_publication_tables.md
 a54c65fc4e09b8e5c8436f453d57f23a0ef80673b062f9f4772e9a78fc4978ad  s2_exec2_gate_and_detector_tables.json
 fa62a3dc704d705180714d43ed59eea9313274b53253709aa78c1a2257de9eb6  s2_exec2_tsplit_power_probe.json
-cbd438f927deafd24a1f248692dbb2d3a2443d3f4e590dd493612e455b29b0c6  s2_exec2_phase4.json
+8d233fd25005272866e6fa7d28f1e81a892bacce2a297dc86d0ee8717a99f324  s2_exec2_phase4.json
 # ---8<--- END BODY ---8<---
-# ROLLUP  f640d37dd406bdfdc8bf50b2e3f67ca1ea5e37158ccd42f4f9be7dda17b41e5f
+# ROLLUP  cc8cb975174c4c1cb8e0eb9ac7c228073a10d574aa5fd5e91223bc47be233b93
