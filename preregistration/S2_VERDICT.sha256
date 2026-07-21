@@ -1,9 +1,14 @@
-# SHA-256 of the Study-2 §11 blind-block VERDICT record (OSF osf.io/wka72). One uninterrupted
-# pass under real CP-2: compute_summaries() -> run_block() with the anchored pre-census cap
-# (route UNCONSTRAINED). Information boundary held: only {verdict, reason, payload_sha256} left
-# the block; on the gate hard-stop the decision quantities were NEVER written. No human viewed
-# any real-engine number before this commit. Payload gitignored (embargoed); only this hash is public.
-# ROLLUP  fe6af9edf5dba1d48b5c4bd591881682f14a7365e304267a8fcbdf99ee764ad5
+# SHA-256 manifest of the Study-2 blind-block verdict payload (EXECUTION 2 — first execution of the
+# registered analysis, under C***). VERDICT = SIGNAL DIES; REASON = 'fails on own merits:
+# c1=False c2=False c3=False'; internal payload_sha256 (sealed decision record) =
+# 472571471d94ddbc69e634bec4c1fdb21b531148fdebd5fbff7ab655a03b3685. The full payload with
+# decision_quantities is gitignored/embargoed under results/v2_controls/; only this hash is public.
+# SUPERSEDES the vacated execution-1 verdict (S2_VERDICT rollup fe6af9ed…, file 33e94369…, internal
+# bfc7e0db…, decision_quantities=null — VACATED at D-9). decision.RATIFIED=False in anchored source
+# (flipped in-process only). Two-tier; released on embargo lift; this hash will verify it unaltered.
+# Body sorted by path; the roll-up below is the SHA-256 of the body lines between the markers.
+#
+# ROLLUP  f1f26e74ee8d584c1bfc139874918ab63e61ad79a0f7c7484c12b55466d6dafc
 # ---8<--- BEGIN BODY ---8<---
-33e94369e1f2f049fac6ce38b7718ac3b8ea4c9000b5e126749073dc1d4fb91e  results/v2_controls/s2_verdict_payload.json
+639b970cbc22945ca1ce99514b233e430aeacd4d6c3615171707012eba97a04a  results/v2_controls/s2_verdict_payload.json
 # ---8<--- END BODY ---8<---
