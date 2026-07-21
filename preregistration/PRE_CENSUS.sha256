@@ -1,11 +1,13 @@
-# SHA-256 of the Phase 2.5 LABEL-SIDE dispositive-arm pre-census (I-10; OSF osf.io/wka72).
-# Ran the popularity-only and shuffled-TS 102+{0..4} arms under the frozen rules, reading ONLY
-# label-side frontier accounting (frontier_size_after/step/label/collapse_step) — no indicator,
-# S, baseline, or delta-TPR. Computed AFTER code freeze C* (CODE_ANCHOR ce/36e255cd… -> this run)
-# and BEFORE the Phase 3 block. RESULT: all arms/seeds clear the I-5a label-side floor
-# (>=100 clean controls & >=100 events per eval fold) -> route_cap = UNCONSTRAINED. Payload
-# gitignored (embargoed); only this hash is public. decision.RATIFIED=False; block not run.
-# ROLLUP  c8f110a5b0c2b4eeb63071b2996a66a8511c84aaa2d5c8ad0fe0aec1b26e6942
+# SHA-256 manifest of the Phase-2.5 label-side pre-census (I-10 route-cap precondition).
+# I-10.1 supersession (D-15/D-24): the C* instance (28a73b3a, Study-1 k grid) is SUPERSEDED for
+# execution by the C** instance below (registered grid {0.02,0.05,0.10,0.20}); the ratified I-10
+# rule is UNCHANGED — only the artifact instance is versioned. route_cap = UNCONSTRAINED in both
+# (the I-5a floor is a fixed count over untouched populations; the cap did not change — D-24 tripwire
+# clear). C* record retained at __c-star.json. Embargoed; hash public. decision.RATIFIED=False.
+# Body sorted by path; the roll-up below is the SHA-256 of the body lines between the markers.
+#
+# ROLLUP  46262bfe41f81b9319d36161517cea2460b503b7713fc4a082faf5f64948e4c4
 # ---8<--- BEGIN BODY ---8<---
-28a73b3aad983b201c275ae159d24e453ed4a069cde79cfd1b616b11d27e3ee9  results/v2_controls/phase25_pre_census.json
+8df3ff85cf2065e443dd42d5783366ebe9cd08ba1871f9911efee8ba42777c8e  results/v2_controls/phase25_pre_census.json
+28a73b3aad983b201c275ae159d24e453ed4a069cde79cfd1b616b11d27e3ee9  results/v2_controls/phase25_pre_census__c-star.json
 # ---8<--- END BODY ---8<---
