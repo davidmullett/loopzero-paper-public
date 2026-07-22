@@ -1,0 +1,76 @@
+{
+  "eval_clean_controls": 766,
+  "eval_events": 10153,
+  "pc1_learnability_gate": {
+    "TPR": 0.561016,
+    "TPR_BCa95": [
+      0.549265,
+      0.574181
+    ],
+    "TPR_minus_b": [
+      0.511016,
+      0.499265,
+      0.524181
+    ],
+    "budget": 0.05,
+    "note": "clean-population PC1 gate (I-7); passed -> user-process signal is learnable (D-32b)",
+    "pass": true
+  },
+  "pc2_liveness_pass": true,
+  "per_detector_operating_tables": {
+    "0.02": {
+      "k": 15,
+      "tpr": {
+        "PC1_early_miss": 0.549985,
+        "S_composite": 0.047277,
+        "ac1": 0.500443,
+        "cusum": 0.549985,
+        "matrix_profile": 0.549985,
+        "page_hinkley": 0.549985,
+        "permutation_entropy": 0.016448,
+        "variance_ews": 0.549985
+      }
+    },
+    "0.05": {
+      "k": 38,
+      "tpr": {
+        "PC1_early_miss": 0.561016,
+        "S_composite": 0.089432,
+        "ac1": 0.512656,
+        "cusum": 0.561016,
+        "matrix_profile": 0.561016,
+        "page_hinkley": 0.561016,
+        "permutation_entropy": 0.041269,
+        "variance_ews": 0.561016
+      }
+    },
+    "0.1": {
+      "k": 77,
+      "tpr": {
+        "PC1_early_miss": 0.583571,
+        "S_composite": 0.148035,
+        "ac1": 0.537772,
+        "cusum": 0.583571,
+        "matrix_profile": 0.583571,
+        "page_hinkley": 0.583571,
+        "permutation_entropy": 0.093273,
+        "variance_ews": 0.583571
+      }
+    },
+    "0.2": {
+      "k": 153,
+      "tpr": {
+        "PC1_early_miss": 0.625332,
+        "S_composite": 0.239634,
+        "ac1": 0.584753,
+        "cusum": 0.625332,
+        "matrix_profile": 0.625332,
+        "page_hinkley": 0.625332,
+        "permutation_entropy": 0.182803,
+        "variance_ews": 0.625332
+      }
+    }
+  },
+  "source": "post-verdict re-derivation; value-matched to sealed payload 472571471d94\u2026",
+  "value_match": "delta_by_budget + covariate identical to sealed payload (tol 1e-9)"
+}

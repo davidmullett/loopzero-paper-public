@@ -1,0 +1,113 @@
+{
+  "all_pass": true,
+  "decision_RATIFIED": false,
+  "partA_all_pass": true,
+  "partA_known_answer_cases": [
+    {
+      "case": "a_artifact_recursion_severed_S_separates",
+      "expected": "SIGNAL DIES",
+      "got": "SIGNAL DIES",
+      "pass": true,
+      "reason": "criterion 4 fails; S retained its advantage on: ['shuffledTS_103', 'shuffledTS_105']"
+    },
+    {
+      "case": "b_dispositive_unmeasurable",
+      "expected": "UNINTERPRETABLE-BY-CONTROL-ARM",
+      "got": "UNINTERPRETABLE-BY-CONTROL-ARM",
+      "pass": true,
+      "reason": "criteria 1-3 hold, no measurable retention, unmeasurable dispositive arm(s): ['popularity']"
+    },
+    {
+      "case": "b2_one_shuffled_seed_unmeasurable",
+      "expected": "UNINTERPRETABLE-BY-CONTROL-ARM",
+      "got": "UNINTERPRETABLE-BY-CONTROL-ARM",
+      "pass": true,
+      "reason": "criteria 1-3 hold, no measurable retention, unmeasurable dispositive arm(s): ['shuffledTS_105']"
+    },
+    {
+      "case": "c_one_of_five_seeds_retains",
+      "expected": "SIGNAL DIES",
+      "got": "SIGNAL DIES",
+      "pass": true,
+      "reason": "criterion 4 fails; S retained its advantage on: ['shuffledTS_105']"
+    },
+    {
+      "case": "d1_clean_pass",
+      "expected": "SIGNAL SURVIVES",
+      "got": "SIGNAL SURVIVES",
+      "pass": true,
+      "reason": "all four criteria met; recursion/personalization specificity confirmed"
+    },
+    {
+      "case": "d2_clear_miss",
+      "expected": "SIGNAL DIES",
+      "got": "SIGNAL DIES",
+      "pass": true,
+      "reason": "fails on own merits: c1=False c2=True c3=True"
+    },
+    {
+      "case": "a2_criteria_fail_and_dispositive_unmeasurable",
+      "expected": "SIGNAL DIES",
+      "got": "SIGNAL DIES",
+      "pass": true,
+      "reason": "fails on own merits: c1=False c2=True c3=True"
+    },
+    {
+      "case": "e_pc1_at_chance",
+      "expected": "UNINTERPRETABLE-BY-CONSTRUCTION",
+      "got": "UNINTERPRETABLE-BY-CONSTRUCTION",
+      "pass": true,
+      "reason": "PC1 learnability gate fails (I-7)"
+    },
+    {
+      "case": "f_power_gate",
+      "expected": "INDETERMINATE-BY-POWER",
+      "got": "INDETERMINATE-BY-POWER",
+      "pass": true,
+      "reason": "eval events 150 < 200"
+    },
+    {
+      "case": "g_pc2_fail",
+      "expected": "UNINTERPRETABLE-BY-CONSTRUCTION",
+      "got": "UNINTERPRETABLE-BY-CONSTRUCTION",
+      "pass": true,
+      "reason": "PC2 liveness gate fails (S degenerate)"
+    },
+    {
+      "case": "h_popularity_retains",
+      "expected": "SIGNAL DIES",
+      "got": "SIGNAL DIES",
+      "pass": true,
+      "reason": "criterion 4 fails; S retained its advantage on: ['popularity']"
+    },
+    {
+      "case": "i_c4_dominance_measurable_retention_over_unmeasurable_seed",
+      "expected": "SIGNAL DIES",
+      "got": "SIGNAL DIES",
+      "pass": true,
+      "reason": "criterion 4 fails; S retained its advantage on: ['popularity']"
+    }
+  ],
+  "partB_chance_confirmed": true,
+  "partB_label_permuted_debug": {
+    "delta_tpr_permuted": {
+      "ci": [
+        -0.0496,
+        0.0206
+      ],
+      "ci_includes_0": true,
+      "near_zero": true,
+      "point": -0.0094
+    },
+    "incremental_auc_permuted": {
+      "ci": [
+        -0.0038,
+        0.044
+      ],
+      "ci_includes_0": true,
+      "near_zero": true,
+      "point": 0.018
+    }
+  },
+  "stage": "verdict_test_suite"
+}

@@ -1,0 +1,84 @@
+{
+  "budgets_matched_counts_eval_controls": {
+    "0.01": 25,
+    "0.02": 49,
+    "0.05": 123,
+    "0.1": 245
+  },
+  "contract_sha256": "2e256b255a7f074c1516d70315ebb216241a4a7e8aba2db88b194417705fd71d",
+  "deviations_applied": {
+    "amber_1_log_activity": "warm_start_positive_count",
+    "amber_2_pop_affinity_population": "all_162541_processed_users_LOUO",
+    "flag_4_consecutive_misses_wording": "option(i) descriptive-wording correction, disclosed; L unchanged",
+    "note_4_detector_score": "family statistic maxed over <=20 window; alarm iff score>=threshold"
+  },
+  "engine_hash": "56c1cff225d60c09",
+  "panel_md5_expected": "d486f59c97701c177e16c8eb0bde4a11",
+  "pc1_gate_learnability": {
+    "PC1_TPR_BCa95": [
+      0.0,
+      0.0
+    ],
+    "PC1_TPR_at_b05": 0.0,
+    "WORDING_FLAG": "PC1-gate reference ambiguous ('chance TPR' vs 'prevalence'); verdict pending ratification. Only 'chance=b' yields a sensible (passable) gate.",
+    "event_prevalence_eval_L": 0.8054,
+    "matched_control_alarm_count": 123,
+    "n_eval_controls": 2453,
+    "primary_budget": 0.05,
+    "reading_chance_equals_b": {
+      "TPR_minus_ref": -0.05,
+      "pass_if_CI_excludes_0": false,
+      "reference": 0.05
+    },
+    "reading_literal_prevalence": {
+      "TPR_minus_ref": -0.80541,
+      "pass_if_CI_excludes_0": false,
+      "reference": 0.8054
+    }
+  },
+  "pc2_gate_liveness": {
+    "criterion": "delta >=20 distinct values across L AND IQR>0",
+    "delta_IQR": 0.024999999999999994,
+    "n_distinct_delta_values_over_L": 42,
+    "pass": true
+  },
+  "population_accounting_s4": {
+    "L_controls": 4755,
+    "L_events": 20265,
+    "L_per_fold": {
+      "cal": {
+        "controls": 2302,
+        "events": 10112,
+        "n": 12414
+      },
+      "eval": {
+        "controls": 2453,
+        "events": 10153,
+        "n": 12606
+      }
+    },
+    "cal_controls_in_L": 2302,
+    "eval_controls_in_L": 2453,
+    "eval_events_in_L": 10153,
+    "excluded_early_degraders_collapse_le_20": 15319,
+    "flag4_correction": {
+      "L_units_with_in_window_miss_saturation": 3267,
+      "corrected_max_consecutive_misses_at_step20_over_L": 19,
+      "fraction_of_L": 0.1306,
+      "note": "\u00a74 'consecutive_misses at step 20 <=7 by construction' is FALSE; frontier-floor(>=10) exception permits long unlabeled streaks in L."
+    },
+    "included_controls": 4755,
+    "included_events": 35584,
+    "n_L": 25020,
+    "n_included_units": 40339
+  },
+  "power_gate_s11": {
+    "eval_events_in_L": 10153,
+    "pass": true,
+    "threshold": 200,
+    "verdict": "OK"
+  },
+  "runtime_s": 16.0,
+  "scope": "NON-DECISION ONLY; \u00a711 \u0394TPR/AUC/four-criteria HELD pending author ratification",
+  "stage": "phase2a_accounting_and_gates"
+}

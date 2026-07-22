@@ -1,0 +1,66 @@
+{
+  "spec": "OSF osf.io/7bvgz (frozen 2026-07-09)",
+  "panel_md5_expected": "d486f59c97701c177e16c8eb0bde4a11",
+  "population_accounting": {
+    "input_units_in_panel": 40339,
+    "excluded_early_degraders_collapse_step_le_20": 15319,
+    "landmark_population_L": {
+      "n": 25020,
+      "events": 20265,
+      "controls": 4755
+    },
+    "by_fold": {
+      "calibration": {
+        "n": 12414,
+        "events": 10112,
+        "controls": 2302
+      },
+      "evaluation": {
+        "n": 12606,
+        "events": 10153,
+        "controls": 2453
+      }
+    }
+  },
+  "power_gate_\u00a711": {
+    "eval_events": 10153,
+    "min_required": 200,
+    "pass": true
+  },
+  "pc2_liveness_gate_\u00a77": {
+    "delta_distinct_values": 42,
+    "delta_iqr": 0.024999999999999994,
+    "pass": true
+  },
+  "z_params_calibration_fold_controls_\u00a76": {
+    "G": {
+      "mean": 0.0958192176835677,
+      "sd": 0.08156791481127619
+    },
+    "p": {
+      "mean": 0.08272059079061685,
+      "sd": 0.014954112536472582
+    },
+    "delta": {
+      "mean": 0.09706125108601217,
+      "sd": 0.03918752596124205
+    }
+  },
+  "indicator_correlation_calibration_controls_\u00a76": {
+    "G": {
+      "G": 1.0,
+      "p": -0.9672,
+      "delta": 0.9926
+    },
+    "p": {
+      "G": -0.9672,
+      "p": 1.0,
+      "delta": -0.9647
+    },
+    "delta": {
+      "G": 0.9926,
+      "p": -0.9647,
+      "delta": 1.0
+    }
+  }
+}

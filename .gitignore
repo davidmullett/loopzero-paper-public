@@ -44,14 +44,12 @@ A1_readiness_brief.md
 audit/
 arxiv_submission/
 
-# Embargoed OSF v2 pre-registration document (pointer committed; PDF kept private)
+# OSF v2 pre-registration PDFs kept private (pointer + content hash committed);
+# DEVIATIONS.md released 2026-07-22 for advisor shareout.
 preregistration/*.pdf
-preregistration/DEVIATIONS.md
 preregistration/STUDY2-prereg-frozen.pdf
 
-# Embargoed V2 analysis code + outputs (design encodes the pre-reg; hash-anchored only,
-# contents released on embargo lift — see preregistration/CODE_ANCHOR.sha256)
-src/loopzero_paper/benchmarks/recommender/v2_controls/
-src/loopzero_paper/benchmarks/recommender/v2_prereg_primary.py
-results/v2_controls/
-results/v2_prereg_primary/
+# V2 analysis code + outputs released 2026-07-22 for advisor shareout (previously embargoed;
+# hash-anchored via preregistration/CODE_ANCHOR.sha256 etc.). Only the large slate panels remain
+# embargoed — content-hash anchored via ARM_PANELS.sha256 / PANEL_MANIFEST.sha256:
+results/v2_controls/arm_*__slate_panel.csv.gz

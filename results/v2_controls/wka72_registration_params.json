@@ -1,0 +1,38 @@
+{
+  "_description": "Machine-readable extract of the FROZEN Study-2 pre-registration parameters, with clause references. Source: STUDY2-prereg-frozen.pdf (osf.io/wka72), document SHA-256 2374e370c0c35c404cc2fec0cce519127ed0045160ad566580e53f485e219df9 (verified live == anchor STUDY2.sha256). Values are the wka72 register; where wka72 supersedes Study 1 (osf.io/7bvgz) the '_supersedes_7bvgz' note is set. Embargoed content; hash-anchored via preregistration/REGISTRATION_PARAMS.sha256.",
+  "params": {
+    "t_split":               {"value": 20,        "clause": "§2, §14"},
+    "window":                {"value": 20,        "clause": "§4"},
+    "slate_size_k":          {"value": 10,        "clause": "§4/§6 (top_k)"},
+    "n_slots":               {"value": 200,       "clause": "§6"},
+    "budgets":               {"value": [0.02, 0.05, 0.10, 0.20], "clause": "§6, §10, §14", "_supersedes_7bvgz": "Study 1 used {0.01,0.02,0.05,0.10}; wka72 removes 0.01 by design and adds 0.20"},
+    "primary_budget":        {"value": 0.05,      "clause": "§6"},
+    "bootstrap_seed":        {"value": 201,       "clause": "§6, §13"},
+    "bootstrap_iters":       {"value": 10000,     "clause": "§6"},
+    "delta_tpr_floor":       {"value": 0.05,      "clause": "§1, §10, §14 (unchangeable)"},
+    "incremental_auc":       {"value": 0.02,      "clause": "§7, §10, §14 (unchangeable)"},
+    "power_min_eval_events": {"value": 200,       "clause": "§5"},
+    "tsplit_sensitivity":    {"value": [15, 25],  "clause": "§8 (reported-only)"},
+    "control_seeds": {
+      "clause": "§9, §13",
+      "value": {
+        "random":             [101, 102, 103, 104, 105],
+        "shuffled_timestamp": [102, 103, 104, 105, 106],
+        "mf_als":             [103, 104, 105, 106, 107],
+        "sequential":         [104, 105, 106, 107, 108]
+      }
+    },
+    "fold_split":            {"value": "seedless_sha256_last_hex_0to7_calibration", "clause": "§4, §14"},
+    "composite_s":           {"value": "z(G)+z(p)-z(delta)", "clause": "§4, §14"},
+    "z_param_source":        {"value": "calibration_fold_CLEAN_controls", "clause": "§4, §14"},
+    "engine_hash":           {"value": "56c1cff225d60c09", "clause": "provenance"}
+  },
+  "config_equality_map": {
+    "_note": "maps config.py attribute -> extract param key for the conformance test",
+    "T_SPLIT": "t_split", "WINDOW": "window", "K": "slate_size_k", "N_SLOTS": "n_slots",
+    "BUDGETS": "budgets", "PRIMARY_BUDGET": "primary_budget", "BOOTSTRAP_SEED": "bootstrap_seed",
+    "BOOTSTRAP_ITERS": "bootstrap_iters", "GUARD_DELTA_TPR": "delta_tpr_floor",
+    "GUARD_INCREMENTAL_AUC": "incremental_auc", "POWER_MIN_EVAL_EVENTS": "power_min_eval_events",
+    "TSPLIT_SENSITIVITY": "tsplit_sensitivity"
+  }
+}

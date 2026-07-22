@@ -1,0 +1,35 @@
+{
+  "N_CLEAN_calibration": 694,
+  "N_CLEAN_evaluation": 766,
+  "N_CLEAN_total": 1460,
+  "candidate_controls_unstarved_at_20": 1463,
+  "fields_read": [
+    "user_id",
+    "label",
+    "step",
+    "frontier_size_after"
+  ],
+  "frontier_floor": 10,
+  "gate": {
+    "cal_ge_450": true,
+    "eval_ge_450": true,
+    "total_ge_1000": true,
+    "verdict": "PASS"
+  },
+  "label_side_only": true,
+  "route": "PROCEED-TO-EXECUTION-PROTOCOL",
+  "spec": "OSF osf.io/wka72 \u00a73",
+  "stage": "study2_clean_control_census",
+  "starvation_time_distribution": {
+    "max": 29,
+    "mean": 24.333,
+    "median": 23.0,
+    "min": 21,
+    "n": 3,
+    "p25": 22.0,
+    "p75": 26.0
+  },
+  "starve_window": "(20,50]",
+  "starved_in_2050": 3,
+  "total_controls": 4755
+}

@@ -1,0 +1,69 @@
+{
+  "all_pass": true,
+  "gates": {
+    "measurability(nclean,nev,sdistinct,siqr)": [
+      154,
+      612,
+      766,
+      3.6902
+    ],
+    "pc1_minus_b": [
+      0.0203,
+      -0.0205,
+      0.0622
+    ],
+    "pc2_pass": true
+  },
+  "load_arm_units": {
+    "clean_determination_pass": true,
+    "mrf_shape": [
+      70,
+      20
+    ],
+    "n_clean": 30,
+    "n_clean_expected": 30,
+    "n_controls": 30,
+    "n_units": 70
+  },
+  "permuted": {
+    "delta_tpr_b05": [
+      -0.0337,
+      -0.0611,
+      0.0169
+    ],
+    "incr_auc": [
+      0.0043,
+      -0.008,
+      0.0171
+    ],
+    "pass": true
+  },
+  "planted": {
+    "bD": [
+      -3.063,
+      -3.258,
+      -2.863
+    ],
+    "bG": [
+      1.74,
+      1.517,
+      1.961
+    ],
+    "bP": [
+      1.462,
+      1.155,
+      1.678
+    ],
+    "delta_tpr_b05": [
+      0.9101,
+      0.899,
+      0.9273
+    ],
+    "incr_auc": [
+      0.4741,
+      0.445,
+      0.5093
+    ],
+    "pass": true
+  }
+}

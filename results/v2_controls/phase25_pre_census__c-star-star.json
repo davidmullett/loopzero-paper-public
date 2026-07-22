@@ -1,0 +1,184 @@
+{
+  "all_arms_clear_floor": true,
+  "arms": [
+    {
+      "arm": "popularity_only",
+      "by_fold": {
+        "cal": {
+          "clean_controls": 320,
+          "controls": 1233,
+          "events": 6136,
+          "n": 7369
+        },
+        "eval": {
+          "clean_controls": 379,
+          "controls": 1299,
+          "events": 5973,
+          "n": 7272
+        }
+      },
+      "eval_clean_controls": 379,
+      "eval_events": 5973,
+      "i5a_labelside_floor_pass": true,
+      "k_of_b_eval_controls": {
+        "0.02": 26,
+        "0.05": 65,
+        "0.1": 130,
+        "0.2": 260
+      }
+    },
+    {
+      "arm": "shuffled_ts_102",
+      "by_fold": {
+        "cal": {
+          "clean_controls": 1042,
+          "controls": 4070,
+          "events": 14473,
+          "n": 18543
+        },
+        "eval": {
+          "clean_controls": 1086,
+          "controls": 4201,
+          "events": 14617,
+          "n": 18818
+        }
+      },
+      "eval_clean_controls": 1086,
+      "eval_events": 14617,
+      "i5a_labelside_floor_pass": true,
+      "k_of_b_eval_controls": {
+        "0.02": 84,
+        "0.05": 210,
+        "0.1": 420,
+        "0.2": 840
+      }
+    },
+    {
+      "arm": "shuffled_ts_103",
+      "by_fold": {
+        "cal": {
+          "clean_controls": 1043,
+          "controls": 4096,
+          "events": 14450,
+          "n": 18546
+        },
+        "eval": {
+          "clean_controls": 1093,
+          "controls": 4237,
+          "events": 14664,
+          "n": 18901
+        }
+      },
+      "eval_clean_controls": 1093,
+      "eval_events": 14664,
+      "i5a_labelside_floor_pass": true,
+      "k_of_b_eval_controls": {
+        "0.02": 85,
+        "0.05": 212,
+        "0.1": 424,
+        "0.2": 847
+      }
+    },
+    {
+      "arm": "shuffled_ts_104",
+      "by_fold": {
+        "cal": {
+          "clean_controls": 1047,
+          "controls": 4155,
+          "events": 14467,
+          "n": 18622
+        },
+        "eval": {
+          "clean_controls": 1087,
+          "controls": 4236,
+          "events": 14553,
+          "n": 18789
+        }
+      },
+      "eval_clean_controls": 1087,
+      "eval_events": 14553,
+      "i5a_labelside_floor_pass": true,
+      "k_of_b_eval_controls": {
+        "0.02": 85,
+        "0.05": 212,
+        "0.1": 424,
+        "0.2": 847
+      }
+    },
+    {
+      "arm": "shuffled_ts_105",
+      "by_fold": {
+        "cal": {
+          "clean_controls": 1012,
+          "controls": 4118,
+          "events": 14467,
+          "n": 18585
+        },
+        "eval": {
+          "clean_controls": 1116,
+          "controls": 4284,
+          "events": 14624,
+          "n": 18908
+        }
+      },
+      "eval_clean_controls": 1116,
+      "eval_events": 14624,
+      "i5a_labelside_floor_pass": true,
+      "k_of_b_eval_controls": {
+        "0.02": 86,
+        "0.05": 214,
+        "0.1": 428,
+        "0.2": 857
+      }
+    },
+    {
+      "arm": "shuffled_ts_106",
+      "by_fold": {
+        "cal": {
+          "clean_controls": 1044,
+          "controls": 4109,
+          "events": 14449,
+          "n": 18558
+        },
+        "eval": {
+          "clean_controls": 1124,
+          "controls": 4314,
+          "events": 14617,
+          "n": 18931
+        }
+      },
+      "eval_clean_controls": 1124,
+      "eval_events": 14617,
+      "i5a_labelside_floor_pass": true,
+      "k_of_b_eval_controls": {
+        "0.02": 86,
+        "0.05": 216,
+        "0.1": 431,
+        "0.2": 863
+      }
+    }
+  ],
+  "decision_RATIFIED": false,
+  "epistemic_split": {
+    "in_block_not_read": [
+      "G",
+      "p",
+      "delta",
+      "S",
+      "baselines",
+      "delta_tpr",
+      "I-5a_S_non_degeneracy_half"
+    ],
+    "label_side_read": [
+      "frontier_size_after",
+      "label",
+      "collapse_step"
+    ]
+  },
+  "i5a_labelside_floor": {
+    "clean_controls_ge": 100,
+    "events_ge": 100
+  },
+  "route_cap": "UNCONSTRAINED",
+  "stage": "phase25_labelside_pre_census"
+}

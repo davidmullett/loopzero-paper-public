@@ -1,0 +1,40 @@
+{
+  "all_pass": true,
+  "clause_i": {
+    "cstar2_rows": 21725,
+    "cstar_rows": 25020,
+    "not_present": 0,
+    "pass": true
+  },
+  "clause_ii": {
+    "absent": 3295,
+    "absent_set_sha256": "0b37c23da0e0dd489e6b29bab0ee6a78f0ef894e21f3168005cac085907b52c4",
+    "exclusion": 3295,
+    "exclusion_set_sha256": "0b37c23da0e0dd489e6b29bab0ee6a78f0ef894e21f3168005cac085907b52c4",
+    "pass": true
+  },
+  "clause_iii": {
+    "columns": [
+      "user_id",
+      "log_activity",
+      "pop_affinity"
+    ],
+    "dtypes": {
+      "log_activity": "float",
+      "pop_affinity": "float",
+      "user_id": "int"
+    },
+    "header": "user_id,log_activity,pop_affinity",
+    "pass": true,
+    "provenance_columns": []
+  },
+  "hashes": {
+    "cstar2_decompressed": "c338f55bd07dcb2369714cbeb30bc1dd8ffcdc19f2663cf7aca80ebf273b6ee0",
+    "cstar_decompressed": "b7a0aa3615966c8292dcb91d1780f4bf13ce5ee7020c82cc63e11afaa8ae43f9"
+  },
+  "precondition": {
+    "admitted_subset_n": 21713,
+    "louo_base_n": 162206,
+    "pass": true
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "item1_bounding_diagnostic": {
+    "G": {
+      "coupling_type": "slate-structure (engine-frontier-coupled)",
+      "d_full": 2.0096,
+      "d_purified": -0.6363,
+      "d_starved_contrast": -5.6224,
+      "mechanical_delta_d": [
+        2.6459,
+        2.5527,
+        2.7393
+      ]
+    },
+    "delta": {
+      "coupling_type": "slate-structure (engine-frontier-coupled)",
+      "d_full": 1.9993,
+      "d_purified": -0.6803,
+      "d_starved_contrast": -5.6034,
+      "mechanical_delta_d": [
+        2.6796,
+        2.5849,
+        2.7751
+      ]
+    },
+    "mrf": {
+      "coupling_type": "outcome-stream (behavioral/miss-coupled)",
+      "d_full": -2.6217,
+      "d_purified": 0.8109,
+      "d_starved_contrast": 6.1397,
+      "mechanical_delta_d": [
+        -3.4325,
+        -3.5498,
+        -3.3166
+      ]
+    },
+    "p": {
+      "coupling_type": "slate-structure (engine-frontier-coupled)",
+      "d_full": -2.2508,
+      "d_purified": 0.046,
+      "d_starved_contrast": 4.0945,
+      "mechanical_delta_d": [
+        -2.2968,
+        -2.389,
+        -2.2035
+      ]
+    }
+  },
+  "item2_tsplit_sensitivity": {
+    "15": {
+      "c1": false,
+      "c2": false,
+      "c3": "NOT COMPUTED (covariate cache is t_split=20-scoped; 59% of this landmark's units covered)",
+      "covariate_cache_coverage": 0.5865,
+      "delta_by_budget": {
+        "0.02": [
+          -0.4602,
+          -0.493033,
+          -0.441117
+        ],
+        "0.05": [
+          -0.425071,
+          -0.446192,
+          -0.393029
+        ],
+        "0.1": [
+          -0.37221,
+          -0.398263,
+          -0.347941
+        ],
+        "0.2": [
+          -0.331599,
+          -0.356555,
+          -0.30239
+        ]
+      },
+      "eval_events": 17877,
+      "executable": true,
+      "pc1_gate_TPR_minus_b": [
+        0.515755,
+        0.505842,
+        0.528581
+      ],
+      "pc2_pass": true
+    },
+    "20": {
+      "c1": false,
+      "c2": false,
+      "c3": false,
+      "covariate": {
+        "bD": [
+          -0.5384,
+          -0.6909,
+          -0.385
+        ],
+        "bG": [
+          -0.4753,
+          -0.6349,
+          -0.3127
+        ],
+        "bP": [
+          -0.4188,
+          -0.512,
+          -0.328
+        ],
+        "incr_auc": [
+          0.1621,
+          0.1431,
+          0.1831
+        ]
+      },
+      "covariate_cache_coverage": 1.0,
+      "delta_by_budget": {
+        "0.02": [
+          -0.502709,
+          -0.5247,
+          -0.487059
+        ],
+        "0.05": [
+          -0.471585,
+          -0.495708,
+          -0.443811
+        ],
+        "0.1": [
+          -0.435536,
+          -0.458645,
+          -0.415311
+        ],
+        "0.2": [
+          -0.385699,
+          -0.412186,
+          -0.348806
+        ]
+      },
+      "eval_events": 10153,
+      "executable": true,
+      "pc1_gate_TPR_minus_b": [
+        0.511016,
+        0.499265,
+        0.524181
+      ],
+      "pc2_pass": true
+    },
+    "25": {
+      "c1": false,
+      "c2": false,
+      "c3": false,
+      "covariate": {
+        "bD": [
+          -0.5201,
+          -0.6748,
+          -0.3653
+        ],
+        "bG": [
+          -0.4246,
+          -0.5887,
+          -0.2608
+        ],
+        "bP": [
+          -0.4055,
+          -0.4952,
+          -0.3142
+        ],
+        "incr_auc": [
+          0.167,
+          0.1457,
+          0.1894
+        ]
+      },
+      "covariate_cache_coverage": 1.0,
+      "delta_by_budget": {
+        "0.02": [
+          -0.541305,
+          -0.559914,
+          -0.525629
+        ],
+        "0.05": [
+          -0.521,
+          -0.540506,
+          -0.499913
+        ],
+        "0.1": [
+          -0.500521,
+          -0.522208,
+          -0.471908
+        ],
+        "0.2": [
+          -0.411836,
+          -0.457064,
+          -0.371125
+        ]
+      },
+      "eval_events": 5762,
+      "executable": true,
+      "pc1_gate_TPR_minus_b": [
+        0.525321,
+        0.510559,
+        0.540514
+      ],
+      "pc2_pass": true
+    },
+    "_kat_t20": {
+      "delta_by_budget": {
+        "0.02": [
+          -0.502709,
+          -0.5247,
+          -0.487059
+        ],
+        "0.05": [
+          -0.471585,
+          -0.495708,
+          -0.443811
+        ],
+        "0.1": [
+          -0.435536,
+          -0.458645,
+          -0.415311
+        ],
+        "0.2": [
+          -0.385699,
+          -0.412186,
+          -0.348806
+        ]
+      },
+      "matches_sealed_payload": true
+    }
+  },
+  "item3_frontier_headroom_split": {
+    "headroom_10_15": {
+      "n_events": 38,
+      "note": "n<100; \u0394TPR not reported"
+    },
+    "headroom_gt15": {
+      "delta_tpr_b05": [
+        -0.469797,
+        -0.493224,
+        -0.441546
+      ],
+      "k": 38,
+      "n_clean_controls": 766,
+      "n_events": 10115
+    }
+  },
+  "item4_indicator_correlation": {
+    "indicators": [
+      "G",
+      "p",
+      "delta",
+      "mrf"
+    ],
+    "n": 12606,
+    "pearson_r": [
+      [
+        1.0,
+        -0.8694,
+        0.9751,
+        -0.9234
+      ],
+      [
+        -0.8694,
+        1.0,
+        -0.8689,
+        0.8756
+      ],
+      [
+        0.9751,
+        -0.8689,
+        1.0,
+        -0.9265
+      ],
+      [
+        -0.9234,
+        0.8756,
+        -0.9265,
+        1.0
+      ]
+    ]
+  },
+  "item5_i5b_absolute": {
+    "popularity_only": {
+      "TPR_S_minus_b": [
+        -0.025389,
+        -0.038648,
+        -0.013676
+      ],
+      "beats_chance": false
+    },
+    "shuffled_ts_102": {
+      "TPR_S_minus_b": [
+        -0.008473,
+        -0.016233,
+        0.003534
+      ],
+      "beats_chance": false
+    },
+    "shuffled_ts_103": {
+      "TPR_S_minus_b": [
+        -0.010788,
+        -0.020315,
+        0.000276
+      ],
+      "beats_chance": false
+    },
+    "shuffled_ts_104": {
+      "TPR_S_minus_b": [
+        -0.016811,
+        -0.027941,
+        -0.007206
+      ],
+      "beats_chance": false
+    },
+    "shuffled_ts_105": {
+      "TPR_S_minus_b": [
+        -0.016493,
+        -0.026009,
+        -0.006281
+      ],
+      "beats_chance": false
+    },
+    "shuffled_ts_106": {
+      "TPR_S_minus_b": [
+        -0.024003,
+        -0.032803,
+        -0.016517
+      ],
+      "beats_chance": false
+    }
+  },
+  "item6_starvation_concurrence": {
+    "a_H3_as_frozen": {
+      "note": "Only 3 candidate controls starve post-landmark; H3-as-frozen has no power and no discrimination is computed. The CLEAN population excludes them; they never entered L2 as clean.",
+      "population_A_starved_in_(20,50]": 3,
+      "population_CLEAN": 1460,
+      "verdict": "VACUOUS by population fact"
+    },
+    "b_starvation_concurrence_probe": {
+      "cohens_d_pre_vs_clean": {
+        "G": -5.6951,
+        "S_composite": 4.2003,
+        "delta": -5.7685,
+        "mrf": 6.2877,
+        "p": 4.174
+      },
+      "max_slate_abs_d": 5.7685,
+      "population_B_starved_at_<=20_prelandmark": 3292,
+      "population_CLEAN": 1460,
+      "precommitted_reading": "slate structure READS frontier depletion (|d|>=0.8) \u2014 S is in part a frontier-depletion detector; this is the contamination the CLEAN purification removes"
+    },
+    "events_frontier_crossed_floor_before_collapse": 0,
+    "note": "D-41 correction: (a) and (b) are DISTINCT control populations (census 6b6ac55), not one figure.",
+    "partition_check": {
+      "clean": 1460,
+      "closes_to_4755": true,
+      "post_landmark_(20,50]": 3,
+      "pre_landmark_<=20": 3292,
+      "sum": 4755
+    }
+  },
+  "not_run_ledger": {
+    "H3_as_frozen": "MOOT \u2014 vacuous by population fact: by the degradation contract (collapse fires only when frontier>=floor) no event can cross the floor before collapse, and the CLEAN population excludes starvers by construction; the starvation-concurrence probe (item 6) reports the within-window-starver counts directly. Not run as a separate test.",
+    "MF_sequential_engines": "MOOT \u2014 existed to test mechanism specificity of a DETECTED signal; none was detected (SIGNAL DIES on c1\u2013c3); not run. Deferred as future characterization (D-33).",
+    "random_arm_rerun": "MOOT \u2014 the random-arm degeneracy IS the result (D-3); a re-run adds nothing. Not run."
+  },
+  "source": "post-verdict Phase-4 (D-33); descriptive/robustness on the pre-registered set only (Route B)"
+}

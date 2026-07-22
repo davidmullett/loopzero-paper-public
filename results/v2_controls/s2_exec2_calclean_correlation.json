@@ -1,0 +1,17 @@
+{
+  "population": "694 calibration-fold CLEAN controls (standardization population; z unit-variance by construction)",
+  "n": 694,
+  "pearson_r": {
+    "G_p": -0.47798,
+    "G_delta": 0.83298,
+    "p_delta": -0.41469
+  },
+  "decomposition_on_correct_population": {
+    "Var_D_=_2(1-r_Gdelta)": 0.33404,
+    "Cov_D_zp_=_rGp-rpdelta": -0.06329,
+    "Var_S": 1.20745,
+    "occupancy_variance_share_=_1/Var_S": 0.82819
+  },
+  "precommitted_reading": "REVERT \u2014 r(G,\u03b4)<0.90 (materially lower); geometric near-cancellation weakens/fails, \u00a75.1 reverts to qualitative form permanently",
+  "note": "D-44 remedy; corrects the eval-arm item-4 matrix. Control-only, no label; verdict untouched."
+}

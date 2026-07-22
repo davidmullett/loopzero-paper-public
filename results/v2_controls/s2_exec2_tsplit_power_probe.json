@@ -1,0 +1,23 @@
+{
+  "landmarks": {
+    "15": {
+      "eval_clean_controls": 766,
+      "eval_events": 17877,
+      "executable": true,
+      "verdict": "EXECUTABLE"
+    },
+    "20": {
+      "eval_clean_controls": 766,
+      "eval_events": 10153,
+      "executable": true,
+      "verdict": "EXECUTABLE"
+    },
+    "25": {
+      "eval_clean_controls": 766,
+      "eval_events": 5762,
+      "executable": true,
+      "verdict": "EXECUTABLE"
+    }
+  },
+  "power_floor": 200
+}
