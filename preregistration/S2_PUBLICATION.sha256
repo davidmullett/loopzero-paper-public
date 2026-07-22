@@ -1,13 +1,14 @@
-# S2 EXECUTION-2 PUBLICATION SET (§12 DIES route) + Phase-4 (D-33) — SHA-256 anchor manifest.
+# S2 EXECUTION-2 PUBLICATION SET (§12 DIES route) + Phase-4 (D-33) + D-42 — SHA-256 anchor manifest.
 # Embargoed payloads are gitignored; only these hashes are public. Decision quantities were
 # sealed pre-verdict and unsealed only after the verdict was anchored (D-36). All numbers
 # re-derive from the sealed verdict payload (472571471d94…); the t=20 known-answer arm
-# reproduces it exactly. Item 6 split into two distinct control populations per D-41.
+# reproduces it exactly. Item 6 split per D-41; D-42 starved-history characterization added.
 # RATIFIED=False in anchored source; C*** CODE_ANCHOR 42075400 unchanged.
 # ---8<--- BEGIN BODY ---8<---
-7175795c785da0d6ae310e241486817406507b02d1699b7cd75254abf84b310e  s2_exec2_publication_tables.md
+d51e292409124d1b0ffbe63b33b818ea5dbce90e09c061d5d6f31977fa93025a  s2_exec2_publication_tables.md
 a54c65fc4e09b8e5c8436f453d57f23a0ef80673b062f9f4772e9a78fc4978ad  s2_exec2_gate_and_detector_tables.json
 fa62a3dc704d705180714d43ed59eea9313274b53253709aa78c1a2257de9eb6  s2_exec2_tsplit_power_probe.json
 8d233fd25005272866e6fa7d28f1e81a892bacce2a297dc86d0ee8717a99f324  s2_exec2_phase4.json
+7b1094c0d3ee47449afc0063bfe5932beb8acda485b88f7948638b07f8934cd7  s2_exec2_starved_history.json
 # ---8<--- END BODY ---8<---
-# ROLLUP  cc8cb975174c4c1cb8e0eb9ac7c228073a10d574aa5fd5e91223bc47be233b93
+# ROLLUP  d1a642bc30b6e1d75def70e134ef423b5cfd2c1f855fe29c836b70241ce8fd1f
