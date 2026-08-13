@@ -13,30 +13,43 @@
 # modified by this script.
 set -euo pipefail
 cd "$(dirname "$0")"
-SRC="../paper_shadow_classes.md"
-MAIN="paper_main.md"
-OUT="paper_main.pdf"
 
-python3 - "$SRC" "$MAIN" <<'PY'
-import sys
-src, out = sys.argv[1], sys.argv[2]
+# Map the math glyphs the text font (STIX Two Text) does not carry to LaTeX math,
+# and (main paper only) drop the not-for-manuscript appendix.
+prep() { # prep <src> <out> <strip_appendix:0|1>
+python3 - "$1" "$2" "$3" <<'PY'
+import sys, re
+src, out, strip = sys.argv[1], sys.argv[2], sys.argv[3]
 s = open(src).read()
-# drop the appendix (explicitly "not for the manuscript")
-s = s.split('## APPENDIX — Notes for revision')[0].rstrip() + '\n'
-# map math glyphs the text font (STIX Two Text) does not carry to LaTeX math
+if strip == '1':
+    s = s.split('## APPENDIX — Notes for revision')[0].rstrip() + '\n'
 subs = {
     '≥': r'$\geq$', '≤': r'$\leq$', '→': r'$\rightarrow$',
     '≈': r'$\approx$', '√': r'$\sqrt{}$', '∎': r'$\blacksquare$',
 }
 for k, v in subs.items():
     s = s.replace(k, v)
+# pandoc's currency heuristic will not close inline math when the closing '$'
+# is immediately followed by a digit (e.g. $\sqrt{}$1.208). Insert a space so
+# the math closes; a math-closing '$' is always the one adjacent to a digit here.
+s = re.sub(r'\$(\d)', r'$ \1', s)
 open(out, 'w').write(s)
 PY
+}
 
-pandoc "$MAIN" -o "$OUT" --pdf-engine=xelatex \
+render() { # render <intermediate.md> <out.pdf>
+pandoc "$1" -o "$2" --pdf-engine=xelatex \
   -V geometry:margin=1in -V fontsize=11pt \
   -V mainfont="STIX Two Text" \
   -V colorlinks=true -V linkcolor=black -V urlcolor=blue \
   --toc -V toc-title="Contents"
+echo "Built $2"
+}
 
-echo "Built $OUT"
+prep "../paper_shadow_classes.md"    "paper_main.md"       1
+render "paper_main.md" "paper_main.pdf"
+
+if [ -f "../supplement_shadow_classes.md" ]; then
+  prep "../supplement_shadow_classes.md" "supplement_main.md" 0
+  render "supplement_main.md" "supplement_main.pdf"
+fi

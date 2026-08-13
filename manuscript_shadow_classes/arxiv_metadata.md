@@ -7,7 +7,7 @@ This is the successor manuscript; it is distinct from the v1 paper (arXiv:2606.0
 ## Files
 
 Main manuscript: `mullett_shadow_classes_main_v1.pdf` (to be built)
-Supplementary materials: `mullett_shadow_classes_supplement_v1.pdf` (to be assembled — see notes)
+Supplementary materials: `mullett_shadow_classes_supplement_v1.pdf` (drafted: `supplement_shadow_classes.md`, 4 pp. — gate in registered vocabulary, conformance audit, D-43/D-44, provenance chain, supporting tables)
 
 ## Title
 
