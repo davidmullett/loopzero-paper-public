@@ -73,6 +73,14 @@ An event must satisfy f ≥ 10 at its degradation step, which occurs after L. Si
 
 The consequence is that the control class does not mean "a healthy user who did not degrade." It substantially means "a user whose frontier ran out — who is failing continuously — and whom the rule is structurally unable to label." The event/control contrast the benchmark presents is not *will-degrade* versus *will-not-degrade*; it is *will-degrade* versus *(will-not-degrade OR cannot-be-labeled)*.
 
+Two terms recur below and are worth fixing precisely. The phrase *shadow class* has unrelated uses in other fields; we use it here in a specific measurement-theoretic sense.
+
+**Definition 1 (shadow class).** Given a population, a construct of interest, and a labeling rule, a *shadow class* is a subset of units that (i) remains substantively relevant to the construct — here, units that are failing; (ii) is structurally prevented by the rule from receiving the label corresponding to that state — not merely unlabeled empirically, but unlabelable by construction; and (iii) is consequentially treated: omitted, censored, or absorbed into another nominal class in a way that affects inference. All three conditions matter. Eligibility rules legitimately place units out of scope; a shadow class exists only where a construct-relevant population is structurally unlabelable and its residual treatment changes what the instrument reports. The starved controls of §2.2 satisfy all three.
+
+**Definition 2 (shadow-class census).** The report, prior to any use of the benchmark for inference, of the prevalence and behaviour of each shadow class the label rule induces.
+
+A shadow class in this sense is not a latent class: its membership is exactly identifiable from observables (here, f_t < 10). What is hidden is not the units but their status under the benchmark's ontology. Nor is it missing data. A shadow-class unit can be fully observed — every step of its trajectory recorded — while remaining invisible to the measurement ontology: the instrument cannot recognise its failure as failure.
+
 ### 2.2 The empirical signature
 
 The contamination is not marginal. In the landmark population (units neither degraded nor starved by step 20):
@@ -128,7 +136,7 @@ The corollary is the design lesson: **an eligibility conjunct with a monotone, a
 
 1.  **Decouple eligibility from labelability.** Remove the absorbing shadow state — for example, a *replenishing* frontier (a rolling window of upcoming positives) so that no unit is permanently barred from being labeled, and failure is always measurable against a live frontier.
 2.  **Define the control class positively, never residually.** A control should be a unit that demonstrably *sustains recovery capability* through the horizon, not merely a unit the rule failed to label.
-3.  **Require a shadow-class census for any conjunctive label rule.** Every eligibility condition partitions the population into labelable and unlabelable units; a valid benchmark must report the size and behaviour of the unlabelable shadow class, because that is where residual contamination hides.
+3.  **Require a shadow-class census for any conjunctive label rule.** Every eligibility condition partitions the population into labelable and unlabelable units. Not every unlabelable stratum is pathological — rules may legitimately place units out of scope — but wherever the three conditions of Definition 1 co-occur, the benchmark must report the size and behaviour of the shadow class, because that is where residual contamination hides.
 4.  **Engineer prevalence at construction.** Fix a minority-class floor (e.g. ≥ 15%) so that the interesting class is neither degenerate nor overwhelming, rather than accepting whatever prevalence the rule happens to produce.
 5.  **Ship a learnability gate as a required validation artifact.** The prerequisite check — can the simplest label-derived signal beat chance? — should be part of releasing the benchmark, not an optional downstream analysis.
 
@@ -390,6 +398,8 @@ The hypothesis that slate-structure statistics carry early warning of recursive 
   
 
 The broader question — whether early warning is achievable in recursive recommender systems — is not answered by this work. Answering it requires a benchmark built to the constructive half of the specification, or a live system, and the analysis reported here places the constraint precisely: whatever is achievable must be sought in the outcome stream or in quantities demonstrably independent of frontier depletion.
+
+A further extension, not attempted here, is a taxonomy of shadow classes across label architectures: the absorbing variety studied here is one type; the gated labels of reject inference suggest another. The census of Definition 2 generalises accordingly.
 
 ### 5.6 Limitations
 
