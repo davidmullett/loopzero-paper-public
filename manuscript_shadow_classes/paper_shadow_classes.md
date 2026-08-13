@@ -39,7 +39,7 @@ We study one such benchmark: a deterministic offline replay on MovieLens-25M (Ha
 
   
 
-Two clarifications frame what follows. First, that prior study's specific indicators were subsequently found to be partly coupled to the label rule, which motivated a redefinition. The problem we describe here is deeper and independent of any indicator: it is a defect in how the benchmark constructs its *labels*, and it would compromise any detector, including the strongest imaginable one. Second — and we state this plainly because it governs the paper's contribution — **the failure mode is not a new phenomenon.** It is a concrete instance of hazards that are well developed elsewhere: informative censoring and competing risks in survival analysis, depletion of susceptibles and immortal-time bias in pharmacoepidemiology, negative-class contamination in positive-unlabeled learning, and reject inference in credit scoring. Our claim is not phenomenon-novelty. It is that this hazard has an unrecognized and undetected instance in the construction of recursive-recommender benchmarks, that its presence inverts the sign of the most natural early-warning signal, and that a lightweight, pre-registerable protocol detects it before any result is produced. Throughout we use the conservative terms *degradation* and *frontier failure* rather than *collapse*.
+Two clarifications frame what follows. First, that prior study's specific indicators were subsequently found to be partly coupled to the label rule, which motivated a redefinition. The problem we describe here is deeper and independent of any indicator: it is a defect in how the benchmark constructs its *labels*, and it would compromise any detector, including the strongest imaginable one. Second, and this governs the paper's contribution: **the failure mode is not a new phenomenon.** It is a concrete instance of hazards that are well developed elsewhere: informative censoring and competing risks in survival analysis, depletion of susceptibles and immortal-time bias in pharmacoepidemiology, negative-class contamination in positive-unlabeled learning, and reject inference in credit scoring. Our claim is not phenomenon-novelty. It is that this hazard has an unrecognized and undetected instance in the construction of recursive-recommender benchmarks, that its presence inverts the sign of the most natural early-warning signal, and that a lightweight, pre-registerable protocol detects it before any result is produced. Throughout we use the conservative terms *degradation* and *frontier failure* rather than *collapse*.
 
   
 
@@ -92,7 +92,7 @@ The contamination is not marginal. In the landmark population (units neither deg
 
   
 
-The direction of the resulting bias is the important part. The most natural early-warning statistic — the early miss rate — is therefore **anti-informative** on this benchmark: the highest-missing units are the controls, not the events. A detector that simply reads "who is missing a lot early" ranks the controls above the events. And because any indicator computed from the recommendation stream is downstream of the same frontier mechanics, an indicator can partially recover the label's mechanical structure — *who is starved* — with no early-warning content whatsoever. The benchmark measures the wrong quantity, and would do so for any detector.
+The resulting bias runs in one direction. The most natural early-warning statistic — the early miss rate — is therefore **anti-informative** on this benchmark: the highest-missing units are the controls, not the events. A detector that simply reads "who is missing a lot early" ranks the controls above the events. And because any indicator computed from the recommendation stream is downstream of the same frontier mechanics, an indicator can partially recover the label's mechanical structure — *who is starved* — with no early-warning content whatsoever. The benchmark measures the wrong quantity, and would do so for any detector.
 
   
 
@@ -150,7 +150,7 @@ Three further literatures stand in weaker relations. Reject inference is the clo
 
   
 
-One demarcation is worth stating before it is blurred. The offline-evaluation biases familiar in recommender research — exposure bias and missing-not-at-random feedback (Marlin and Zemel, 2009; Steck, 2013), and closed-loop contamination from prior recommendation policies (Chaney, Stewart and Engelhardt, 2018) — are properties of how the data were collected. The pathology here lives in the definition of the label itself, and would persist under perfectly collected data.
+One demarcation matters before it is blurred. The offline-evaluation biases familiar in recommender research — exposure bias and missing-not-at-random feedback (Marlin and Zemel, 2009; Steck, 2013), and closed-loop contamination from prior recommendation policies (Chaney, Stewart and Engelhardt, 2018) — are properties of how the data were collected. The pathology here lives in the definition of the label itself, and would persist under perfectly collected data.
 
   
 
@@ -229,7 +229,7 @@ Incremental AUC = **0.162, CI \[0.143, 0.183\]** — eight times the required fl
 
   
 
-Two things follow, and the paper states both rather than only the convenient one. The indicators carry considerable discriminative information beyond the covariates, and for two of the three the relationship runs opposite to the hypothesis. But the coverage coefficient satisfies its registered direction with an interval clear of zero. The criterion's failure is not uniform, and reporting it as uniform would misdescribe the result.
+Two things follow. The indicators carry considerable discriminative information beyond the covariates, and for two of the three the relationship runs opposite to the hypothesis. But the coverage coefficient satisfies its registered direction with an interval clear of zero. The criterion's failure is not uniform, and reporting it as uniform would misdescribe the result.
 
   
 
@@ -237,7 +237,7 @@ Two frames must be kept distinct when counting. In the **joint model** two coeff
 
   
 
-The predictors are correlated but not severely so: on the standardisation population the variance inflation factors are approximately 3.5 for churn, 3.3 for coverage and 1.3 for occupancy — moderate by conventional standards, and not high enough to render the estimates unstable. We therefore let the coefficients stand as reported. Note what that implies for the theory: bG at −0.475 with a clean interval and a moderate VIF is a robust inverted partial effect, which is more damaging to the hypothesis than an unstable one would be.
+The predictors are correlated but not severely so: on the standardisation population the variance inflation factors are approximately 3.5 for churn, 3.3 for coverage and 1.3 for occupancy — moderate by conventional standards, and not high enough to render the estimates unstable. We therefore let the coefficients stand as reported. What this implies for the theory: bG at −0.475 with a clean interval and a moderate VIF is a robust inverted partial effect, which is more damaging to the hypothesis than an unstable one would be.
 
   
 
@@ -249,7 +249,7 @@ In absolute terms the composite reaches a matched true-positive rate of **0.089*
 
   
 
-One property of the baseline set should be reported plainly. Five of the seven comparators — the early-miss reference, variance EWS, CUSUM, Page–Hinkley and matrix profile — achieve *identical* matched true-positive rates of 0.561. All are computed from the same derived miss-run series, and at matched alarm counts they select the same units. They are therefore not seven independent baselines but essentially two: a miss-based family and permutation entropy, the latter below chance at 0.041 — under the 0.05 matched-budget chance rate here, and under the matched chance rate at all four budgets (0.016, 0.041, 0.093, 0.183 against 0.02, 0.05, 0.10, 0.20), so its sub-chance behaviour is consistent across budgets rather than a single-budget artifact. This weakens the "best of six families" framing while leaving the comparison itself intact, since the composite loses to the miss-based family by a wide margin however that family is counted.
+The baseline set is narrower than it looks. Five of the seven comparators — the early-miss reference, variance EWS, CUSUM, Page–Hinkley and matrix profile — achieve *identical* matched true-positive rates of 0.561. All are computed from the same derived miss-run series, and at matched alarm counts they select the same units. They are therefore not seven independent baselines but essentially two: a miss-based family and permutation entropy, the latter below chance at 0.041 — under the 0.05 matched-budget chance rate here, and under the matched chance rate at all four budgets (0.016, 0.041, 0.093, 0.183 against 0.02, 0.05, 0.10, 0.20), so its sub-chance behaviour is consistent across budgets rather than a single-budget artifact. This weakens the "best of six families" framing while leaving the comparison itself intact, since the composite loses to the miss-based family by a wide margin however that family is counted.
 
 ### 4.4 Characterisation
 
@@ -275,7 +275,7 @@ Two distinct frames must be kept apart here, and conflating them would misstate 
 
   
 
-So one of the three registered slate indicators retains a moderate effect consistent with the hypothesis. That is the honest description, and it is not the description that would make the null look cleaner.
+So one of the three registered slate indicators retains a moderate effect consistent with the hypothesis.
 
   
 
@@ -295,11 +295,11 @@ The mechanical component of the shift has a cluster-bootstrap interval excluding
 
   
 
-The population matters here and is worth stating explicitly. Computed instead on the full evaluation-fold arm, which includes events and starved controls, the same correlations are far higher (0.975, −0.869, −0.869). That inflation is itself attributable to the contamination: the starved stratum carries extreme indicator values, and its presence drives the indicators into apparent lockstep. The values reported above are those on the population where standardisation is defined.
+The population matters here. Computed instead on the full evaluation-fold arm, which includes events and starved controls, the same correlations are far higher (0.975, −0.869, −0.869). That inflation is itself attributable to the contamination: the starved stratum carries extreme indicator values, and its presence drives the indicators into apparent lockstep. The values reported above are those on the population where standardisation is defined.
 
   
 
-The generalisable point is worth stating once. **Feature geometry estimated on a population whose labels have not been validated inherits the contamination.** Any composite, index, factor structure or weighting scheme designed from such correlations is designed on an artifact — here, a difference between 0.975 and 0.833 that would materially change how one reasons about the feature space. Taken with the label itself and the effect sizes, the same contamination has now been shown to corrupt three distinct layers of the analysis.
+The generalisable point follows. **Feature geometry estimated on a population whose labels have not been validated inherits the contamination.** Any composite, index, factor structure or weighting scheme designed from such correlations is designed on an artifact — here, a difference between 0.975 and 0.833 that would materially change how one reasons about the feature space. Taken with the label itself and the effect sizes, the same contamination has now been shown to corrupt three distinct layers of the analysis.
 
   
 
@@ -359,7 +359,7 @@ The pre-registered composite showed no advantage over miss-based baselines at ma
 
   
 
-That is decisive against the registered hypothesis. It is not a demonstration that no slate-derived statistic could carry early-warning information in any recursive recommender. Three limits on the claim are worth stating explicitly:
+That is decisive against the registered hypothesis. It is not a demonstration that no slate-derived statistic could carry early-warning information in any recursive recommender. Three limits on the claim:
 
   
 
