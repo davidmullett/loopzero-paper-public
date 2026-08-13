@@ -17,7 +17,7 @@ In a MovieLens-25M recommender replay, degradation requires eight consecutive fr
 
   
 
-Treating starvation as a competing terminal event and restricting the control class accordingly, we then execute a pre-registered evaluation on the purified population. (A conformance audit before execution found four departures of the executed configuration from the registration; an earlier execution, which had halted at its own gate without producing a detector comparison, was vacated and the registered design executed once. All findings are reported.) The gate, which failed before repair, passes after it (TPR 0.561 against a chance rate of 0.05) — the first valid measurement this benchmark has produced. On that instrument the pre-registered slate-structure composite fails all three evaluated criteria: it is *worse* than the best miss-based baseline at every matched budget (ΔTPR = −0.472, CI \[−0.496, −0.444\] at the primary), and two of its three covariate coefficients are inverted while the set carries substantial incremental discrimination (0.162, CI \[0.143, 0.183\]).
+Treating starvation as a competing terminal event and restricting the control class accordingly, we then execute a pre-registered evaluation on the purified population. (A conformance audit before execution found four departures of the executed configuration from the registration; an earlier execution, which had halted at its own gate without producing a detector comparison, was vacated and the registered design executed once. All findings are reported.) The gate, which failed before repair, passes after it (TPR 0.561 against a chance rate of 0.05) — the first valid measurement this benchmark has produced. On that instrument the pre-registered slate-structure composite fails all three evaluated criteria: it is *worse* than the best miss-based baseline at every matched budget (ΔTPR = −0.472, CI [−0.496, −0.444] at the primary), and two of its three covariate coefficients are inverted while the set carries substantial incremental discrimination (0.162, CI [0.143, 0.183]).
 
   
 
@@ -47,15 +47,15 @@ Two clarifications frame what follows. First, that prior study's specific indica
 
 ### 2.1 The eligibility conjunct and the absorbing shadow state
 
-The degradation rule is a conjunction. Let m\_t be the count of consecutive frontier misses at step t and f\_t the remaining frontier size. Degradation is declared at the first step where
+The degradation rule is a conjunction. Let m_t be the count of consecutive frontier misses at step t and f_t the remaining frontier size. Degradation is declared at the first step where
 
   
 
-m\_t ≥ 8   AND   f\_t ≥ 10.
+m_t ≥ 8   AND   f_t ≥ 10.
 
   
 
-The first clause is the *signal* the benchmark intends to measure. The second is an *eligibility* clause: it restricts labeling to units that still have enough frontier left to fail against. But f\_t is monotonically non-increasing — the frontier can only shrink as positives are recovered or the horizon advances — so once f\_t falls below the floor of 10, it never returns. Call a unit **starved** at step t if f\_t \< 10. Starvation is therefore *absorbing*: a starved unit can never again satisfy the eligibility clause, hence can never be labeled degraded, no matter how badly it fails thereafter. It falls out of the "degraded" class and, because the benchmark defines the control class *residually* (everything not degraded), it lands among the **controls**.
+The first clause is the *signal* the benchmark intends to measure. The second is an *eligibility* clause: it restricts labeling to units that still have enough frontier left to fail against. But f_t is monotonically non-increasing — the frontier can only shrink as positives are recovered or the horizon advances — so once f_t falls below the floor of 10, it never returns. Call a unit **starved** at step t if f_t < 10. Starvation is therefore *absorbing*: a starved unit can never again satisfy the eligibility clause, hence can never be labeled degraded, no matter how badly it fails thereafter. It falls out of the "degraded" class and, because the benchmark defines the control class *residually* (everything not degraded), it lands among the **controls**.
 
   
 
@@ -63,11 +63,11 @@ Figure 1 shows the resulting state structure. This yields a deterministic statem
 
   
 
-**Observation 1 (starvation implies control).** Consider the landmark population — units neither degraded nor starved at a landmark step L. Let a unit be undegraded at some step t \> L and starved at t. Then that unit is a control. Equivalently, no unit starved after the landmark is ever an event.
+**Observation 1 (starvation implies control).** Consider the landmark population — units neither degraded nor starved at a landmark step L. Let a unit be undegraded at some step t > L and starved at t. Then that unit is a control. Equivalently, no unit starved after the landmark is ever an event.
 
   
 
-An event must satisfy f ≥ 10 at its degradation step, which occurs after L. Since f is non-increasing, a unit starved at t \> L has f \< 10 at every step from t onward; it can never meet the eligibility clause thereafter and can never be degraded. Not being degraded by the horizon, it is a control by the residual definition.
+An event must satisfy f ≥ 10 at its degradation step, which occurs after L. Since f is non-increasing, a unit starved at t > L has f < 10 at every step from t onward; it can never meet the eligibility clause thereafter and can never be degraded. Not being degraded by the horizon, it is a control by the residual definition.
 
   
 
@@ -184,7 +184,7 @@ Before any detector comparison, the pre-registered protocol evaluates a learnabi
 
   
 
-On the purified population it does. The gate passes with a true-positive rate of **0.561, BCa 95% CI \[0.549, 0.574\]** at the primary budget, against a chance rate of 0.05 — an excess over chance of 0.511 \[0.499, 0.524\].
+On the purified population it does. The gate passes with a true-positive rate of **0.561, BCa 95% CI [0.549, 0.574]** at the primary budget, against a chance rate of 0.05 — an excess over chance of 0.511 [0.499, 0.524].
 
   
 
@@ -204,7 +204,7 @@ The pre-registered composite is S = z(G) + z(p) − z(δ), evaluated out of fold
 
   
 
-**Criterion 1 — discrimination advantage at the primary budget.** Required: ΔTPR ≥ 0.05 with a cluster-aware BCa interval excluding zero. Observed: **ΔTPR = −0.472, CI \[−0.496, −0.444\]**. The composite does not fall short of the bar; it is substantially worse than the best baseline, with the entire interval on the opposite side of zero.
+**Criterion 1 — discrimination advantage at the primary budget.** Required: ΔTPR ≥ 0.05 with a cluster-aware BCa interval excluding zero. Observed: **ΔTPR = −0.472, CI [−0.496, −0.444]**. The composite does not fall short of the bar; it is substantially worse than the best baseline, with the entire interval on the opposite side of zero.
 
   
 
@@ -212,20 +212,20 @@ The pre-registered composite is S = z(G) + z(p) − z(δ), evaluated out of fold
 
   
 
-**Criterion 3 — covariate adjustment.** Required: coefficient signs in the hypothesised directions (bG \> 0, bp \> 0, bδ \< 0) and incremental AUC ≥ 0.02 over the covariates alone. Observed:
+**Criterion 3 — covariate adjustment.** Required: coefficient signs in the hypothesised directions (bG > 0, bp > 0, bδ < 0) and incremental AUC ≥ 0.02 over the covariates alone. Observed:
 
   
 
 |  |  |  |  |  |
 | :-: | :-: | :-: | :-: | :-: |
-| \*\*coefficient\*\* | \*\*estimate\*\* | \*\*BCa 95% CI\*\* | \*\*required\*\* | \*\*met\*\* |
-| bG (churn) | −0.475 | \\\[−0.635, −0.313\\\] | \\\> 0 | no |
-| bp (occupancy) | −0.419 | \\\[−0.512, −0.328\\\] | \\\> 0 | no |
-| bδ (coverage) | −0.538 | \\\[−0.691, −0.385\\\] | \\\< 0 | \*\*yes\*\* |
+| **coefficient** | **estimate** | **BCa 95% CI** | **required** | **met** |
+| bG (churn) | −0.475 | [−0.635, −0.313] | > 0 | no |
+| bp (occupancy) | −0.419 | [−0.512, −0.328] | > 0 | no |
+| bδ (coverage) | −0.538 | [−0.691, −0.385] | < 0 | **yes** |
 
   
 
-Incremental AUC = **0.162, CI \[0.143, 0.183\]** — eight times the required floor. The criterion fails on the two inverted coefficients.
+Incremental AUC = **0.162, CI [0.143, 0.183]** — eight times the required floor. The criterion fails on the two inverted coefficients.
 
   
 
@@ -263,11 +263,11 @@ Six pre-registered analyses and one post-verdict descriptive comparison characte
 
 |  |  |  |  |
 | :-: | :-: | :-: | :-: |
-| \*\*indicator\*\* | \*\*contaminated\*\* | \*\*purified\*\* | \*\*mechanical Δd \\\[95% CI\\\]\*\* |
-| G (churn) | \\+2.01 | \*\*−0.64\*\* | 2.65 \\\[2.55, 2.74\\\] |
-| p (occupancy) | −2.25 | \*\*+0.05\*\* | −2.30 \\\[−2.39, −2.20\\\] |
-| δ (coverage) | \\+2.00 | \*\*−0.68\*\* | 2.68 \\\[2.58, 2.78\\\] |
-| miss-run fraction | −2.62 | \*\*+0.81\*\* | −3.43 \\\[−3.55, −3.32\\\] |
+| **indicator** | **contaminated** | **purified** | **mechanical Δd [95% CI]** |
+| G (churn) | +2.01 | **−0.64** | 2.65 [2.55, 2.74] |
+| p (occupancy) | −2.25 | **+0.05** | −2.30 [−2.39, −2.20] |
+| δ (coverage) | +2.00 | **−0.68** | 2.68 [2.58, 2.78] |
+| miss-run fraction | −2.62 | **+0.81** | −3.43 [−3.55, −3.32] |
 
   
 
@@ -311,7 +311,7 @@ The generalisable point follows. **Feature geometry estimated on a population wh
 
   
 
-**Who the label discards** *(the post-verdict comparison)*. Starvation is absorbing and never co-occurs with an event: **zero of 20,265 events** cross the eligibility floor before collapse, confirming Observation 1 empirically. The discarded stratum is not a random sample of users — those excluded have thinner early positive histories than clean controls (**d = −0.441, CI \[−0.500, −0.381\]**), a moderate association. This comparison was granted after the verdict, with its direction, effect-size threshold and reporting rule fixed and anchored before any value was computed. The measured variable is warm-start positive count, not total activity; no claim about usage frequency is made or licensed, and no other covariate was compared.
+**Who the label discards** *(the post-verdict comparison)*. Starvation is absorbing and never co-occurs with an event: **zero of 20,265 events** cross the eligibility floor before collapse, confirming Observation 1 empirically. The discarded stratum is not a random sample of users — those excluded have thinner early positive histories than clean controls (**d = −0.441, CI [−0.500, −0.381]**), a moderate association. This comparison was granted after the verdict, with its direction, effect-size threshold and reporting rule fixed and anchored before any value was computed. The measured variable is warm-start positive count, not total activity; no claim about usage frequency is made or licensed, and no other covariate was compared.
 
   
 
@@ -327,7 +327,7 @@ Three registered analyses were not run and are reported with their reasons: the 
 
   
 
-**The near-chance performance follows arithmetically from the component effects.** Combining the purified marginals as the registered composite combines them — z(G) + z(p) − z(δ) — gives (−0.64) + (+0.05) − (−0.68) ≈ +0.09, against a composite standard deviation of √(3 + 2\[r(G,p) − r(G,δ) − r(p,δ)\]) = √1.208 ≈ 1.10. The inverted churn term approximately cancels the coverage term it is subtracted from, the null occupancy term carries the remainder, and the net standardised separation is roughly 0.08. That is near chance, and it is consistent with the observed matched true-positive rate of 0.089 against a chance rate of 0.05. The figure is approximate: it treats the marginal effect sizes as though pooled-SD standardised.
+**The near-chance performance follows arithmetically from the component effects.** Combining the purified marginals as the registered composite combines them — z(G) + z(p) − z(δ) — gives (−0.64) + (+0.05) − (−0.68) ≈ +0.09, against a composite standard deviation of √(3 + 2[r(G,p) − r(G,δ) − r(p,δ)]) = √1.208 ≈ 1.10. The inverted churn term approximately cancels the coverage term it is subtracted from, the null occupancy term carries the remainder, and the net standardised separation is roughly 0.08. That is near chance, and it is consistent with the observed matched true-positive rate of 0.089 against a chance rate of 0.05. The figure is approximate: it treats the marginal effect sizes as though pooled-SD standardised.
 
   
 
@@ -419,15 +419,15 @@ The instrument now measures. What it measures is one narrow question, and the an
 
 ## Figures
 
-**Figure 1.** *The eligibility conjunct creates an absorbing shadow state.* Schematic frontier trajectories under the degradation rule. Placement: §2.1, after the statement of the rule. — figures/fig1\_absorbing\_shadow\_state.pdf
+**Figure 1.** *The eligibility conjunct creates an absorbing shadow state.* Schematic frontier trajectories under the degradation rule. Placement: §2.1, after the statement of the rule. — figures/fig1_absorbing_shadow_state.pdf
 
   
 
-**Figure 2.** *Every large contaminated-population effect is mechanical.* Paired effect sizes for all four indicators on the contaminated versus purified populations. Placement: §4.4, at "The apparent Study 1 signal was contamination." — figures/fig2\_bounding\_diagnostic.pdf
+**Figure 2.** *Every large contaminated-population effect is mechanical.* Paired effect sizes for all four indicators on the contaminated versus purified populations. Placement: §4.4, at "The apparent Study 1 signal was contamination." — figures/fig2_bounding_diagnostic.pdf
 
   
 
-**Figure 3.** *Discrimination advantage at matched alarm budgets.* Composite minus best baseline at all four registered budgets with cluster-aware BCa intervals; parity and acceptance threshold marked. Placement: §4.3, after the absolute-performance paragraph. — figures/fig3\_delta\_tpr\_by\_budget.pdf
+**Figure 3.** *Discrimination advantage at matched alarm budgets.* Composite minus best baseline at all four registered budgets with cluster-aware BCa intervals; parity and acceptance threshold marked. Placement: §4.3, after the absolute-performance paragraph. — figures/fig3_delta_tpr_by_budget.pdf
 
   
 
@@ -537,7 +537,7 @@ Second adversarial review received 2026-07-22 against the same eight-axis rubric
 
   
 
-  - **A-1** — the δ asymmetry. The draft had claimed purification "reverses or eliminates every indicator effect." It does not: δ's purified marginal (−0.68) and its coefficient (−0.538, CI \[−0.691, −0.385\]) are both in the hypothesised direction. Corrected in the abstract, §4.3, §4.4 and §5.1.
+  - **A-1** — the δ asymmetry. The draft had claimed purification "reverses or eliminates every indicator effect." It does not: δ's purified marginal (−0.68) and its coefficient (−0.538, CI [−0.691, −0.385]) are both in the hypothesised direction. Corrected in the abstract, §4.3, §4.4 and §5.1.
 
   
 
