@@ -31,11 +31,11 @@ The failure mode is not new — it is informative censoring by an absorbing comp
 
 ## Part 1 — The benchmark and the claim it was built to test
 
-Recursive systems — those whose current output conditions their future input — recur across recommender systems, model-training loops, and market microstructure. A natural question is whether such systems emit an early-warning signal before they lose the ability to make progress. Answering it requires a benchmark: a population of units, each labeled as a degradation case or a control by an operational rule, over which candidate detectors can be compared at matched false-positive budgets.
+Recursive systems — those whose current output conditions their future input — recur across recommender systems, model-training loops, and market microstructure. A natural question is whether such systems emit an early-warning signal before they lose the ability to make progress — a signal whose detectability has known limits even in well-characterised dynamical systems (Boettiger and Hastings, 2012). Answering it requires a benchmark: a population of units, each labeled as a degradation case or a control by an operational rule, over which candidate detectors can be compared at matched false-positive budgets.
 
   
 
-We study one such benchmark: a deterministic offline replay on MovieLens-25M. Each user is replayed for up to 50 recursive steps through a frozen item-item collaborative-filtering engine. At each step the engine recommends a top-K slate; a "hit" recovers a held-out positive item and appends it to the profile; the user's *frontier* is the set of remaining recoverable positives. A unit is labeled **degraded** when it accrues a run of eight consecutive frontier misses while its remaining frontier is at least ten, within the horizon; otherwise it is a **control**. A prior preprint (arXiv:2606.00329) reported a directional early-warning association on this benchmark using three slate-derived indicators.
+We study one such benchmark: a deterministic offline replay on MovieLens-25M (Harper and Konstan, 2015). Each user is replayed for up to 50 recursive steps through a frozen item-item collaborative-filtering engine. At each step the engine recommends a top-K slate; a "hit" recovers a held-out positive item and appends it to the profile; the user's *frontier* is the set of remaining recoverable positives. A unit is labeled **degraded** when it accrues a run of eight consecutive frontier misses while its remaining frontier is at least ten, within the horizon; otherwise it is a **control**. A prior preprint (arXiv:2606.00329) reported a directional early-warning association on this benchmark using three slate-derived indicators.
 
   
 
@@ -146,7 +146,7 @@ The corollary is the design lesson: **an eligibility conjunct with a monotone, a
 
   
 
-Three further literatures stand in weaker relations. Reject inference is the closest structural analogue: there, as here, labels exist only conditional on a gate operated by the system under evaluation. Positive-unlabeled learning is an inverted analogue — its unlabeled class hides positives, whereas ours hides the worst failures by rule. And the eligibility-bias cluster in pharmacoepidemiology — depletion of susceptibles, immortal-time bias, collider stratification (Suissa; Hernán) — is the direct epidemiological cousin, differing in substrate rather than in mechanism.
+Three further literatures stand in weaker relations. Reject inference is the closest structural analogue: there, as here, labels exist only conditional on a gate operated by the system under evaluation (Hand and Henley, 1997; Crook and Banasik, 2004). Positive-unlabeled learning is an inverted analogue — its unlabeled class hides positives, whereas ours hides the worst failures by rule (Elkan and Noto, 2008; Bekker and Davis, 2020). And the eligibility-bias cluster in pharmacoepidemiology — depletion of susceptibles (Moride and Abenhaim, 1994), immortal-time bias, collider stratification (Suissa; Hernán) — is the direct epidemiological cousin, differing in substrate rather than in mechanism.
 
   
 
@@ -159,6 +159,8 @@ Our contribution is the location of this hazard and a means of detecting it. Wha
   
 
 ## Part 4 — The corrected study, as executed
+
+**Statistical procedures.** Effect sizes are Cohen's *d*; the contaminated and purified columns of §4.4 report each indicator's event-versus-control separation before and after competing-risk purification of the control class, and the mechanical Δd contrasts pre-landmark starved controls against clean controls. Interval estimates are bias-corrected and accelerated bootstrap intervals (BCa; Efron, 1987), resampled over the clustering unit wherever a statistic pools across units. Detectors are compared at matched control-alarm counts rather than at fixed score thresholds — k = {15, 38, 77, 153} at the four registered budgets — so every comparison sits at an identical false-positive count, with the operating point taken as the largest matched alarm count not exceeding the budget. The z-standardisation parameters for all indicators are estimated once on the 694 calibration-fold clean controls and applied unchanged out of fold.
 
 ### 4.1 What was corrected, and what was audited
 
@@ -247,7 +249,7 @@ In absolute terms the composite reaches a matched true-positive rate of **0.089*
 
   
 
-One property of the baseline set should be reported plainly. Five of the seven comparators — the early-miss reference, variance EWS, CUSUM, Page–Hinkley and matrix profile — achieve *identical* matched true-positive rates of 0.561. All are computed from the same derived miss-run series, and at matched alarm counts they select the same units. They are therefore not seven independent baselines but essentially two: a miss-based family and permutation entropy, the latter performing below chance at 0.041. This weakens the "best of six families" framing while leaving the comparison itself intact, since the composite loses to the miss-based family by a wide margin however that family is counted.
+One property of the baseline set should be reported plainly. Five of the seven comparators — the early-miss reference, variance EWS, CUSUM, Page–Hinkley and matrix profile — achieve *identical* matched true-positive rates of 0.561. All are computed from the same derived miss-run series, and at matched alarm counts they select the same units. They are therefore not seven independent baselines but essentially two: a miss-based family and permutation entropy, the latter below chance at 0.041 — under the 0.05 matched-budget chance rate here, and under the matched chance rate at all four budgets (0.016, 0.041, 0.093, 0.183 against 0.02, 0.05, 0.10, 0.20), so its sub-chance behaviour is consistent across budgets rather than a single-budget artifact. This weakens the "best of six families" framing while leaving the comparison itself intact, since the composite loses to the miss-based family by a wide margin however that family is counted.
 
 ### 4.4 Characterisation
 
@@ -277,11 +279,11 @@ So one of the three registered slate indicators retains a moderate effect consis
 
   
 
-The mechanical component of the shift has a cluster-bootstrap interval excluding zero for all four quantities. The contrast against the starved stratum identifies what the contaminated effects were tracking: on that comparison the slate indicators reach |d| of 5.6 to 5.7 and the miss-run fraction 6.1.
+The mechanical component of the shift has a cluster-bootstrap interval excluding zero for all four quantities. The contrast against the starved stratum identifies what the contaminated effects were tracking. In this bounding diagnostic — evaluation-fold starved controls against clean controls — the slate indicators reach |d| of 5.6 to 5.7 and the miss-run fraction 6.1. (This is a distinct comparison from the pre-landmark probe reported next, and its d range should not be merged with that one.)
 
   
 
-**And the mechanism is visible directly.** Comparing pre-landmark starved controls (n = 3,292) against clean controls (n = 1,460) over the observation window, the composite separates them at **d = +4.20**, with individual indicators from −5.77 to +6.29. The composite is, in substantial part, a frontier-depletion detector. In the contaminated population that is exactly what it was rewarded for detecting; purification removes the thing it was reading.
+**And the mechanism is visible directly.** In the pre-landmark starvation-concurrence probe — starved-at-step-20 controls (n = 3,292) against clean controls (n = 1,460), indicators taken over steps 1–20 — the composite separates them at **d = +4.20**, with individual indicators from −5.77 to +6.29. The composite is, in substantial part, a frontier-depletion detector. In the contaminated population that is exactly what it was rewarded for detecting; purification removes the thing it was reading.
 
   
 
@@ -475,7 +477,11 @@ van Houwelingen, H. C. (2007). Dynamic prediction by landmarking in event histor
 
   
 
-*Cited in the demarcation paragraph (§3) — verify before submission.*
+*The following entries were added or last revised after the 2026-07-22 source pass; re-verify each against source before submission.*
+
+  
+
+Bekker, J. and Davis, J. (2020). Learning from positive and unlabeled data: a survey. *Machine Learning* 109(4), 719–760.
 
   
 
@@ -483,7 +489,19 @@ Chaney, A. J. B., Stewart, B. M., and Engelhardt, B. E. (2018). How algorithmic 
 
   
 
+Crook, J. and Banasik, J. (2004). Does reject inference really improve the performance of application scoring models? *Journal of Banking & Finance* 28(4), 857–874.
+
+  
+
+Hand, D. J. and Henley, W. E. (1997). Statistical classification methods in consumer credit scoring: a review. *Journal of the Royal Statistical Society: Series A* 160(3), 523–541.
+
+  
+
 Marlin, B. M. and Zemel, R. S. (2009). Collaborative prediction and ranking with non-random missing data. *RecSys '09*.
+
+  
+
+Moride, Y. and Abenhaim, L. (1994). Evidence of the depletion of susceptibles effect in non-experimental pharmacoepidemiology. *Journal of Clinical Epidemiology* 47(7), 731–737.
 
   
 
@@ -491,11 +509,7 @@ Steck, H. (2013). Evaluation of recommendations: rating-prediction and ranking. 
 
   
 
-*Optional additions.* Moride and Abenhaim (1994) for depletion of susceptibles; Bekker and Davis (2020) as a positive-unlabeled survey alongside Elkan and Noto; Crook and Banasik (2004) as a second reject-inference source.
-
-  
-
-**Citation integrity check before submission:** every reference above must be cited in the body text. As drafted, Boettiger and Hastings, Elkan and Noto, Hand and Henley, Harper and Konstan, and Efron are listed but not yet cited at a specific point — Efron belongs at the first BCa mention (§4.3), Harper and Konstan at the first dataset mention (§1), and the remaining three in the prior-work paragraph where their hazards are named.
+**Citation integrity — status.** Every listed reference now carries a specific in-body citation: Efron at the statistical-procedures paragraph (§4, first BCa use); Harper and Konstan at the first dataset mention and Boettiger and Hastings at the early-warning premise (§1); Hand and Henley and Crook and Banasik at the reject-inference clause, Elkan and Noto and Bekker and Davis at the positive-unlabeled clause, and Moride and Abenhaim at "depletion of susceptibles" (§3, prior-work). One reverse gap remains for the author: "Hernán" is cited in the §3 pharmacoepidemiology clause but has no reference-list entry — supply the intended source or drop the attribution before submission.
 
   
 
