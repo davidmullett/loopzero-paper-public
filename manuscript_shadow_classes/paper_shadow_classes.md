@@ -75,19 +75,19 @@ The consequence is that the control class does not mean "a healthy user who did 
 
 Two terms recur below and are worth fixing precisely. The phrase *shadow class* has unrelated uses in other fields; we use it here in a specific measurement-theoretic sense.
 
-**Definition 1 (shadow class).** Given a population, a construct of interest, and a labeling rule, a *shadow class* is a subset of units that (i) remains substantively relevant to the construct — here, units that are failing; (ii) is structurally prevented by the rule from receiving the label corresponding to that state — not merely unlabeled empirically, but unlabelable by construction; and (iii) is consequentially treated: omitted, censored, or absorbed into another nominal class in a way that affects inference. All three conditions matter. Eligibility rules legitimately place units out of scope; a shadow class exists only where a construct-relevant population is structurally unlabelable and its residual treatment changes what the instrument reports. The starved controls of §2.2 satisfy all three.
+**Definition 1 (shadow class).** Given a population, a target outcome, and a labeling rule, a *shadow class* is a subset of units that (i) remains relevant to the inferential contrast the labels are used to support; (ii) is structurally prevented by the labeling architecture from having the target outcome ascertained — not merely unlabeled empirically, but unlabelable by construction; and (iii) is consequentially treated: omitted, censored, or absorbed into another nominal class in a way that changes inference. All three conditions matter. Eligibility rules legitimately place units out of scope; a shadow class exists only where units relevant to the contrast become structurally unascertainable and their residual treatment changes what the instrument reports. The starved controls of §2.2 satisfy all three: after starvation, degradation status is unascertainable under the rule, and the residual definition converts that unascertainability into a negative label. An outcome that is no longer ascertainable is not thereby a negative outcome.
 
 **Definition 2 (shadow-class census).** The report, prior to any use of the benchmark for inference, of the prevalence and behaviour of each shadow class the label rule induces.
 
-A shadow class in this sense is not a latent class: its membership is exactly identifiable from observables (here, f_t < 10). What is hidden is not the units but their status under the benchmark's ontology. Nor is it missing data. A shadow-class unit can be fully observed — every step of its trajectory recorded — while remaining invisible to the measurement ontology: the instrument cannot recognise its failure as failure.
+A shadow class in this sense is not a latent class: its membership is exactly identifiable from observables (here, f_t < 10). Nor is it missing data. Three situations should be kept distinct: *data invisibility* — the unit is not observed; *label uncertainty* — the unit is observed but its correct label is unknown; and *shadow-class unascertainability* — the unit is fully observed, every step of its trajectory recorded, while the labeling architecture has made one relevant outcome structurally unreachable. The pathology reported here is the third.
 
 ### 2.2 The empirical signature
 
-The contamination is not marginal. In the landmark population (units neither degraded nor starved by step 20):
+The contamination is not marginal. Of the 4,755 units the rule files as controls (every unit not labelled degraded through the horizon), read at the landmark step (step 20):
 
   
 
-  - **3,292 of 4,755 controls (69.2%) are frontier-starved.** By Observation 1, **0 of 20,265 events are** — verified by direct assertion.
+  - **3,292 of 4,755 controls (69.2%) are frontier-starved by step 20.** By Observation 1, **0 of 20,265 events are** — verified by direct assertion.
   - The starved controls fail almost continuously: control units miss a **median of 15 of the 20** pre-landmark steps (up to 19). Event units, which by construction have not yet degraded, miss **at most 7 of 20** (median 1).
 
   
@@ -96,7 +96,7 @@ The resulting bias runs in one direction. The most natural early-warning statist
 
   
 
-A second-order figure quantifies how much of the original signal was measured on unlabelable units: of 35,584 whole-horizon events, only 20,265 survive to a landmark at step 20 — **43% of the events were already gone by step 20**, on units for which a step-20 warning was not even conceptually possible.
+A separate quantity shows the importance of warning runway: of 35,584 whole-horizon events, only 20,265 remain event-free and eligible at step 20 — **43% had already degraded**, with no runway over which a step-20 warning could have been assessed. These early events are labeled, not shadow-class members; they are excluded by standard landmark logic.
 
 ### 2.3 A reductio via a random recommender
 
@@ -112,7 +112,7 @@ The label nominally measuring *user degradation* therefore fires on essentially 
 
 ### 2.4 Detection: a learnability gate, evaluated before any decision quantity
 
-The reason this pathology is reported here rather than discovered by a reviewer is that the evaluation was pre-registered (OSF) with a **learnability gate** placed upstream of the detector comparison. The gate asks a prerequisite question: at the primary false-positive budget, does the simplest label-derived signal — the early miss rate — separate events from controls above chance? On the contaminated population it does not; its true-positive rate is zero at the operating point, its confidence interval excluding zero on the wrong side. Under the frozen protocol, a learnability-gate failure routes the study to *uninterpretable-by-construction*: the detector results are reported but carry no evidential weight, because the population cannot distinguish "no early-warning signal" from "a label whose control class is contaminated." The gate is evaluated *before* any detector-versus-baseline decision quantity is computed, so the finding cannot be a post-hoc rationalization of an unwelcome result. The gate blocked a measurement of the wrong quantity.
+The reason this pathology is reported here rather than discovered by a reviewer is that the evaluation was pre-registered (OSF) with a **learnability gate** placed upstream of the detector comparison. The gate asks a prerequisite question: at the primary false-positive budget, does the simplest label-derived signal — the early miss rate — separate events from controls above chance? Functionally this is a prerequisite-direction test: the outcome is defined through runs of misses, so the simplest outcome-adjacent observable must not have its direction structurally reversed by the negative class. On the contaminated population it does not; its true-positive rate is zero at the operating point, its confidence interval excluding zero on the wrong side. Under the frozen protocol, a learnability-gate failure routes the study to *uninterpretable-by-construction*: the detector results are reported but carry no evidential weight, because the population cannot distinguish "no early-warning signal" from "a label whose control class is contaminated." The gate is evaluated *before* any detector-versus-baseline decision quantity is computed, so the finding cannot be a post-hoc rationalization of an unwelcome result. The gate blocked a measurement of the wrong quantity.
 
   
 
@@ -126,7 +126,7 @@ A natural hope is that the contamination can be tuned away — for instance by m
 
   
 
-*Proof.* Both predicates defining a clean control — "never degraded by T" and "never starved by T" — are evaluated over the full horizon and are functions of the unit's trajectory alone. The landmark step determines only the window over which indicators are computed and the point after which labels are read; it does not alter any trajectory or its terminal classification. Hence the clean-control set is identical for every landmark. Because starvation is absorbing, an earlier landmark cannot rescue a unit that will starve later: once doomed to starve, it is doomed at every horizon. ∎
+*Proof.* Both predicates defining a clean control — "never degraded by T" and "never starved by T" — are evaluated over the full horizon and are functions of the unit's trajectory alone. The landmark step determines only the window over which indicators are computed and the point after which labels are read; it does not alter any trajectory or its terminal classification. Hence the clean-control set is identical for every landmark. Because starvation is absorbing, an earlier landmark cannot rescue a unit that will starve later: changing the landmark while holding T fixed cannot alter whether a trajectory subsequently starves by T. ∎
 
   
 
@@ -160,11 +160,15 @@ Our contribution is the location of this hazard and a means of detecting it. Wha
 
 ## Part 4 — The corrected study, as executed
 
-**Statistical procedures.** Effect sizes are Cohen's *d*; the contaminated and purified columns of §4.4 report each indicator's event-versus-control separation before and after competing-risk purification of the control class, and the mechanical Δd contrasts pre-landmark starved controls against clean controls. Interval estimates are bias-corrected and accelerated bootstrap intervals (BCa; Efron, 1987), resampled over the clustering unit wherever a statistic pools across units. Detectors are compared at matched control-alarm counts rather than at fixed score thresholds — k = {15, 38, 77, 153} at the four registered budgets — so every comparison sits at an identical false-positive count, with the operating point taken as the largest matched alarm count not exceeding the budget. The z-standardisation parameters for all indicators are estimated once on the 694 calibration-fold clean controls and applied unchanged out of fold.
+**Statistical procedures.** Effect sizes are Cohen's *d*; the contaminated and purified columns of §4.4 report each indicator's event-versus-control separation before and after competing-risk purification of the control class, and the mechanical Δd for each indicator is their difference — the registered contrast between its contaminated- and purified-population effect sizes. The separate bounding diagnostic of §4.4 contrasts controls starved by the landmark against clean controls (|d| = 5.6–6.1). Interval estimates are bias-corrected and accelerated bootstrap intervals (BCa; Efron, 1987), resampled over the clustering unit wherever a statistic pools across units. Detectors are compared at matched control-alarm counts rather than at fixed score thresholds — k = {15, 38, 77, 153} at the four registered budgets — so every comparison sits at an identical false-positive count, with the operating point taken as the largest matched alarm count not exceeding the budget. The z-standardisation parameters for all indicators are estimated once on the 694 calibration-fold clean controls and applied unchanged out of fold.
 
 ### 4.1 What was corrected, and what was audited
 
 Study 1's benchmark could not support the measurement it was built for. Study 2 was pre-registered (OSF, osf.io/wka72) as its repair: starvation is treated as a competing terminal event, the control class is restricted to units that neither degrade nor starve through the horizon, and every downstream quantity — indicator normalisation, matched alarm budgets, covariate adjustment — is computed against that purified population. The analysis plan, the four acceptance criteria, and the response to each possible verdict were all fixed before the clean-control census existed.
+
+  
+
+One methodological point should be stated exactly. Landmarking defines the at-risk population at L; the repair here additionally treats subsequent starvation as a competing terminal event and excludes that stratum from the residual control class, which goes beyond landmark analysis proper. The repaired benchmark's estimand is therefore: among units event-free and eligible at the landmark, does a detector distinguish subsequent degradation from sustained non-degradation-and-non-starvation through the horizon?
 
   
 
@@ -283,7 +287,7 @@ The mechanical component of the shift has a cluster-bootstrap interval excluding
 
   
 
-**And the mechanism is visible directly.** In the pre-landmark starvation-concurrence probe — starved-at-step-20 controls (n = 3,292) against clean controls (n = 1,460), indicators taken over steps 1–20 — the composite separates them at **d = +4.20**, with individual indicators from −5.77 to +6.29. The composite is, in substantial part, a frontier-depletion detector. In the contaminated population that is exactly what it was rewarded for detecting; purification removes the thing it was reading.
+**And the mechanism is visible directly.** In the pre-landmark starvation-concurrence probe — controls starved by the landmark (n = 3,292) against clean controls (n = 1,460), indicators taken over steps 1–20 — the composite separates them at **d = +4.20**, with individual indicators from −5.77 to +6.29. The composite is, in substantial part, a frontier-depletion detector. In the contaminated population that is exactly what it was rewarded for detecting; purification removes the thing it was reading.
 
   
 
@@ -327,7 +331,7 @@ Three registered analyses were not run and are reported with their reasons: the 
 
   
 
-**The near-chance performance follows arithmetically from the component effects.** Combining the purified marginals as the registered composite combines them — z(G) + z(p) − z(δ) — gives (−0.64) + (+0.05) − (−0.68) ≈ +0.09, against a composite standard deviation of √(3 + 2[r(G,p) − r(G,δ) − r(p,δ)]) = √1.208 ≈ 1.10. The inverted churn term approximately cancels the coverage term it is subtracted from, the null occupancy term carries the remainder, and the net standardised separation is roughly 0.08. That is near chance, and it is consistent with the observed matched true-positive rate of 0.089 against a chance rate of 0.05. The figure is approximate: it treats the marginal effect sizes as though pooled-SD standardised.
+**A first-order consistency check explains the near-cancellation:** Combining the purified marginals as the registered composite combines them — z(G) + z(p) − z(δ) — gives (−0.64) + (+0.05) − (−0.68) ≈ +0.09, against a composite standard deviation of √(3 + 2[r(G,p) − r(G,δ) − r(p,δ)]) = √1.208 ≈ 1.10. The inverted churn term approximately cancels the coverage term it is subtracted from, the null occupancy term carries the remainder, and the net standardised separation is roughly 0.08. That is near chance, and it is consistent with the observed matched true-positive rate of 0.089 against a chance rate of 0.05. The figure is approximate: it treats the marginal effect sizes as though pooled-SD standardised.
 
   
 
@@ -339,11 +343,11 @@ What the result establishes is narrower. On this benchmark, at this landmark, th
 
   
 
-The single sentence: **whatever early-warning information exists in this system lives in the outcome stream, not in slate structure — and the theory placed it on the wrong side of the instrument.**
+The single sentence: **On this benchmark, the outcome-stream baseline carries substantially more early-warning information than the registered slate-structure composite — and the theory placed its signal on the wrong side of the instrument.**
 
 ### 5.2 What the repair validated, and what remains proposed
 
-Three elements of the §3 specification were exercised and are validated as sufficient for measurability on this dataset: competing-risk purification of the control class, the shadow-class census as a required construction artifact, and the learnability gate as a release precondition. The gate's passing on the purified population, having failed on the contaminated one, is direct evidence for the first two and a demonstration of the third.
+Three elements of the §3 specification were exercised in this case: competing-event purification restored the intended binary contrast; the shadow-class census exposed the magnitude and behaviour of the excluded stratum; and the pre-registered gate confirmed that the repaired population recovers the required directional prerequisite. The gate's passing on the purified population, having failed on the contaminated one, is direct evidence for the first two and a demonstration of the third.
 
   
 
@@ -351,7 +355,7 @@ Two elements remain proposed rather than validated: the replenishing frontier an
 
   
 
-The distinction matters for anyone adopting the specification: the diagnostic half is demonstrated, the constructive half is argued.
+The distinction matters for anyone adopting the specification: the diagnostic half was exercised and demonstrated in this instance, the constructive half is proposed.
 
 ### 5.3 What the negative does and does not establish
 
@@ -375,7 +379,7 @@ The setting is one offline replay, one item-item collaborative-filtering engine 
 
 ### 5.4 Implications for benchmark construction
 
-**The three prescriptions below apply to any benchmark whose labels are defined by an algorithmic conjunctive rule, not only to the one studied here.** That is the scope of the claim, and it is where the contribution lives.
+**The prescriptions below apply to algorithmically labeled benchmarks in which an eligibility condition can render the target outcome structurally unascertainable while the residual class remains inferentially active.** Any conjunctive label rule containing an eligibility condition should be audited for that possibility: audit broadly, claim pathology narrowly.
 
   
 
@@ -387,7 +391,7 @@ Second, label validity should be established *before* the feature geometry used 
 
   
 
-Third, a learnability gate should be a release artifact rather than an optional downstream analysis. The check is cheap — can the most direct label-derived signal beat chance on this population? — and its failure distinguishes "no signal was found" from "no signal could have been found," which are otherwise indistinguishable in a null result. In this project the same gate produced both answers on the same benchmark, before and after repair.
+Third, a learnability gate should be a release artifact rather than an optional downstream analysis. The check is cheap — can the most direct label-derived signal beat chance on this population? — and its failure flags that a null detector result cannot safely be interpreted as absence of early-warning information until label validity is investigated. In this project the same gate produced both answers on the same benchmark, before and after repair.
 
   
 
