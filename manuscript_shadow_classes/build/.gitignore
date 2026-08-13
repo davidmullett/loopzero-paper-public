@@ -1,0 +1,8 @@
+# Regenerable pandoc intermediate (produced by build.sh from the SSOT markdown)
+paper_main.md
+# LaTeX aux files if a manual .tex pass is run
+*.aux
+*.log
+*.out
+*.toc
+paper_full.*
