@@ -2,7 +2,7 @@
 
 ### A control-class contamination in a recursive-recommender benchmark, a protocol that detects it, and a pre-registered null on the repaired instrument
 
-**David Mullett** *Independent researcher*
+**David Mullett** *Independent researcher* · ORCID 0009-0004-2543-1664 · correspondence: d@loopzero.org
 
   
   
@@ -515,7 +515,13 @@ Steck, H. (2013). Evaluation of recommendations: rating-prediction and ranking. 
 
 ## Data, code and pre-registration availability
 
-Study 1 pre-registration: OSF osf.io/7bvgz. Study 2 pre-registration: OSF osf.io/wka72. Source data: MovieLens-25M, GroupLens Research, verified against the published distribution hash. Analysis code, frozen configuration, complete deviations log, and hash manifests: \[REPO URL\]. Derived panels are embargoed pending release; their content hashes are published in the input manifest and released artifacts verify against them.
+Study 1 pre-registration: OSF osf.io/7bvgz. Study 2 pre-registration: OSF osf.io/wka72. Source data: MovieLens-25M, GroupLens Research, verified against the published distribution hash. Analysis code, frozen configuration, complete deviations log, and hash manifests: https://github.com/davidmullett/loopzero-paper-public. Derived panels are embargoed pending release; their content hashes are published in the input manifest and released artifacts verify against them.
+
+  
+
+## Competing interests
+
+The author is the founder of Loopzero, Inc., which has filed a U.S. provisional patent application (No. 64/042,661, filed April 17, 2026) covering monitoring and verification methods related to the subject matter of this work; the author is the named inventor. The author declares no other competing interests.
 
   
 
