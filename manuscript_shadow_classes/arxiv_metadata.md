@@ -1,0 +1,65 @@
+# arXiv Submission Metadata — Absorbing Shadow Classes (successor)
+
+Generated from `paper_shadow_classes.md` on 2026-08-13 (a1-shadow-classes branch).
+This is the successor manuscript; it is distinct from the v1 paper (arXiv:2606.00329,
+`manuscript/arxiv_metadata.md`) and does not replace it.
+
+## Files
+
+Main manuscript: `mullett_shadow_classes_main_v1.pdf` (to be built)
+Supplementary materials: `mullett_shadow_classes_supplement_v1.pdf` (to be assembled — see notes)
+
+## Title
+
+Absorbing Shadow Classes in Conjunctive Label Rules
+
+## Subtitle (running / in body only; arXiv has no subtitle field)
+
+A control-class contamination in a recursive-recommender benchmark, a protocol that detects it, and a pre-registered null on the repaired instrument
+
+## Author
+
+David Mullett
+
+## Affiliation
+
+Independent Researcher
+
+## ORCID
+
+0009-0004-2543-1664
+
+## Corresponding email
+
+d@loopzero.org
+
+## Abstract
+
+*(ASCII-safe, ≤1920 chars for the arXiv form; 250-word short abstract.)*
+
+Benchmarks for early-warning detection in recursive systems label each unit as a degradation case or a control. A natural label --- declaring degradation only when a run condition co-occurs with an eligibility condition --- can silently corrupt the control class. In a MovieLens-25M recommender replay the eligibility clause, a minimum-frontier floor, is absorbing: once a unit's frontier falls below the floor it can never be labeled degraded, so units that fail continuously are filed as controls. In the landmark population 69.2% of controls are frontier-starved and no events are, making the most natural early-warning statistic anti-informative. A pre-registered learnability gate caught this before any detector result existed, and we prove the contamination is structural: because starvation is absorbing, no landmark choice rescues it. Treating starvation as a competing terminal event, we re-run the evaluation on the purified population, where the gate passes (TPR 0.561 against chance 0.05). The registered slate-structure composite fails every criterion, losing to the best miss-based baseline at every budget (Delta-TPR = -0.472). Purification reverses or nulls the contaminated effects --- churn inverts (+2.01 -> -0.64), occupancy collapses to null (+0.05) --- while coverage keeps a moderate effect in the hypothesised direction (-0.68); on marginal effects one indicator is inverted, one null, one consistent. The composite separates starved from clean controls at d = +4.20: it read frontier depletion, not early warning. The contribution is a detection protocol --- a learnability gate plus a shadow-class census --- that caught two distinct failures before either produced a result.
+
+## Primary category
+
+cs.IR — Information Retrieval
+
+## Cross-list categories
+
+cs.LG — Machine Learning
+stat.ME — Methodology
+
+## License
+
+CC BY 4.0
+
+## Comments
+
+Code, frozen configuration, deviations log, and hash manifests: https://github.com/davidmullett/loopzero-paper-public . Pre-registrations: OSF osf.io/7bvgz (Study 1), osf.io/wka72 (Study 2).
+
+## Notes
+
+- Use ASCII-safe abstract text in the arXiv form: `---` for em dash, `->` for arrow, `Delta-TPR` for ΔTPR, plain apostrophes and hyphen-minus for the minus sign.
+- `cs.SY`/`eess.SY` is NOT used here; the successor is a recommender/measurement paper, so primary is `cs.IR` with `cs.LG` and `stat.ME` cross-lists (venue analysis).
+- Page/figure/table counts (Comments field) to be filled after the PDF build. Figures referenced by the manuscript (`fig1_absorbing_shadow_state.pdf`, `fig2_bounding_diagnostic.pdf`, `fig3_delta_tpr_by_budget.pdf`) are not yet in the repo and must be produced before the build.
+- Venue order (carried from the appendix): TORS first (with an EiC email flagging the pre-registration), then NeurIPS Datasets & Benchmarks (Evaluations & Datasets) 2027, then R. Soc. Open Sci. as fallback. Avoid KDD-class desk-reject risk.
+- OSF embargoes on both registrations MUST be lifted before submission — the paper's credibility claim requires public registrations.
