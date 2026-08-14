@@ -63,7 +63,9 @@ Figure 1 shows the resulting state structure. This yields a deterministic statem
 
   
 
-*[**Figure 1** — *The eligibility conjunct creates an absorbing shadow state*: schematic frontier trajectories under the degradation rule. Embeds at `assets/fig1_absorbing_shadow_state.pdf` once a VECTOR PDF export lands — the current craft-pass export is a raster PNG mislabeled `.pdf` and xelatex/arXiv cannot include it.]*
+![](assets/fig1_absorbing_shadow_state.pdf){width=100%}
+
+**Figure 1.** *The eligibility conjunct creates an absorbing shadow state.* **(A)** The rule sends a unit to *Degraded* only on eight consecutive misses while the frontier is still eligible (f_t ≥ 10); once the frontier falls below the floor the unit is *Starved* — an absorbing state with no exit — and is filed, at the horizon, as a residual control. An outcome no longer ascertainable is not thereby a negative outcome. **(B)** Read at the landmark (t = 20), 69.2% of the nominal control class — 3,292 of 4,755 — is starved-by-the-landmark shadow class, against 1,460 clean controls and 3 post-landmark starvers.
 
   
 
