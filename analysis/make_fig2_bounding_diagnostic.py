@@ -61,13 +61,13 @@ def build(ax):
                     arrowprops=dict(arrowstyle="-|>", color=GRAY, lw=1.0,
                                     shrinkA=5, shrinkB=5))
         ax.plot([cont], [y], marker="o", ms=8, color=VERM, zorder=3)
-        ax.plot([pur], [y], marker="s", ms=7, color=INK, zorder=3)
+        ax.plot([pur], [y], marker="s", ms=8, color=INK, zorder=3)  # F9: +~14% weight
         ax.annotate(fmt(cont), (cont, y), textcoords="offset points",
                     xytext=(0, 9), ha="center", va="bottom",
                     color=VERM, fontsize=8, fontweight="bold")
         ax.annotate(fmt(pur), (pur, y), textcoords="offset points",
-                    xytext=(0, -10), ha="center", va="top",
-                    color=INK, fontsize=8)
+                    xytext=(0, -11), ha="center", va="top",
+                    color=INK, fontsize=9, fontweight="bold")  # F9: heavier destination label
     # direct key (marks, not a legend box), in the empty upper-left
     ax.plot([-2.95], [3.42], marker="o", ms=8, color=VERM, clip_on=False)
     ax.text(-2.78, 3.42, "contaminated", va="center", color=VERM, fontsize=8)
