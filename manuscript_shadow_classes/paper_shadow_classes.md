@@ -25,7 +25,7 @@ Purification eliminates or reverses the large contaminated-population effects: c
 
   
 
-The failure mode is not new — it is informative censoring by an absorbing competing risk, and the remedy we adopt is landmark analysis. The contribution is its unrecognized instance in algorithmically-labeled benchmark construction, and a detection protocol (a learnability gate plus a shadow-class census) that caught two distinct failures in our own benchmark before either produced a result.
+The failure mode is not new: it is an absorbing competing-risk pathology. We repair the binary benchmark by landmarking the at-risk population and excluding subsequent competing-event units from the residual control class. The contribution is its unrecognized instance in algorithmically-labeled benchmark construction, and a detection and audit protocol (a learnability gate plus a shadow-class census) that exposed both the original label pathology and a subsequent nonconformant execution before either could support a detector conclusion.
 
   
 
@@ -67,11 +67,11 @@ Figure 1 shows the resulting state structure. This yields a deterministic statem
 
   
 
-**Observation 1 (starvation implies control).** Consider the landmark population — units neither degraded nor starved at a landmark step L. Let a unit be undegraded at some step t > L and starved at t. Then that unit is a control. Equivalently, no unit starved after the landmark is ever an event.
+**Observation 1 (starvation implies control).** If a unit becomes starved at any time before the horizon without first being degraded, it can never subsequently become an event and therefore enters the residual control class. This includes units already starved at the landmark and units that starve subsequently.
 
   
 
-An event must satisfy f ≥ 10 at its degradation step, which occurs after L. Since f is non-increasing, a unit starved at t > L has f < 10 at every step from t onward; it can never meet the eligibility clause thereafter and can never be degraded. Not being degraded by the horizon, it is a control by the residual definition.
+An event must satisfy f ≥ 10 at its degradation step. Since f is non-increasing, once a unit is starved (f < 10) it can never again meet the eligibility clause and can never be degraded; not being degraded by the horizon, it is a control by the residual definition. For a unit already starved at the landmark the argument is immediate — it is unlabelable at the landmark; for a unit that starves later it applies from the starvation step onward.
 
   
 
@@ -96,7 +96,7 @@ The contamination is not marginal. Of the 4,755 units the rule files as controls
 
   
 
-The resulting bias runs in one direction. The most natural early-warning statistic — the early miss rate — is therefore **anti-informative** on this benchmark: the highest-missing units are the controls, not the events. A detector that simply reads "who is missing a lot early" ranks the controls above the events. And because any indicator computed from the recommendation stream is downstream of the same frontier mechanics, an indicator can partially recover the label's mechanical structure — *who is starved* — with no early-warning content whatsoever. The benchmark measures the wrong quantity, and would do so for any detector.
+The resulting bias runs in one direction. The most natural early-warning statistic — the early miss rate — is therefore **anti-informative** on this benchmark: the highest-missing units are the controls, not the events. A detector that simply reads "who is missing a lot early" ranks the controls above the events. And because any indicator computed from the recommendation stream is downstream of the same frontier mechanics, an indicator can partially recover the label's mechanical structure — *who is starved* — with no early-warning content whatsoever. The benchmark measures the wrong quantity, and therefore presents a corrupted target to any detector evaluated against these labels.
 
   
 
@@ -116,7 +116,7 @@ The label nominally measuring *user degradation* therefore fires on essentially 
 
 ### 2.4 Detection: a learnability gate, evaluated before any decision quantity
 
-The reason this pathology is reported here rather than discovered by a reviewer is that the evaluation was pre-registered (OSF) with a **learnability gate** placed upstream of the detector comparison. The gate asks a prerequisite question: at the primary false-positive budget, does the simplest label-derived signal — the early miss rate — separate events from controls above chance? Functionally this is a prerequisite-direction test: the outcome is defined through runs of misses, so the simplest outcome-adjacent observable must not have its direction structurally reversed by the negative class. On the contaminated population it does not; its true-positive rate is zero at the operating point, its confidence interval excluding zero on the wrong side. Under the frozen protocol, a learnability-gate failure routes the study to *uninterpretable-by-construction*: the detector results are reported but carry no evidential weight, because the population cannot distinguish "no early-warning signal" from "a label whose control class is contaminated." The gate is evaluated *before* any detector-versus-baseline decision quantity is computed, so the finding cannot be a post-hoc rationalization of an unwelcome result. The gate blocked a measurement of the wrong quantity.
+The reason this pathology is reported here rather than discovered by a reviewer is that the evaluation was pre-registered (OSF) with a **learnability gate** placed upstream of the detector comparison. The gate asks a prerequisite question: at the primary false-positive budget, does the simplest label-derived signal — the early miss rate — separate events from controls above chance? Functionally this is a prerequisite-direction test: the outcome is defined through runs of misses, so the simplest outcome-adjacent observable must not have its direction structurally reversed by the negative class. On the contaminated population it does not; its true-positive rate is zero at the operating point, its confidence interval excluding zero on the wrong side. Under the frozen protocol, a learnability-gate failure routes the study to *uninterpretable-by-construction*: the detector results are reported but carry no evidential weight, because the population cannot distinguish "no early-warning signal" from "a label whose control class is contaminated." The gate is evaluated *before* any detector-versus-baseline decision quantity is computed, so the finding cannot be a post-hoc rationalization of an unwelcome result. The gate blocked interpretation of detector results until the directional contradiction in the benchmark had been resolved.
 
   
 
@@ -146,7 +146,7 @@ The corollary is the design lesson: **an eligibility conjunct with a monotone, a
 
   
 
-**Relation to prior work.** The statistical phenomenon reported here is not new. Observation 1 describes informative censoring by an absorbing competing risk, a hazard with a five-decade literature in survival analysis, and we claim no priority over it. Its identity is exact: starvation and degradation are competing terminal events, the censoring event is not independent of the outcome but precludes it, and treating the censored stratum as a residual control is the classic error of ignoring a competing risk (Fine and Gray, 1999). The remedy we adopt is equally standard and equally not ours: restricting analysis to a landmark population is landmark analysis (Anderson, Cain and Gelber, 1983; van Houwelingen, 2007), and Proposition 2 is a statement about why landmarking cannot rescue this particular construction rather than a novel method.
+**Relation to prior work.** The statistical phenomenon reported here is not new. Observation 1 describes an absorbing competing-risk pathology, a hazard with a five-decade literature in survival analysis, and we claim no priority over it. Starvation and degradation are competing terminal events. The benchmark's error is to collapse the starvation event into the residual negative class rather than represent it as a competing outcome. When starvation is instead treated as if it conveyed ordinary non-event status, the resulting analysis has the same inferential pathology that motivates competing-risk methods, for which Putter, Fiocco and Geskus (2007) is a standard tutorial and Fine and Gray (1999) one canonical treatment. The remedy we adopt is equally standard and equally not ours: restricting analysis to a landmark population is landmark analysis (Anderson, Cain and Gelber, 1983; van Houwelingen, 2007), and Proposition 2 is a statement about why landmarking cannot rescue this particular construction rather than a novel method.
 
   
 
@@ -196,7 +196,7 @@ On the purified population it does. The gate passes with a true-positive rate of
 
   
 
-We report this as a primary result. It establishes that competing-risk purification, applied to a benchmark exhibiting the shadow-class pathology, recovers a population on which early-warning evaluation is possible — a single-instance demonstration that the repair works, on the benchmark where the pathology was found.
+We report this as a primary result. It establishes that competing-risk purification, applied to a benchmark exhibiting the shadow-class pathology, recovers a population that supports the registered binary early-warning contrast — a single-instance demonstration that the repair works, on the benchmark where the pathology was found.
 
   
 
@@ -315,7 +315,7 @@ The mechanical component of the shift has a cluster-bootstrap interval excluding
 
   
 
-The population matters here. Computed instead on the full evaluation-fold arm, which includes events and starved controls, the same correlations are far higher (0.975, −0.869, −0.869). That inflation is itself attributable to the contamination: the starved stratum carries extreme indicator values, and its presence drives the indicators into apparent lockstep. The values reported above are those on the population where standardisation is defined.
+The population matters here. Computed instead on the full evaluation-fold arm, which includes events and starved controls, the same correlations are far higher (0.975, −0.869, −0.869). That inflation is itself attributable to the contamination: the starved stratum carries extreme indicator values, and its presence drives the indicators into apparent lockstep. Label contamination changed not only estimated discrimination but the apparent covariance structure of the proposed measurement instrument. The values reported above are those on the population where standardisation is defined.
 
   
 
@@ -403,7 +403,7 @@ First, any such evaluation should publish a shadow-class census: the size and be
 
   
 
-Second, label validity should be established *before* the feature geometry used to design an instrument is estimated. Correlations, factor structures and composite weightings computed on an unvalidated-label population inherit whatever contamination that population carries; the difference reported in §4.4 between 0.975 and 0.833 is a demonstration of the size such an artifact can reach. Designing a detector on the first figure would have produced a different and wrong understanding of the feature space.
+Second, label validity should be established *before* the feature geometry used to design an instrument is estimated. Correlations, factor structures and composite weightings computed on an unvalidated-label population inherit whatever contamination that population carries; the difference reported in §4.4 between 0.975 and 0.833 is a demonstration of the size such an artifact can reach. Designing a detector on the first figure would have produced a different and wrong understanding of the feature space: once the class ontology is wrong, feature selection and composite construction performed downstream inherit that error before any detector is evaluated.
 
   
 
@@ -419,7 +419,7 @@ The hypothesis that slate-structure statistics carry early warning of recursive 
 
   
 
-The broader question — whether early warning is achievable in recursive recommender systems — is not answered by this work. Answering it requires a benchmark built to the constructive half of the specification, or a live system, and the analysis reported here places the constraint precisely: whatever is achievable must be sought in the outcome stream or in quantities demonstrably independent of frontier depletion.
+The broader question — whether early warning is achievable in recursive recommender systems — is not answered by this work. Answering it requires a benchmark built to the constructive half of the specification, or a live system, and the analysis reported here places the constraint precisely: the present results point future work toward the outcome stream and toward candidate quantities whose independence from frontier depletion can be demonstrated.
 
 A further extension, not attempted here, is a taxonomy of shadow classes across label architectures: the absorbing variety studied here is one type; the gated labels of reject inference suggest another. The census of Definition 2 generalises accordingly.
 
@@ -496,6 +496,10 @@ Marlin, B. M. and Zemel, R. S. (2009). Collaborative prediction and ranking with
   
 
 Moride, Y. and Abenhaim, L. (1994). Evidence of the depletion of susceptibles effect in non-experimental pharmacoepidemiologic research. *Journal of Clinical Epidemiology* 47(7), 731–737. doi:10.1016/0895-4356(94)90170-8
+
+  
+
+Putter, H., Fiocco, M., and Geskus, R. B. (2007). Tutorial in biostatistics: competing risks and multi-state models. *Statistics in Medicine* 26(11), 2389–2430. doi:10.1002/sim.2712
 
   
 
