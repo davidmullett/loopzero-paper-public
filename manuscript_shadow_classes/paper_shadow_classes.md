@@ -63,6 +63,10 @@ Figure 1 shows the resulting state structure. This yields a deterministic statem
 
   
 
+*[**Figure 1** — *The eligibility conjunct creates an absorbing shadow state*: schematic frontier trajectories under the degradation rule. The schematic embeds at `assets/fig1_absorbing_shadow_state.pdf` once the craft-pass artifact lands.]*
+
+  
+
 **Observation 1 (starvation implies control).** Consider the landmark population — units neither degraded nor starved at a landmark step L. Let a unit be undegraded at some step t > L and starved at t. Then that unit is a control. Equivalently, no unit starved after the landmark is ever an event.
 
   
@@ -253,6 +257,12 @@ In absolute terms the composite reaches a matched true-positive rate of **0.089*
 
   
 
+![](assets/fig3_delta_tpr_by_budget.pdf)
+
+**Figure 3.** *Discrimination advantage at matched alarm budgets.* Composite minus best baseline (ΔTPR) at the four registered budgets, with cluster-aware BCa 95% intervals; the parity (ΔTPR = 0) and acceptance (ΔTPR ≥ 0.05) lines are marked. Every point is negative with its interval clear of zero — the composite is strictly worse than the best miss-based baseline at every budget.
+
+  
+
 The baseline set is narrower than it looks. Five of the seven comparators — the early-miss reference, variance EWS, CUSUM, Page–Hinkley and matrix profile — achieve *identical* matched true-positive rates of 0.561. All are computed from the same derived miss-run series, and at matched alarm counts they select the same units. They are therefore not seven independent baselines but essentially two: a miss-based family and permutation entropy, the latter below chance at 0.041 — under the 0.05 matched-budget chance rate here, and under the matched chance rate at all four budgets (0.016, 0.041, 0.093, 0.183 against 0.02, 0.05, 0.10, 0.20), so its sub-chance behaviour is consistent across budgets rather than a single-budget artifact. This weakens the "best of six families" framing while leaving the comparison itself intact, since the composite loses to the miss-based family by a wide margin however that family is counted.
 
 ### 4.4 Characterisation
@@ -272,6 +282,12 @@ Six pre-registered analyses and one post-verdict descriptive comparison characte
 | p (occupancy) | −2.25 | **+0.05** | −2.30 [−2.39, −2.20] |
 | δ (coverage) | +2.00 | **−0.68** | 2.68 [2.58, 2.78] |
 | miss-run fraction | −2.62 | **+0.81** | −3.43 [−3.55, −3.32] |
+
+  
+
+![](assets/fig2_bounding_diagnostic.pdf)
+
+**Figure 2.** *Every large contaminated-population effect is mechanical.* Paired Cohen's d for all four indicators on the contaminated population (vermillion circles, vs all controls) and the purified population (ink squares, vs clean controls); each large contaminated effect collapses toward zero or reverses under purification.
 
   
 
@@ -418,20 +434,6 @@ The baseline set is less independent than its nomenclature suggests. Five of the
   
 
 The instrument now measures. What it measures is one narrow question, and the answer is no.
-
-  
-
-## Figures
-
-**Figure 1.** *The eligibility conjunct creates an absorbing shadow state.* Schematic frontier trajectories under the degradation rule. Placement: §2.1, after the statement of the rule. — figures/fig1_absorbing_shadow_state.pdf
-
-  
-
-**Figure 2.** *Every large contaminated-population effect is mechanical.* Paired effect sizes for all four indicators on the contaminated versus purified populations. Placement: §4.4, at "The apparent Study 1 signal was contamination." — figures/fig2_bounding_diagnostic.pdf
-
-  
-
-**Figure 3.** *Discrimination advantage at matched alarm budgets.* Composite minus best baseline at all four registered budgets with cluster-aware BCa intervals; parity and acceptance threshold marked. Placement: §4.3, after the absolute-performance paragraph. — figures/fig3_delta_tpr_by_budget.pdf
 
   
 

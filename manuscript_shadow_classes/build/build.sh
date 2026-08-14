@@ -13,16 +13,20 @@
 # modified by this script.
 set -euo pipefail
 cd "$(dirname "$0")"
+REPO="$(cd ../.. && pwd)"   # repo root, for resolving assets/ image paths
 
 # Map the math glyphs the text font (STIX Two Text) does not carry to LaTeX math,
-# and (main paper only) drop the not-for-manuscript appendix.
+# rewrite repo-relative image paths to absolute, and (main paper only) drop the
+# not-for-manuscript appendix.
 prep() { # prep <src> <out> <strip_appendix:0|1>
-python3 - "$1" "$2" "$3" <<'PY'
+python3 - "$1" "$2" "$3" "$REPO" <<'PY'
 import sys, re
-src, out, strip = sys.argv[1], sys.argv[2], sys.argv[3]
+src, out, strip, repo = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 s = open(src).read()
 if strip == '1':
     s = s.split('## APPENDIX — Notes for revision')[0].rstrip() + '\n'
+# resolve repo-relative image paths (assets/...) to absolute so xelatex finds them
+s = s.replace('](assets/', f']({repo}/assets/')
 subs = {
     '≥': r'$\geq$', '≤': r'$\leq$', '→': r'$\rightarrow$',
     '≈': r'$\approx$', '√': r'$\sqrt{}$', '∎': r'$\blacksquare$',
@@ -39,6 +43,7 @@ PY
 
 render() { # render <intermediate.md> <out.pdf>
 pandoc "$1" -o "$2" --pdf-engine=xelatex \
+  --from=markdown-implicit_figures \
   -V geometry:margin=1in -V fontsize=11pt \
   -V mainfont="STIX Two Text" \
   -V colorlinks=true -V linkcolor=black -V urlcolor=blue \

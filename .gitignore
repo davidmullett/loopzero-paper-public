@@ -53,3 +53,6 @@ preregistration/STUDY2-prereg-frozen.pdf
 # hash-anchored via preregistration/CODE_ANCHOR.sha256 etc.). Only the large slate panels remain
 # embargoed — content-hash anchored via ARM_PANELS.sha256 / PANEL_MANIFEST.sha256:
 results/v2_controls/arm_*__slate_panel.csv.gz
+
+# grayscale figure survival-test outputs (regenerable by analysis/make_fig*.py)
+assets/*_gray.png
