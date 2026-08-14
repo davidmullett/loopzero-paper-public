@@ -39,7 +39,7 @@ MINUS = "−"   # unicode minus, to match the manuscript
 plt.rcParams.update({
     "font.family": "sans-serif",
     "font.sans-serif": ["DejaVu Sans", "Helvetica", "Arial"],
-    "font.size": 9, "pdf.fonttype": 42, "svg.fonttype": "none",
+    "font.size": 11, "pdf.fonttype": 42, "svg.fonttype": "none",  # F11: legible at 3.3in col
     "text.color": INK, "axes.edgecolor": INK, "axes.labelcolor": INK,
     "xtick.color": INK, "ytick.color": INK,
 })
@@ -63,16 +63,16 @@ def build(ax):
         ax.plot([cont], [y], marker="o", ms=8, color=VERM, zorder=3)
         ax.plot([pur], [y], marker="s", ms=8, color=INK, zorder=3)  # F9: +~14% weight
         ax.annotate(fmt(cont), (cont, y), textcoords="offset points",
-                    xytext=(0, 9), ha="center", va="bottom",
-                    color=VERM, fontsize=8, fontweight="bold")
+                    xytext=(0, 10), ha="center", va="bottom",
+                    color=VERM, fontsize=11, fontweight="bold")  # F11
         ax.annotate(fmt(pur), (pur, y), textcoords="offset points",
-                    xytext=(0, -11), ha="center", va="top",
-                    color=INK, fontsize=9, fontweight="bold")  # F9: heavier destination label
+                    xytext=(0, -12), ha="center", va="top",
+                    color=INK, fontsize=12, fontweight="bold")  # F9 heavier + F11
     # direct key (marks, not a legend box), in the empty upper-left
     ax.plot([-2.95], [3.42], marker="o", ms=8, color=VERM, clip_on=False)
-    ax.text(-2.78, 3.42, "contaminated", va="center", color=VERM, fontsize=8)
-    ax.plot([-2.95], [3.06], marker="s", ms=7, color=INK, clip_on=False)
-    ax.text(-2.78, 3.06, "purified", va="center", color=INK, fontsize=8)
+    ax.text(-2.74, 3.42, "contaminated", va="center", color=VERM, fontsize=11)  # F11
+    ax.plot([-2.95], [3.06], marker="s", ms=8, color=INK, clip_on=False)
+    ax.text(-2.74, 3.06, "purified", va="center", color=INK, fontsize=11)  # F11
 
     ax.axvline(0, color=GRAY, lw=0.8, ls=(0, (4, 3)), zorder=1)
     ax.set_yticks(ys)
