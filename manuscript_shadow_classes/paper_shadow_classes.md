@@ -146,7 +146,7 @@ The corollary is the design lesson: **an eligibility conjunct with a monotone, a
 
   
 
-Three further literatures stand in weaker relations. Reject inference is the closest structural analogue: there, as here, labels exist only conditional on a gate operated by the system under evaluation (Hand and Henley, 1997; Crook and Banasik, 2004). Positive-unlabeled learning is an inverted analogue — its unlabeled class hides positives, whereas ours hides the worst failures by rule (Elkan and Noto, 2008; Bekker and Davis, 2020). And the eligibility-bias cluster in pharmacoepidemiology — depletion of susceptibles (Moride and Abenhaim, 1994), immortal-time bias, collider stratification (Suissa; Hernán) — is the direct epidemiological cousin, differing in substrate rather than in mechanism.
+Three further literatures stand in weaker relations. Reject inference is the closest structural analogue: there, as here, labels exist only conditional on a gate operated by the system under evaluation (Hand and Henley, 1997; Crook and Banasik, 2004). Positive-unlabeled learning is an inverted analogue — its unlabeled class hides positives, whereas ours hides the worst failures by rule (Elkan and Noto, 2008; Bekker and Davis, 2020). And the eligibility-bias cluster in pharmacoepidemiology — depletion of susceptibles (Moride and Abenhaim, 1994), immortal-time bias, collider stratification (Suissa, 2008; Hernán et al., 2004) — is the direct epidemiological cousin, differing in substrate rather than in mechanism.
 
   
 
@@ -437,7 +437,7 @@ The instrument now measures. What it measures is one narrow question, and the an
 
 ## References
 
-*All entries below verified against source, 2026-07-22.*
+*All entries verified against source (2026-07-22; additions verified 2026-08-14).*
 
   
 
@@ -445,7 +445,19 @@ Anderson, J. R., Cain, K. C., and Gelber, R. D. (1983). Analysis of survival by 
 
   
 
+Bekker, J. and Davis, J. (2020). Learning from positive and unlabeled data: a survey. *Machine Learning* 109(4), 719–760. doi:10.1007/s10994-020-05877-5
+
+  
+
 Boettiger, C. and Hastings, A. (2012). Quantifying limits to detection of early warning for critical transitions. *Journal of the Royal Society Interface* 9(75), 2527–2539. doi:10.1098/rsif.2012.0125
+
+  
+
+Chaney, A. J. B., Stewart, B. M., and Engelhardt, B. E. (2018). How algorithmic confounding in recommendation systems increases homogeneity and decreases utility. *RecSys '18*.
+
+  
+
+Crook, J. and Banasik, J. (2004). Does reject inference really improve the performance of application scoring models? *Journal of Banking & Finance* 28(4), 857–874. doi:10.1016/j.jbankfin.2003.10.010
 
   
 
@@ -461,7 +473,15 @@ Fine, J. P. and Gray, R. J. (1999). A proportional hazards model for the subdist
 
   
 
+Hand, D. J. and Henley, W. E. (1997). Statistical classification methods in consumer credit scoring: a review. *Journal of the Royal Statistical Society: Series A* 160(3), 523–541.
+
+  
+
 Harper, F. M. and Konstan, J. A. (2015). The MovieLens datasets: history and context. *ACM Transactions on Interactive Intelligent Systems* 5(4), Article 19. doi:10.1145/2827872
+
+  
+
+Hernán, M. A., Hernández-Díaz, S., and Robins, J. M. (2004). A structural approach to selection bias. *Epidemiology* 15(5), 615–625.
 
   
 
@@ -469,7 +489,19 @@ Jacobs, A. Z. and Wallach, H. (2021). Measurement and fairness. In *Proceedings 
 
   
 
+Marlin, B. M. and Zemel, R. S. (2009). Collaborative prediction and ranking with non-random missing data. *RecSys '09*.
+
+  
+
+Moride, Y. and Abenhaim, L. (1994). Evidence of the depletion of susceptibles effect in non-experimental pharmacoepidemiologic research. *Journal of Clinical Epidemiology* 47(7), 731–737. doi:10.1016/0895-4356(94)90170-8
+
+  
+
 Raji, I. D., Bender, E. M., Paullada, A., Denton, E., and Hanna, A. (2021). AI and the everything in the whole wide world benchmark. In *NeurIPS Track on Datasets and Benchmarks*. arXiv:2111.15366
+
+  
+
+Steck, H. (2013). Evaluation of recommendations: rating-prediction and ranking. *RecSys '13*.
 
   
 
@@ -481,39 +513,7 @@ van Houwelingen, H. C. (2007). Dynamic prediction by landmarking in event histor
 
   
 
-*The following entries were added or last revised after the 2026-07-22 source pass; re-verify each against source before submission.*
-
-  
-
-Bekker, J. and Davis, J. (2020). Learning from positive and unlabeled data: a survey. *Machine Learning* 109(4), 719–760.
-
-  
-
-Chaney, A. J. B., Stewart, B. M., and Engelhardt, B. E. (2018). How algorithmic confounding in recommendation systems increases homogeneity and decreases utility. *RecSys '18*.
-
-  
-
-Crook, J. and Banasik, J. (2004). Does reject inference really improve the performance of application scoring models? *Journal of Banking & Finance* 28(4), 857–874.
-
-  
-
-Hand, D. J. and Henley, W. E. (1997). Statistical classification methods in consumer credit scoring: a review. *Journal of the Royal Statistical Society: Series A* 160(3), 523–541.
-
-  
-
-Marlin, B. M. and Zemel, R. S. (2009). Collaborative prediction and ranking with non-random missing data. *RecSys '09*.
-
-  
-
-Moride, Y. and Abenhaim, L. (1994). Evidence of the depletion of susceptibles effect in non-experimental pharmacoepidemiology. *Journal of Clinical Epidemiology* 47(7), 731–737.
-
-  
-
-Steck, H. (2013). Evaluation of recommendations: rating-prediction and ranking. *RecSys '13*.
-
-  
-
-**Citation integrity — status.** Every listed reference now carries a specific in-body citation: Efron at the statistical-procedures paragraph (§4, first BCa use); Harper and Konstan at the first dataset mention and Boettiger and Hastings at the early-warning premise (§1); Hand and Henley and Crook and Banasik at the reject-inference clause, Elkan and Noto and Bekker and Davis at the positive-unlabeled clause, and Moride and Abenhaim at "depletion of susceptibles" (§3, prior-work). One reverse gap remains for the author: "Hernán" is cited in the §3 pharmacoepidemiology clause but has no reference-list entry — supply the intended source or drop the attribution before submission.
+**Citation integrity.** Every listed reference carries a specific in-body citation, and every author–year citation in the text resolves to a listed entry — including the §3 pharmacoepidemiology attributions (Suissa, 2008; Hernán et al., 2004). No orphans in either direction.
 
   
 
