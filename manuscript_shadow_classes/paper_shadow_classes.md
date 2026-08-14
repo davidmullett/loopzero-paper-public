@@ -39,7 +39,7 @@ We study one such benchmark: a deterministic offline replay on MovieLens-25M (Ha
 
   
 
-Two clarifications frame what follows. First, that prior study's specific indicators were subsequently found to be partly coupled to the label rule, which motivated a redefinition. The problem we describe here is deeper and independent of any indicator: it is a defect in how the benchmark constructs its *labels*, and it would compromise any detector, including the strongest imaginable one. Second, and this governs the paper's contribution: **the failure mode is not a new phenomenon.** It is a concrete instance of hazards that are well developed elsewhere: informative censoring and competing risks in survival analysis, depletion of susceptibles and immortal-time bias in pharmacoepidemiology, negative-class contamination in positive-unlabeled learning, and reject inference in credit scoring. Our claim is not phenomenon-novelty. It is that this hazard has an unrecognized and undetected instance in the construction of recursive-recommender benchmarks, that its presence inverts the sign of the most natural early-warning signal, and that a lightweight, pre-registerable protocol detects it before any result is produced. Throughout we use the conservative terms *degradation* and *frontier failure* rather than *collapse*.
+Two clarifications frame what follows. First, that prior study's specific indicators were subsequently found to be partly coupled to the label rule, which motivated a redefinition. The problem we describe here is deeper and independent of any indicator: it is a defect in how the benchmark constructs its *labels*, and it corrupts the target against which any detector is evaluated. Second, and this governs the paper's contribution: **the failure mode is not a new phenomenon.** It is a concrete instance of hazards that are well developed elsewhere: informative censoring and competing risks in survival analysis, depletion of susceptibles and immortal-time bias in pharmacoepidemiology, negative-class contamination in positive-unlabeled learning, and reject inference in credit scoring. Our claim is not phenomenon-novelty. It is that this hazard has an unrecognized and undetected instance in the construction of recursive-recommender benchmarks, that its presence inverts the sign of the most natural early-warning signal, and that a lightweight, pre-registerable protocol detects it before any result is produced. Throughout we use the conservative terms *degradation* and *frontier failure* rather than *collapse*.
 
   
 
@@ -106,7 +106,7 @@ A separate quantity shows the importance of warning runway: of 35,584 whole-hori
 
 ### 2.3 A reductio via a random recommender
 
-The pathology is a property of the *label rule's interaction with the engine*, not of any particular recommender. Replace the collaborative-filtering engine with a uniform-random recommender and drive the *same* frozen replay rules over the *same* users: the population and their rating histories are unchanged, and only the engine differs. A random recommender draws a ten-item slate from the full unseen catalogue, so frontier recovery is rare by construction: essentially every eligible user accrues eight consecutive misses within the first several steps and is labelled degraded immediately. Because degradation before the landmark removes a unit from the analysis population, the landmark population under this engine is empty — literally so on the pre-registered degeneracy probe, which admitted **0 of 3,000 users**, with 63.5% excluded for collapsing before the minimum warning runway.
+The pathology is a property of the *label rule's interaction with the engine*, not of any particular recommender. Replace the collaborative-filtering engine with a uniform-random recommender and drive the *same* frozen replay rules over the *same* users: the population and their rating histories are unchanged, and only the engine differs. A random recommender draws a ten-item slate from the full unseen catalogue, so frontier recovery is rare by construction: essentially every eligible user accrues eight consecutive misses within the first several steps and is labelled degraded immediately. Because degradation before the landmark removes a unit from the analysis population, the landmark population under this engine is empty — literally so on the pre-registered degeneracy probe, which admitted **0 of 3,000 users**, with 63.5% excluded for degrading before the minimum warning runway.
 
   
 
@@ -148,11 +148,11 @@ The corollary is the design lesson: **an eligibility conjunct with a monotone, a
 
   
 
-**Relation to prior work.** The statistical phenomenon reported here is not new. Observation 1 describes an absorbing competing-risk pathology, a hazard with a five-decade literature in survival analysis, and we claim no priority over it. Starvation and degradation are competing terminal events. The benchmark's error is to collapse the starvation event into the residual negative class rather than represent it as a competing outcome. When starvation is instead treated as if it conveyed ordinary non-event status, the resulting analysis has the same inferential pathology that motivates competing-risk methods, for which Putter, Fiocco and Geskus (2007) is a standard tutorial and Fine and Gray (1999) one canonical treatment. The remedy we adopt is equally standard and equally not ours: restricting analysis to a landmark population is landmark analysis (Anderson, Cain and Gelber, 1983; van Houwelingen, 2007), and Proposition 2 is a statement about why landmarking cannot rescue this particular construction rather than a novel method.
+**Relation to prior work.** The statistical phenomenon reported here is not new. Observation 1 describes an absorbing competing-risk pathology, a hazard with a five-decade literature in survival analysis, and we claim no priority over it. Starvation and degradation are competing terminal events. The benchmark's error is to collapse the starvation event into the residual negative class rather than represent it as a competing outcome. When starvation is instead treated as if it conveyed ordinary non-event status, the resulting analysis has the same inferential pathology that motivates competing-risk methods, for which Putter, Fiocco and Geskus (2007) is a standard tutorial and Fine and Gray (1999) one canonical treatment. Landmarking supplies one component of the repair by defining the at-risk population (Anderson, Cain and Gelber, 1983; van Houwelingen, 2007). The binary benchmark additionally excludes units that subsequently experience the competing starvation event from the residual control class, as specified in §4.1.
 
   
 
-Three further literatures stand in weaker relations. Reject inference is the closest structural analogue: there, as here, labels exist only conditional on a gate operated by the system under evaluation (Hand and Henley, 1997; Crook and Banasik, 2004). Positive-unlabeled learning is an inverted analogue — its unlabeled class hides positives, whereas ours hides the worst failures by rule (Elkan and Noto, 2008; Bekker and Davis, 2020). And the eligibility-bias cluster in pharmacoepidemiology — depletion of susceptibles (Moride and Abenhaim, 1994), immortal-time bias, collider stratification (Suissa, 2008; Hernán et al., 2004) — is the direct epidemiological cousin, differing in substrate rather than in mechanism.
+Three further literatures stand in weaker relations. Reject inference is the closest structural analogue: there, as here, labels exist only conditional on a gate operated by the system under evaluation (Hand and Henley, 1997; Crook and Banasik, 2004). Positive-unlabeled learning is an inverted analogue — its unlabeled class hides positives, whereas ours absorbs into the negative class units for which the target outcome has become structurally unascertainable (Elkan and Noto, 2008; Bekker and Davis, 2020). And the eligibility-bias cluster in pharmacoepidemiology — depletion of susceptibles (Moride and Abenhaim, 1994), immortal-time bias, collider stratification (Suissa, 2008; Hernán et al., 2004) — is the direct epidemiological cousin, differing in substrate rather than in mechanism.
 
   
 
@@ -321,7 +321,7 @@ The population matters here. Computed instead on the full evaluation-fold arm, w
 
   
 
-The generalisable point follows. **Feature geometry estimated on a population whose labels have not been validated inherits the contamination.** Any composite, index, factor structure or weighting scheme designed from such correlations is designed on an artifact — here, a difference between 0.975 and 0.833 that would materially change how one reasons about the feature space. Taken with the label itself and the effect sizes, the same contamination has now been shown to corrupt three distinct layers of the analysis.
+The generalisable point follows. **Feature geometry estimated on a population whose labels have not been validated can inherit the contamination.** A composite, index, factor structure or weighting scheme designed from such correlations can therefore be designed partly around an artifact — here, a difference between 0.975 and 0.833 that would materially change how one reasons about the feature space. Taken with the label itself and the effect sizes, the same contamination has now been shown to corrupt three distinct layers of the analysis.
 
   
 
@@ -365,7 +365,7 @@ The single sentence: **On this benchmark, the outcome-stream baseline carries su
 
 ### 5.2 What the repair validated, and what remains proposed
 
-Three elements of the §3 specification were exercised in this case: competing-event purification restored the intended binary contrast; the shadow-class census exposed the magnitude and behaviour of the excluded stratum; and the pre-registered gate confirmed that the repaired population recovers the required directional prerequisite. The gate's passing on the purified population, having failed on the contaminated one, is direct evidence for the first two and a demonstration of the third.
+Three elements of the §3 specification were exercised in this case: competing-event purification restored the intended binary contrast; the shadow-class census exposed the magnitude and behaviour of the excluded stratum; and the pre-registered gate confirmed that the repaired population recovers the required directional prerequisite. Together, these three operations exposed the contamination, defined the repaired contrast, and confirmed that the registered directional prerequisite was restored.
 
   
 
@@ -401,7 +401,7 @@ The setting is one offline replay, one item-item collaborative-filtering engine 
 
   
 
-First, any such evaluation should publish a shadow-class census: the size and behaviour of the population the rule renders unlabelable. In the case reported here that population was 69% of the nominal control class and was failing roughly twice as often as the labelled failures. No summary statistic the benchmark reported revealed it.
+First, any such evaluation should publish a shadow-class census: the size and behaviour of the population the rule renders unlabelable. In the case reported here that population comprised 69% of the nominal control class and missed a median 15 of 20 pre-landmark steps, while events missed at most 7. No summary statistic the benchmark reported revealed it.
 
   
 
