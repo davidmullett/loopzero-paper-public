@@ -7,3 +7,5 @@ supplement_main.md
 *.out
 *.toc
 paper_full.*
+*.tex
+*.xelog

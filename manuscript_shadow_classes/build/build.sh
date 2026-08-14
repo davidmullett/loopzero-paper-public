@@ -42,12 +42,23 @@ PY
 }
 
 render() { # render <intermediate.md> <out.pdf>
-pandoc "$1" -o "$2" --pdf-engine=xelatex \
+# Two-step (pandoc -> standalone .tex -> xelatex) rather than pandoc's direct
+# -o PDF: direct mode copies images into a temp media dir, and xelatex fails to
+# load the Figma-exported fig1 from that copy. The .tex keeps the absolute
+# assets/ paths (rewritten in prep) and xelatex loads them in place. Run twice
+# for the table of contents.
+local base="${2%.pdf}"
+pandoc "$1" -s -o "$base.tex" --pdf-engine=xelatex \
   --from=markdown-implicit_figures \
   -V geometry:margin=1in -V fontsize=11pt \
   -V mainfont="STIX Two Text" \
   -V colorlinks=true -V linkcolor=black -V urlcolor=blue \
+  --resource-path="$REPO" \
   --toc -V toc-title="Contents"
+xelatex -interaction=nonstopmode -halt-on-error "$base.tex" >/dev/null 2>&1 || true
+xelatex -interaction=nonstopmode -halt-on-error "$base.tex" > "$base.xelog" 2>&1
+grep -q "Output written on $base.pdf" "$base.xelog" || { echo "BUILD FAILED: $2"; tail -15 "$base.xelog"; exit 1; }
+rm -f "$base.tex" "$base.aux" "$base.log" "$base.out" "$base.toc" "$base.xelog"
 echo "Built $2"
 }
 

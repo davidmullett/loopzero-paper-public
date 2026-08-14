@@ -63,7 +63,7 @@ Figure 1 shows the resulting state structure. This yields a deterministic statem
 
   
 
-*[**Figure 1** — *The eligibility conjunct creates an absorbing shadow state*: schematic frontier trajectories under the degradation rule. The schematic embeds at `assets/fig1_absorbing_shadow_state.pdf` once the craft-pass artifact lands.]*
+*[**Figure 1** — *The eligibility conjunct creates an absorbing shadow state*: schematic frontier trajectories under the degradation rule. Embeds at `assets/fig1_absorbing_shadow_state.pdf` once a VECTOR PDF export lands — the current craft-pass export is a raster PNG mislabeled `.pdf` and xelatex/arXiv cannot include it.]*
 
   
 
