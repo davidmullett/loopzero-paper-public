@@ -77,10 +77,12 @@ def build(ax):
     ax.plot(xs, vals, "-", color=INK, lw=1.2, zorder=2)
     ax.errorbar(xs, vals, yerr=yerr, fmt="o", ms=7, color=INK,
                 ecolor=INK, elinewidth=1.2, capsize=4, zorder=3)
-    for x, v in zip(xs, vals):
-        ax.annotate(fmt3(v), (x, v), textcoords="offset points",
-                    xytext=(9, 0), ha="left", va="center",
-                    color=INK, fontsize=8, fontweight="bold")
+    # F15: label each point at the SAME dy above its upper error-bar cap, so the
+    # offset is consistent across all four despite the differing interval lengths
+    for x, v, hi in zip(xs, vals, his):
+        ax.annotate(fmt3(v), (x, hi), textcoords="offset points",
+                    xytext=(0, 7), ha="center", va="bottom",
+                    color=INK, fontsize=11, fontweight="bold")
 
     ax.set_xticks(xs)
     ax.set_xticklabels([f"b = {disp}\nk = {k}" for _, disp, k in BUDGETS])
