@@ -32,14 +32,15 @@ OUT = ROOT / "assets/fig3_delta_tpr_by_budget.pdf"
 OUT_GRAY = ROOT / "assets/fig3_delta_tpr_by_budget_gray.png"
 
 INK = "#1A1A1A"
-GRAY = "#8A8A8A"
+GRAY = "#8A8A8A"      # reference lines
+MIDGRAY = "#333333"  # F14: reference-line LABELS, dark enough to survive print
 LGRAY = "#D8D8D8"
 MINUS = "−"
 
 plt.rcParams.update({
     "font.family": "sans-serif",
     "font.sans-serif": ["DejaVu Sans", "Helvetica", "Arial"],
-    "font.size": 9, "pdf.fonttype": 42, "svg.fonttype": "none",
+    "font.size": 11, "pdf.fonttype": 42, "svg.fonttype": "none",  # F14: y-title legible at 3.3in col
     "text.color": INK, "axes.edgecolor": INK, "axes.labelcolor": INK,
     "xtick.color": INK, "ytick.color": INK,
 })
@@ -66,10 +67,12 @@ def build(ax):
     ax.axhline(0.05, color=GRAY, lw=1.0, ls=(0, (5, 3)), zorder=1)
     ax.axhline(0.0, color=GRAY, lw=1.0, ls="-", zorder=1)
     ax.axhspan(-0.6, 0.0, color=LGRAY, alpha=0.35, lw=0, zorder=0)
-    ax.text(3.12, 0.05, "acceptance  ΔTPR ≥ 0.05", va="center", ha="left",
-            color=GRAY, fontsize=8, clip_on=False)
-    ax.text(3.12, 0.0, "parity  0", va="center", ha="left",
-            color=GRAY, fontsize=8, clip_on=False)
+    # F14: darkened to mid-gray, moved inside the axes (kills the right overhang
+    # that was starving the y-title), stacked clear of each other
+    ax.text(3.0, 0.05, "acceptance  ΔTPR ≥ 0.05", va="bottom", ha="right",
+            color=MIDGRAY, fontsize=10)
+    ax.text(3.0, 0.0, "parity  0", va="top", ha="right",
+            color=MIDGRAY, fontsize=10)
 
     ax.plot(xs, vals, "-", color=INK, lw=1.2, zorder=2)
     ax.errorbar(xs, vals, yerr=yerr, fmt="o", ms=7, color=INK,
