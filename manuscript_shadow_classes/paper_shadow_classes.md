@@ -289,7 +289,7 @@ Six pre-registered analyses and one post-verdict descriptive comparison characte
 
 ![](assets/fig2_bounding_diagnostic.pdf)
 
-**Figure 2.** *Every large contaminated-population effect is mechanical.* Paired Cohen's d for all four indicators on the contaminated population (vermillion circles, vs all controls) and the purified population (ink squares, vs clean controls); each large contaminated effect collapses toward zero or reverses under purification.
+**Figure 2.** *Every large contaminated-population effect is dominated by the mechanical contamination.* Paired Cohen's d for all four indicators on the contaminated population (vermillion circles, vs all controls) and the purified population (ink squares, vs clean controls); each large contaminated effect collapses toward zero or reverses under purification.
 
   
 
@@ -572,15 +572,16 @@ Second adversarial review received 2026-07-22 against the same eight-axis rubric
 
   
 
-**B-fixes outstanding:** a short statistical-procedures paragraph (d definition and populations per column, BCa with the Efron citation, tie-breaking, z-source); the S1 gate described in registered rather than Study-2 vocabulary; a significance clause on permutation entropy's 0.041; the two starved-stratum ranges labelled to distinguish the comparisons.
+**B-fixes outstanding: NONE — all four verified implemented (independent audit, 2026-08-15).** This list was stale. Located in the current draft: the statistical-procedures paragraph (§4.1, "Statistical procedures" — d definition with populations per column, BCa with Efron 1987, matched-alarm-count operating point, z-source stated as the 694 cal-fold clean controls); the gate in registered vocabulary (§2.4, "learnability gate", "prerequisite-direction test"); the permutation-entropy significance clause (§4.3, extended to all four budgets: 0.016 / 0.041 / 0.093 / 0.183 against 0.02 / 0.05 / 0.10 / 0.20); and the two starved-stratum ranges labelled distinctly (abstract and §4.4 give d = +4.20 for the composite and −5.77 … +6.29 for individual indicators, each naming its comparison).
 
 ### Still missing before submission
 
-  - **Abstract.** Now \~390 words. Fine for arXiv; several journals cap at 250.
+  - **Abstract.** Now \~390 words. Fine for arXiv; several journals cap at 250. **TMLR imposes no abstract cap and no length limit** (author guide, checked 2026-08-15), so no cut is needed for that venue.
   - **Venue list** should add NeurIPS Datasets & Benchmarks — per the reviewer, precisely this genre, and where the Raji citation lives. Order: TORS, NeurIPS D\&B, R. Soc. Open Sci. Mainline RecSys is roughly a coin-flip on desk. Avoid KDD-class.
-  - **Affiliation line** and correspondence address.
-  - **OSF embargoes must be lifted** before submission — the paper's central credibility claim is that the analysis was registered before the data could vote, and a reader cannot verify that against a private registration.
-  - **The voicing pass**, which is the only substantial work remaining.
+    **Add TMLR, and consider it first.** Its two stated criteria are (i) claims supported by accurate, convincing, clear evidence and (ii) some of its audience would be interested; it states papers "should be accepted even if the contribution or significance of the work is modest," and explicitly welcomes reproducibility studies and work revealing method strengths and weaknesses. Novelty is **not** a criterion — which retires this paper's weakest axis and the residual kill vector below. arXiv preprints are permitted, there are no fees, and there is no length limit; submission must be anonymised and must not link itself to the preprint, and the TMLR LaTeX template is mandatory (format violation is an explicit desk-reject trigger). Note also that TMLR acceptance is the eligibility route into MLRC / the NeurIPS reproducibility track — the 2026 window (closing 2026-09-30) is unreachable given review times, but the route recurs.
+  - **Affiliation line** and correspondence address. **DONE** — present in the header.
+  - **OSF embargoes must be lifted** before submission — the paper's central credibility claim is that the analysis was registered before the data could vote, and a reader cannot verify that against a private registration. **STILL OPEN, and the repository's claim to the contrary is false:** `api.osf.io/v2/registrations/wka72/` returns HTTP 401. See the correction in `arxiv_metadata.md` and `audit/v2_evidence_ledger.md` E-36/E-37/E-38. This is the single submission blocker and it is external.
+  - **The voicing pass**, which is the only substantial work remaining. It must be done by the author: a model performing a voicing pass on a manuscript whose named risk is model-sounding prose is counterproductive. The 2026-08-15 audit deliberately left all prose untouched.
 
 ### The residual kill vector
 

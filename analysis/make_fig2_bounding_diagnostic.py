@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Figure 2 - "Every large contaminated-population effect is mechanical."
+"""Figure 2 - "Every large contaminated-population effect is dominated by the mechanical contamination."
 
 Paired Cohen's d for the four indicators on the contaminated population
 (d_full, vs all controls) and the purified population (d_purified, vs clean
