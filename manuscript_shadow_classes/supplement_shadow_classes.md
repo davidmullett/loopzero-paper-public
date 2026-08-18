@@ -4,7 +4,7 @@
 
 **David Mullett** *Independent researcher* · ORCID 0009-0004-2543-1664 · correspondence: d@loopzero.org
 
-This document contains the supplementary materials referenced in the main manuscript: the learnability gate stated in the registration's own vocabulary (S1), the pre-execution conformance audit in full (S2), the two revision-stage deviations D-43 and D-44 (S3), the content-pinned provenance chain (S4), and the supporting robustness and control-arm tables (S5). Section references of the form §7, §11 are to the frozen Study 2 pre-registration (OSF osf.io/wka72); Study 1 is OSF osf.io/7bvgz. Hashes are given in short form; the full manifest is in the repository.
+This document contains the supplementary materials referenced in the main manuscript: the learnability gate stated in the registration's own vocabulary (S1), the pre-execution conformance audit in full (S2), the two revision-stage deviations D-43 and D-44 (S3), the content-pinned provenance chain (S4), and the supporting robustness and control-arm tables (S5). Section references of the form §7, §11 are to the frozen Study 2 pre-registration (OSF osf.io/wka72); Study 1's frozen pre-registration document is hosted in OSF project osf.io/7bvgz. Hashes are given in short form; the full manifest is in the repository.
 
 ---
 
