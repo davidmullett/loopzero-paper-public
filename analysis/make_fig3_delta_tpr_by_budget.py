@@ -88,11 +88,11 @@ def build(ax):
     ax.set_xticklabels([f"b = {disp}\nk = {k}" for _, disp, k in BUDGETS])
     ax.set_xlim(-0.35, 3.05)
     ax.set_ylim(-0.58, 0.12)
-    ax.set_ylabel("ΔTPR = TPR(composite) − TPR(best baseline)")
+    ax.set_ylabel("ΔTPR  (composite − best baseline)")  # F1: shortened to fit bbox
     ax.spines[["top", "right"]].set_visible(False)
 
 
-fig, ax = plt.subplots(figsize=(5.6, 3.2))
+fig, ax = plt.subplots(figsize=(5.6, 3.5))  # F1: taller so the y-label clears the bbox
 build(ax)
 fig.savefig(OUT, bbox_inches="tight")
 

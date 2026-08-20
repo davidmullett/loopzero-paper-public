@@ -47,15 +47,15 @@ Two clarifications frame what follows. First, that prior study's specific indica
 
 ### 2.1 The eligibility conjunct and the absorbing shadow state
 
-The degradation rule is a conjunction. Let m_t be the count of consecutive frontier misses at step t and f_t the remaining frontier size. Degradation is declared at the first step where
+The degradation rule is a conjunction. Let $m_t$ be the count of consecutive frontier misses at step t and $f_t$ the remaining frontier size. Degradation is declared at the first step where
 
   
 
-m_t ≥ 8   AND   f_t ≥ 10.
+$m_t$ ≥ 8   AND   $f_t$ ≥ 10.
 
   
 
-The first clause is the *signal* the benchmark intends to measure. The second is an *eligibility* clause: it restricts labeling to units that still have enough frontier left to fail against. But f_t is monotonically non-increasing — the frontier can only shrink as positives are recovered or the horizon advances — so once f_t falls below the floor of 10, it never returns. Call a unit **starved** at step t if f_t < 10. Starvation is therefore *absorbing*: a starved unit can never again satisfy the eligibility clause, hence can never be labeled degraded, no matter how badly it fails thereafter. It falls out of the "degraded" class and, because the benchmark defines the control class *residually* (everything not degraded), it lands among the **controls**.
+The first clause is the *signal* the benchmark intends to measure. The second is an *eligibility* clause: it restricts labeling to units that still have enough frontier left to fail against. But $f_t$ is monotonically non-increasing — the frontier can only shrink as positives are recovered or the horizon advances — so once $f_t$ falls below the floor of 10, it never returns. Call a unit **starved** at step t if $f_t$ < 10. Starvation is therefore *absorbing*: a starved unit can never again satisfy the eligibility clause, hence can never be labeled degraded, no matter how badly it fails thereafter. It falls out of the "degraded" class and, because the benchmark defines the control class *residually* (everything not degraded), it lands among the **controls**.
 
   
 
@@ -65,7 +65,7 @@ Figure 1 shows the resulting state structure. This yields a deterministic statem
 
 ![](assets/fig1_absorbing_shadow_state.pdf){width=100%}
 
-**Figure 1.** *The eligibility conjunct creates an absorbing shadow state.* **(A)** The rule sends a unit to *Degraded* only on eight consecutive misses while the frontier is still eligible (f_t ≥ 10); once the frontier falls below the floor the unit is *Starved* — an absorbing state with no exit — and is filed, at the horizon, as a residual control. An outcome no longer ascertainable is not thereby a negative outcome. **(B)** Read at the landmark (t = 20), 69.2% of the nominal control class — 3,292 of 4,755 — is starved-by-the-landmark shadow class, against 1,460 clean controls and 3 post-landmark starvers.
+**Figure 1.** *The eligibility conjunct creates an absorbing shadow state.* **(A)** The rule sends a unit to *Degraded* only on eight consecutive misses while the frontier is still eligible ($f_t$ ≥ 10); once the frontier falls below the floor the unit is *Starved* — an absorbing state with no exit — and is filed, at the horizon, as a residual control. An outcome no longer ascertainable is not thereby a negative outcome. **(B)** Read at the landmark (t = 20), 69.2% of the nominal control class — 3,292 of 4,755 — is starved-by-the-landmark shadow class, against 1,460 clean controls and 3 post-landmark starvers.
 
   
 
@@ -85,7 +85,7 @@ Two terms recur below and are worth fixing precisely. The phrase *shadow class* 
 
 **Definition 2 (shadow-class census).** The report, prior to any use of the benchmark for inference, of the prevalence and behaviour of each shadow class the label rule induces.
 
-A shadow class in this sense is not a latent class: its membership is exactly identifiable from observables (here, f_t < 10). Nor is it missing data. Three situations should be kept distinct: *data invisibility* — the unit is not observed; *label uncertainty* — the unit is observed but its correct label is unknown; and *shadow-class unascertainability* — the unit is fully observed, every step of its trajectory recorded, while the labeling architecture has made one relevant outcome structurally unreachable. The pathology reported here is the third.
+A shadow class in this sense is not a latent class: its membership is exactly identifiable from observables (here, $f_t$ < 10). Nor is it missing data. Three situations should be kept distinct: *data invisibility* — the unit is not observed; *label uncertainty* — the unit is observed but its correct label is unknown; and *shadow-class unascertainability* — the unit is fully observed, every step of its trajectory recorded, while the labeling architecture has made one relevant outcome structurally unreachable. The pathology reported here is the third.
 
 ### 2.2 The empirical signature
 
@@ -349,7 +349,7 @@ Three registered analyses were not run and are reported with their reasons: the 
 
   
 
-**A first-order consistency check explains the near-cancellation:** Combining the purified marginals as the registered composite combines them — z(G) + z(p) − z(δ) — gives (−0.64) + (+0.05) − (−0.68) ≈ +0.09, against a composite standard deviation of √(3 + 2[r(G,p) − r(G,δ) − r(p,δ)]) = √1.208 ≈ 1.10. The inverted churn term approximately cancels the coverage term it is subtracted from, the null occupancy term carries the remainder, and the net standardised separation is roughly 0.08. That is near chance, and it is consistent with the observed matched true-positive rate of 0.089 against a chance rate of 0.05. The figure is approximate: it treats the marginal effect sizes as though pooled-SD standardised.
+**A first-order consistency check explains the near-cancellation:** Combining the purified marginals as the registered composite combines them — z(G) + z(p) − z(δ) — gives (−0.64) + (+0.05) − (−0.68) ≈ +0.09, against a composite standard deviation of $\sqrt{3 + 2[r(G,p) - r(G,\delta) - r(p,\delta)]} = \sqrt{1.208} \approx 1.10$. The inverted churn term approximately cancels the coverage term it is subtracted from, the null occupancy term carries the remainder, and the net standardised separation is roughly 0.08. That is near chance, and it is consistent with the observed matched true-positive rate of 0.089 against a chance rate of 0.05. The figure is approximate: it treats the marginal effect sizes as though pooled-SD standardised.
 
   
 

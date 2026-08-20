@@ -77,7 +77,7 @@ def build(ax):
     ax.axvline(0, color=GRAY, lw=0.8, ls=(0, (4, 3)), zorder=1)
     ax.set_yticks(ys)
     ax.set_yticklabels([r[0] for r in rows])
-    ax.set_ylim(-0.6, 3.7)
+    ax.set_ylim(-1.0, 3.7)  # F7: more room below the bottom row so +0.81 clears the x-axis
     ax.set_xlim(-3.3, 2.7)
     ax.set_xlabel("Cohen's d  (event vs control separation)")
     ax.spines[["top", "right", "left"]].set_visible(False)
