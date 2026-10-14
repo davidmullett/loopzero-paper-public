@@ -15,6 +15,11 @@
 > pre-registration document in OSF project https://osf.io/7bvgz (public). The V2
 > deviations & interpretations log is released — see
 > [`preregistration/RELEASE_NOTE.md`](preregistration/RELEASE_NOTE.md).
+>
+> **On manuscript versions.** `manuscript_shadow_classes/build/paper_main.pdf`
+> is an August 2026 draft of that successor paper, kept public as part of the
+> research record. The current manuscript is available on request:
+> d@loopzero.org.
 
 # Loopzero — Benchmarking Recursive-Collapse Warning Claims Under Matched False-Positive Control
 
